@@ -1,0 +1,37 @@
+---
+title: "Course Information"
+image: ioc_entrance_far.jpg
+about:
+  template: marquee
+title-block-banner: true
+---
+
+::: {.grid style="text-align: left"}
+
+::: {.g-col-4}
+Tuesday 9:00-10:30 & 11:00-12:30
+<br>B1 and B2
+:::
+
+::: {.g-col-4}
+&nbsp;
+:::
+
+::: {.g-col-4}
+Charles C. Lanfear<br> [cl948\@cam.ac.uk](cl948@cam.ac.uk "Email")<br>Office 3.9, drop-in times:<br>
+-- Tuesday, 14:00-15:00<br>
+-- Wednesday, 11:00-12:00
+:::
+
+:::
+
+
+# Materials
+
+There are two core texts for this course. One is only available in print, but there are short-loan copies in the library and the softcover is inexpensive. The other is available free online but may be ordered in print form as well.
+
+-   [Bueno de Mesquita, Ethan & Fowler, Anthony. 2021. *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*](https://press.princeton.edu/books/hardcover/9780691214368/thinking-clearly-with-data)
+
+-   [Huntington-Klein, Nick. 2021 *The Effect: An Introduction to Research Design and Causality*](https://theeffectbook.net/)
+
+Under each lecture view you will find the required readings for each unit. You can return to the lecture view using the link in the upper left.

@@ -1,0 +1,22 @@
+---
+title: "Quantitative Data and Relationships"
+subtitle: "CRM Lecture 2"
+author: "Charles Lanfear"
+date: "12 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+output:
+  xaringan::moon_reader:
+    css: "../assets/cam-css.css"
+    lib_dir: libs
+    nature:
+      highlightStyle: tomorrow-night-bright
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "../assets/cam_macros.js"
+      titleSlideClass: ["center","top"]
+---
+
+Population, sample, sampling, observations
+
+Latent variables
+
+Formative vs. reflective measurements

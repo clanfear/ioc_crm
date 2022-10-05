@@ -1,0 +1,21 @@
+---
+title: "Seminar 2: Quantitative Data and Relationships"
+description: "An introduction to quantitative data and bivariate relationships: correlations and regression"
+author: "Charles Lanfear"
+date: "2022-10-18"
+draft: false
+---
+
+Lecture Slides
+
+Readings:
+
+* Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press. 
+   * Read pp. 19—85: (1) Chapter 3: Describing Variables, (2) Chapter 4: Describing Relationships, and (3) Chapter 5: Identification
+
+* Bueno de Mesquita, E. and Fowler, A. (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*, Princeton, NJ: Princeton University Press.
+   * Read pp. 53—93: (1) Chapter 2: Correlation: What Is It and What Is It Good For?, (2) Causation: What Is It and What Is It Good For?, (3) Chapter 4: Correlation Requires Variation, and (4) Chapter 5: Regression for Describing and Forecasting
+
+* Sullivan, C.J. and McGloin, J.M. (2014) ‘Looking back to move forward: some thoughts on measuring crime and delinquency over the past 50 years’, *Journal of Research in Crime and Delinquency*, 51(4): 445-466. [http://dx.doi.org/10.1177/0022427813520446]()
+
+* Maguire, M. & McVie, S. 2017. ‘Crime Data and Criminal Statistics: A critical reflection.’ in A. Liebling, S. Maruna, & L. McAra (eds.) *The Oxford Handbook of Criminology*, 6th Ed., Oxford: Oxford University Press, pp. 163-189

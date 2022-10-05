@@ -1,0 +1,17 @@
+---
+title: "Seminar 4: Causality and Testing Theories"
+description: "Principles of causal inference and their relationship to social theory"
+author: "Charles Lanfear"
+date: "2022-11-01"
+draft: false
+---
+
+Lecture Slides
+
+Reading:
+
+* Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press. 
+   * Read pp. 87—128 & 144—159: (1) Chapter 6: Causal Diagrams, (2) Chapter 7: Drawing Causal Diagrams, (3) Chapter 8: Causal Paths and Closing Back Doors, (4) Chapter 10: Treatment Effects
+
+* Bueno de Mesquita, E. and Fowler, A. (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*, Princeton, NJ: Princeton University Press.
+   * Read pp. 193—242: (1) Chapter 9: Why Correlation Doesn’t Imply Causation, (2) Chapter 10: Controlling for Confounders, and (3) Chapter 11: Randomized Experiments

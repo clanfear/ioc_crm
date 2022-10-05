@@ -1,0 +1,28 @@
+---
+title: "Seminar 1: Introduction to Research"
+subtitle: "Questions and their answers"
+description: "An overview of research questions and approaches to answering questions in criminology"
+author: "Charles Lanfear"
+date: "2022-10-11"
+draft: false
+---
+
+[Lecture Slides](https://clanfear.github.io/ioc_iqa/_lectures/1_research-questions/slides_research-questions.html)
+
+Reading:
+
+* Gadd, D., Karstedt, S., and Messner, S.F. (2012) *The SAGE Handbook of Criminological Research Methods*, London: SAGE.
+   * Read the Editorial Introduction pp.1-8
+   * Access ebook via iDiscover
+
+* James, D. (2015) How to get clear about method, methodology, epistemology and ontology, once and for all. [https://www.youtube.com/watch?v=b83ZfBoQ_Kw]()
+
+* Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press. 
+   * Read pp. xix–18: (1) Introduction, (2) Chapter 1: Designing Research, and (3) Chapter 2: Research Questions
+
+* Bottoms (2000) ‘The relationship between theory and research in criminology’ in R. King and E. Wincup (eds), *Doing Research on Crime and Justice*, Oxford: OUP, Chapter 3. pp. 15-60.
+   * Download from Moodle
+
+Read this too:
+
+* Schwartz, M.A. (2008) 'The importance of stupidity in scientific research' *Journal of Cell Science*, 121(11): 1771 [https://doi.org/10.1242/jcs.033340](https://doi.org/10.1242/jcs.033340)

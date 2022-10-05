@@ -1,0 +1,860 @@
+---
+title: "Fundamentals"
+subtitle: "IQA Lecture 1"
+author: "Charles Lanfear"
+date: "12 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+output:
+  xaringan::moon_reader:
+    css: "../assets/cam_style.css"
+    lib_dir: libs
+    nature:
+      highlightStyle: tomorrow-night-bright
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "../assets/cam_macros.js"
+      titleSlideClass: ["center","top"]
+---
+
+```{r setup, purl=FALSE}
+#| include: false
+knitr::opts_chunk$set(eval=TRUE, echo=TRUE, message=TRUE, warning=TRUE)
+```
+
+
+OUTLINE
+
+Basic logistics for the course
+
+A hook illustrating research approaches
+
+Some Logistics
+
+An Extended Example
+
+Serious crime like robbery seems to be more likely to occur where there is disorder—litter on the ground, panhandlers in the street, and youths loitering on the corner.
+
+Broken Windows Theory says disorder signals to potential criminals that people in area are unlikely to intervene, so it emboldens them to commit crime.
+
+DIAGRAM
+
+How might we test that?
+
+Experimental
+
+Keizer et al. (2008) manipulated disorder and observed if people were more likely to steal.
+
+They discovered they were.^[Though this hasn't been found in replications.]
+
+Observational
+
+Sampson & Raudenbush carefully obtained objective measures of disorder in 80 neighborhoods in Chicago and examined how disorder relates to crime net of social control capacity.
+
+They discovered the disorder to crime relationship disappeared controlling for social control-disorder and crime both seem to emerge where people are unable or unwilling to regulate public spaces.
+
+Interview
+
+Both of these focus on level of disorder and level of crime but not the process linking them. BWT says potential offenders interpret disorder as a signal of low social control.
+
+St. Jean interviewed active robbers and drug dealers to find out how they interpreted disorder.
+
+He found they didn't interpret disorder as related to social control—instead they're sensitive to opportunity, which sometimes co-occurs with disorder.
+
+Takeaway
+
+There are many ways to answer the same question
+
+This Course
+
+Mainly about how to answer research questions.
+
+Methods are the techniques actually applied. We'll touch on them but not the focus. IQA is methods for quant. SSRMC offers other methods courses.
+
+Course not about epistemology or ontology, though they're hidden and embedded. Your orientation in those realms will shape how you approach methodology. Mine shapes how I teach this course and how others teach the latter half. Try to keep an open mind.
+
+While course emphasizes causality, it is not advocating positivism or post-positivism. These approaches and principles are applicable when focus is on meaning and interpretation.
+
+My own theoretical work drags routine activity and ecological theories kicking and screaming into what Bottoms calls active-subject socially-oriented criminology—but my approach is generally quantitative.
+
+Hypothetic-deductive method emphasized in causal research. Often quant but can be approached qualitatively. Causal research usually demands well thought-out theory.
+
+Might note something on grand theory, relate to Ross's work
+
+
+
+
+# Course Goals
+
+* Understand what research is and how it is done
+
+   * Major research traditions in criminology
+
+   * Principles of research design
+
+* Recognize major debates and challenges in criminological research
+
+* Learn to critically evaluate research
+
+* Help you write a robust research proposal
+
+---
+
+# Course Structure
+
+* Michaelmas:
+
+   * This course (CRM)
+
+     * Introductory lectures and discussions
+     * First half emphasizes quantitative approaches
+     * Second half emphasizes qualitative approaches
+
+   * Introduction to Quantitative Analysis (IQA)
+
+* Lent:
+
+   * Practical workshops
+   * Topics to be decided
+
+* CRM Materials:
+
+   * Lecture slides on course website
+   * Recording on Moodle
+   * Some readings on Moodle
+   
+---
+
+# Joining a conversation
+
+Criminology is an ongoing conversation
+
+--
+
+To participate, you need to know:
+
+* What the conversation is about
+* What the current state is
+* What its premises are
+
+--
+
+Joining the conversation requires understanding of theories and methodology
+
+--
+
+* This course is about methodology---and a bit of methods
+
+   * Methodology is theory about how research questions are answered
+   * It guides our choice of methods, the techniques and procedures used to conduct research
+
+
+---
+
+# Criminological Research
+
+Social science research is about understanding how the world works
+
+--
+
+For criminologists, it typically has to do specifically with...
+
+--
+
+* Criminal Law (e.g., definitions of crime)
+
+--
+
+* Causes of crime (e.g., opportunity)
+
+--
+
+* Consequences of crime (e.g., victimizaton)
+
+--
+
+* Responses to crime (e.g., policing and incarceration)
+
+---
+
+# Good questions
+
+* Are answerable<sup>1</sup>
+
+--
+
+* Improve our understanding of the world
+
+   * That is, they inform **theory**
+
+.footnote[[1] What answerable *means* is subject to epistemological debate.]
+
+--
+
+Good research design is that which can answer good research questions
+
+--
+
+Empirical research uses observations from the world
+
+---
+# Sources of Questions
+
+* Theory
+
+   * We have expectations---are they correct?
+   * Often theories offer differing expectations
+      * Adjudication makes for compelling questions!
+
+--
+
+* Ignorance
+
+   * We have no expectations
+   * True ignorance is much rarer than being poorly read<sup>1</sup>
+
+.footnote[[1] Criminology, like other social sciences, is plagued with reinvention of the wheel.]
+
+--
+
+*In both cases, you're probably going to need to read a lot.*
+
+---
+
+# Who produces data on crime and criminal justice?
+
+* Academic researchers
+
+* Contract researchers
+
+* Government and related departments
+
+   * Ministry of Justice
+   * Home Office,
+   * Youth Justice Board
+   * Inspectorates
+
+* Campaign Organisations
+
+   * Prison Reform Trust
+   * Howard League
+
+---
+
+# What knowledge is generated?
+
+* Descriptive statistics
+
+* Risk and protective factors 
+
+* Explanations / Explanatory Frameworks
+
+* Descriptions
+
+* Interpretations
+
+* Critiques
+
+---
+
+> Expert, research-based knowledge about crime and criminals
+still competes with views of the subject which are not
+‘criminological’ in their style of reasoning or their use of
+evidence. Judges, moralists, religious fundamentalists, and
+populist leader-writers still offer views on criminological
+subjects which are quite innocent of criminological science.
+Unlike physics or even economics, which have established a
+degree of monopoly over the right to speak authoritatively
+about their subjects, criminology operates in a culture which
+combines traditional and scientific modes of thought and
+action. Intuitive, ‘instinctive’, common-sense views about
+crime and criminals are still more persuasive to many –
+including many in positions of power and authority – than
+are the results of carefully executed empirical research’
+(Garland, 2002:23)
+
+---
+
+# How can we understand the social world?
+
+---
+
+# Criminological research
+
+* Research on incidence and distribution of criminal behaviour
+
+* Inquiries about the causes or correlates of criminal coduct
+
+* Clinical studies of individual delinquents
+
+* Ethnographies of deviant groups
+
+* Penological studies
+
+* Victim studies
+
+* The monitoring and evaluation of criminal justice agencies
+
+* Prediction of future criminal conduct
+
+* Study of processes of social reaction
+
+* Historical work on changing patterns of crime and control
+
+---
+
+# Types of Research
+
+1. Description (‘what is the extent of this thing? What does
+this look like?’): e.g. how many children experience
+parental imprisonment? At what ages? What happens
+when they go to visit their parent in prison?)
+
+2. Exploration/ interpretation (‘what is going on here?) e.g.
+How do children experience the imprisonment of a
+parent? (What does it feel like? Stigmatising?
+Embarrassing? A relief?) What meanings do children
+attach to the parent’s imprisonment?
+
+3. Explanation (‘what explains, predicts, accounts for?’) Why
+do some children adapt relatively well to parental
+imprisonment and others do not?
+
+4. Evaluation (‘what works / what impact?’: e.g. how does
+an intervention support resettlement of imprisoned
+fathers with their families (and why?)
+
+Note that almost any topic could be studied in any of these
+ways.
+
+---
+
+# Descriptive Research
+
+– Extent of an issue / prevalence of an issue
+• How many prisoners have mental health
+problems?
+• How many probation staff say that their
+morale is affected by having to fulfil targets?
+– The process of something
+• E.g. What are the dynamics of court cases?
+Who does what, at what point?
+– The experience of something
+• How do female prisoners experience release,
+and what are the biggest hurdles in
+
+---
+
+# Exploratory and interpretive research
+
+• Exploratory research - when there is little
+existing data– aim is to build insight into a
+phenomenon, (sometimes in order to develop
+research questions for more focussed research)
+• Often, few expectations about what you might
+find (i.e. No ‘hypotheses’ or highly specific
+research questions).
+• Usually this will also be fairly descriptive
+research, but will include some attempt to
+‘understand’, ‘interpret’ or ‘explain’
+(subjectively) the phenomenon, i.e. How and
+why do prisoners women use drugs: what does
+it mean to them? what does it do for them?
+
+---
+
+# Explanatory Research
+
+• Deductive
+– Starting with an explanation or
+theory and collecting data to test it.
+– E.g. Labeling Theory: Empirical Tests
+(Farrington and Murray, 2014)
+• Inductive
+– Exploratory. Developing the
+explanation from the data
+collected.
+– Why do victims often not press
+charges in cases of domestic
+violence? (Bennett, Goodman and
+Dutton, 1999)
+
+---
+
+# Predictive Research
+
+• E.g. using existing data (e.g.
+characteristics of cases) to predict
+an outcome
+• E.g. forecasting of domestic
+violence or prisoner resettlement.
+• Longitudinal and prospective
+research studies e.g Cambridge
+Study for Delinquency
+Development, Families and
+Imprisonment Research Study.
+
+---
+
+# Evaluation research
+
+• Is intervention X effective?
+• Even if you can answer this question, you still
+might not be able to explain why
+– E.g. Minneapolis DV Experiments: arrest
+worked in reducing domestic violence
+– Replication studies: arrest worked in some
+cases, but not others
+– Why? Research was not set up to study this.
+• Explanatory research is usually done AFTER or AS
+PART of evaluation research, using interviews and
+observations (‘what did people say about what
+was going on?’), or secondary data analysis (‘were
+there differences between the groups that might
+help us understand the results?)
+• Problem: if something was not considered
+important in the first place, there might not be any
+data on it. Often this results new studies, to test
+the new explanation.
+
+---
+
+# On research and theory
+
+“Theory is never completely isolated
+from problems of empirical research,
+any more than empirical research is
+free from theoretical assumptions”
+Layder (1994: vi)
+
+“Theory is inextricably involved in
+the process of data-gathering and
+data-interpretation” Bottoms
+(2007: 75)
+
+---
+
+(Image from Bottoms (2008:93) on positive and negative features of five approaches to criminology)
+
+---
+
+# Research Approaches
+
+Theoretical Perspective
+(view of the world and
+social life within it)
+
+e.g.
+Positivism
+Post-positivism
+Interpretivism
+(e.g. symbolic
+interactionism,
+phenomenology,
+hermeneutics)
+Constructivism
+Critical Inquiry
+Feminism
+Postmodernism
+Pragmatism
+
+
+Methodology
+(strategy or plan of action)
+
+Quantitative or qualitative
+e.g.
+(Quasi) experiments
+Surveys
+Ethnography
+Grounded Theory
+Action Research
+Discourse Analysis
+Case study
+Oral History
+
+Methods
+(techniques and procedures for
+collecting and analysing data)
+
+e.g.
+Interviews
+Focus Groups
+Observations
+Visual methods
+Secondary Data Analysis
+Documentary Analysis
+Questionnaires
+
+---
+
+# Qualitative and quantitative research methodologies
+
+### Distinct but complementary
+
+---
+
+# Quantitative research methodology
+
+* Has philosophical roots in positivism (and post-positivism) and the natural
+sciences
+
+* Sharp distinction between scientific issues and statements and normative
+ones
+
+* Focus on explanation, prediction, cause and effect
+
+* Interest in ‘laws’, general cases, patterns, generalisations…
+
+* Deductive analysis
+
+---
+
+# Examples of quantitative methods
+
+* Survey analysis
+* Experiments and quasi-experiments
+* Psychometrics
+* Text mining
+* Meta-analyses
+
+---
+
+# Qualitative research methodology
+
+* Focus on interpretation: how reality is understood and constructed by
+individuals/groups in social settings; how power is exercised
+
+* Approaches to research which prioritise the interpretations of actions and meanings
+over measurement and prediction
+
+* Aims to produce contextual/ideographic understandings (rather than nomothetic)
+
+(I'd disagree with this---maybe an emphasis but not overall aim)
+
+* Philosophically rooted in a broadly interpretivist and constructivist positions
+
+* Based on flexible methods of data generation
+
+* Inductive and deductive analysis
+
+---
+
+# Examples of qualitative methods
+
+* Interviews
+* Ethnography and participant observation
+* Focus groups
+* Document and discourse analysis
+* Case studies
+
+---
+
+# Mixed Methods Research
+
+Research in which the investigator collects and analyses
+data, integrates the findings, and draws inferences using
+both qualitative and quantitative approaches or methods
+in a single study or program of inquiry’ Tashakkori and
+Creswell (2007:4)
+
+Mixing approaches and methods is very common (real
+world research…)
+
+an intellectual and practical synthesis
+
+‘qualitative knowing’ about a setting may help to make
+sense of patterns in observations or statistical data;
+qualitative data analysis may help guide the formulation
+of hypotheses to be tested
+
+---
+
+# Limits of using single approaches?
+• The need for a full
+‘methodological
+toolbox’
+• Use the tool
+appropriate to the
+research
+topic/questions
+
+---
+
+# Truths and Representations
+
+Most research studies in the social sciences involve
+rather abstract concepts or constructs devised by
+the researcher or other members of the
+discipline, like intelligence, wealth, class, social
+mobility, knowledge of a language. This means
+that to investigate a problem, based on an
+abstract idea, a way of measuring that idea is
+going to be required. This will mean devising or
+selecting a measuring ‘instrument’ that will
+constitute an operational (observable) definition
+of this abstraction” (Black, 1993:14-15)
+
+“Without the ‘correcting influence’ of
+ethnographic or participant observation
+approaches, it is all too easy for those studying
+crime to lose their sense of reality and begin to
+perceive offenders not as people, but merely as
+‘problems’ or ‘numbers’” (Maguire, 2007: 149)
+
+“Curiosity has itself to be
+under scrutiny while being
+exercised; we must not be
+directed towards
+understanding other
+problems by inhibiting
+observation of our own
+curiosity” (Bion, 1976)
+
+---
+
+# Hierarchies of Knowledge
+
+“In any system of ranked groups, participants take it
+as given that members of the highest group have the
+right to define the way things really are. And since …
+matters of rank and status are contained in the
+mores, this belief has a moral quality. … Thus,
+credibility and the right to be heard are differently
+distributed through the ranks of the system”
+(Becker, 1967: 241)
+
+---
+
+# Thinking about Research Quality
+
+The Research Aims
+
+How well does the author
+convince of the relevance and
+topicality of the research?
+
+Does it have relevance for
+theoretical understanding/
+policy development/practice?
+
+How well will the study
+contribute to existing
+research knowledge?
+
+---
+
+# Research Questions/Hypotheses
+
+What are the key research questions/
+hypotheses?
+
+How well are they justified? Do they respond
+to gaps in/or developing
+theory/policy/practice?
+
+How clearly are the key concepts /constructs
+defined? Are they convincing?
+
+How will the research contribute to existing
+knowledge? (How effectively does it draw on
+previous research findings or reference
+existing academic debates?)
+
+---
+
+# The Research Design
+
+Is the research design
+explained and
+justified?
+
+Does it allow the
+research questions or
+hypotheses to be
+answered effectively?
+
+---
+
+# Research Sample
+
+How was the sample selected
+and recruited?
+
+What is the make-up of the
+actual sample? Does it reflect
+the intended sample?
+
+Are strengths and limitations of
+the sample acknowledged?
+
+How effectively will data from
+this sample answer the research questions or hypotheses?
+
+---
+
+# Data Collection Methods
+
+Are the methods of data
+collection likely to
+generate data to answer
+the research questions
+effectively?
+
+Are the limitations as well
+as the strengths of the
+methods explained?
+
+
+How rigorous was the methodological approach?
+
+---
+
+# Mixed Methods Studies
+
+Is there a convincing justification for using a mixed
+methods approach to the research question?
+
+How well has the design been explained in terms of
+the purpose, priority, and sequence of methods?
+
+How well has each method been presented in terms
+of sampling, data collection and analysis?
+
+How effectively have the methods been integrated?
+
+Are there any limitations of one method associated
+with the presence of the other method?
+
+O’Cathain, Murphy, and Nicholl (2008)
+
+---
+
+# Ethics
+
+Is there a discussion of ethical
+issues?
+
+Any concerns about
+informed consent?
+
+Has any potential for harm
+to participants been
+acknowledged or
+addressed?
+
+Reference to ethical
+standards/guidelines?
+
+---
+
+# Data Analysis
+
+How have the data been
+analysed?
+
+Are the processes of analysis
+described fully? Are they
+convincingly rigorous?
+
+Do they make suitable use of
+the data collected?
+
+Is it clear how analytical
+themes were derived from the
+data?
+
+---
+
+# Research Findings
+
+Quantitative Research 
+
+Are the findings reliable?
+(If you ran the research again would you
+get the same findings?)
+
+Are they valid?
+(Do they measure/evaluate what was
+intended?)
+
+Are they generalisable?
+To what extent can the findings applicable
+across other populations?
+
+
+Qualitative Research
+
+Are the findings dependable?
+(stability and consistency of research
+approach)
+
+Are they credible?
+(Are they believable?)
+
+Are they transferable?
+To what extent can the findings be applied
+to other situations?
+
+---
+
+# Research Conclusions
+– Are the conclusions justifiable
+in light of the research
+findings?
+– Do they answer the research
+questions?
+– Are other conclusions possible
+/considered?
+– Are claims to generalisability
+appropriate?
+– Are there any stakeholder
+interests that may have shaped
+the conclusions of the
+research?
+– Are the strengths and
+limitations of the research
+acknowledged?
+
+---
+
+# The Criminological Imagination
+
+Where will you take it?
+
+---
+
+# Discussion Groups
+
+How did you find the readings for the seminar?
+
+Design a research project you might develop from the graph or the news items on the following slides?
+
+How you would ensure that this project would be of high quality?
+
+---
+
+(Media stories of all different sorts on crime)
+
+---
+
+(Covid in Scotland --- imapct of lockdown on crime)
+
+What research
+question and
+project might
+you design
+based on this
+news bulletin?
+
+---
+
+# Prison
+Population in
+England and
+Wales
+
+(graph showing aging prison pop)
+
+---
+Wrap-Up
+
+The Effect readings for next week are a bit more methods and design—they're about quantitative data and quantitative relationships. They're a quick intro to what people are talking about when they say distributions, correlations, and controlling for variables. It may seem odd to focus on linear models, but as it turns out, most things in applied quantitative research are well approximated by linear models.
