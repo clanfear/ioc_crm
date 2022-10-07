@@ -7,7 +7,7 @@ date: "2022-10-11"
 draft: false
 ---
 
-[Lecture Slides](https://clanfear.github.io/ioc_iqa/_lectures/1_research-questions/slides_research-questions.html)
+[Lecture Slides]()
 
 Reading:
 
@@ -22,7 +22,5 @@ Reading:
 
 * Bottoms (2000) ‘The relationship between theory and research in criminology’ in R. King and E. Wincup (eds), *Doing Research on Crime and Justice*, Oxford: OUP, Chapter 3. pp. 15-60.
    * Download from Moodle
-
-Read this too:
 
 * Schwartz, M.A. (2008) 'The importance of stupidity in scientific research' *Journal of Cell Science*, 121(11): 1771 [https://doi.org/10.1242/jcs.033340](https://doi.org/10.1242/jcs.033340)

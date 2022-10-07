@@ -1,4 +1,4 @@
-# Introduction to Quantitative Analysis
+# Criminological Research Methods
 
-[Visit the course site here](https://clanfear.github.io/ioc_iqa/_site/index.html)
+[Visit the course site here](https://clanfear.github.io/ioc_crm/_site/index.html)
  

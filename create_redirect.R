@@ -1,0 +1,9 @@
+body_content <- 
+  '<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting to https://clanfear.github.io/ioc_crm/_site/index.html</title>
+<meta http-equiv="refresh" content="0; URL=https://clanfear.github.io/ioc_crm/_site/index.html">
+<link rel="canonical" href="https://clanfear.github.io/ioc_crm/_site/index.html">'
+fileConn<-file("index.html")
+writeLines(body_content, fileConn)
+close(fileConn)

@@ -2,7 +2,7 @@ render_lecture <- function(x, purl = TRUE){
   input_paths <-  sort(list.files("./_lectures/", 
                                   pattern = "^slides.*Rmd$", 
                                   recursive = TRUE, 
-                                  full.names = TRUE))[x+1]
+                                  full.names = TRUE))[x]
   r_out_paths <-  stringr::str_remove(input_paths, "md$")
   unlink(r_out_paths, recursive = FALSE)
   purrr::walk2(.x = input_paths, .y = r_out_paths, 

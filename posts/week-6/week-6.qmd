@@ -1,9 +1,9 @@
 ---
-title: "Week 6"
-description: "Post description"
-author: "Charles Lanfear"
+title: "Week 6: Ethnographic and Observational Research"
+description: ""
+author: "Arushi Garg"
 date: "2022-11-15"
 draft: false
 ---
 
-This is a test for the first lecture
+Forthcoming
