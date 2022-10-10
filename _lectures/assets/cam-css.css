@@ -115,7 +115,7 @@ a, a > code {
 }
 
 .title-slide {
-  background-color: var(--primary);
+  background-color: #e95420;
   background-image: url(ioc_white.svg), url(ioc_entrance_crop.jpg);
   background-position: center center, center bottom;
   background-size: contain, contain;
