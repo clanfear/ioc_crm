@@ -180,46 +180,75 @@ What makes a research question *good*?
 
 ---
 
-# Sources of Data / Research
+# Sources of Research
 
-* Academic researchers
+.pull-left[
+Academic Researchers
 
-* Contract researchers
+Contract Researchers
 
-* Government and related departments
+* RTI International
 
-   * Ministry of Justice
-   * Home Office,
-   * Youth Justice Board
-   * Inspectorates
+Government and Related Orgs
 
-* Campaign Organisations
+* Ministry of Justice
+* Home Office
+* Youth Justice Board
+* Inspectorates
 
-   * Prison Reform Trust
-   * Howard League
+Campaign Organisations
 
-???
+* Prison Reform Trust
+* Howard League for Penal Reform
+]
 
-Critical evaluation of sources---agenda determines what they research
+--
+
+.pull-right[
+Agendas influence research
+
+* What to research
+* How to research
+* How to interpret
+
+*This includes academics*
+]
+
+---
+
+# What is Generated?
+
+Descriptions
+
+* Patterns and prevalences
+* Descriptive narratives
+
+--
+
+Associations and Interpretations
+
+* Risk and protective factors
+* Interpretive narratives
+
+--
+
+Explanations / Explanatory Frameworks
+
+* Theory
+* Theory testing and causal research 
+
+--
+
+Evaluations and Critiques
+
+* Tests of policy and interventions
+* Normative critique or advocacy
 
 ---
 
-# What knowledge is generated?
+# Crime as a Subject
 
-* Descriptive statistics
-
-* Risk and protective factors 
-
-* Explanations / Explanatory Frameworks
-
-* Descriptions
-
-* Interpretations
-
-* Critiques
-
-
----
+Garland (2002:23):
 
 > Expert, research-based knowledge about crime and criminals
 still competes with views of the subject which are not
@@ -235,7 +264,7 @@ action. Intuitive, ‘instinctive’, common-sense views about
 crime and criminals are still more persuasive to many –
 including many in positions of power and authority – than
 are the results of carefully executed empirical research’
-(Garland, 2002:23)
+
 
 ???
 
@@ -253,7 +282,6 @@ Deterrence example: Science says harsh punishment doesn't do much, but public an
 
    * Incidence and distribution of criminal behaviour
    * Causes or correlates of criminal conduct
-   * Clinical studies of individual delinquents
    * Ethnographies of deviant groups
 
 --
@@ -261,8 +289,7 @@ Deterrence example: Science says harsh punishment doesn't do much, but public an
 * Consequences of crime (e.g., victimizaton)
 
    * Victim studies
-   * Physical and mental wellbeing
-   * Intergenerational transmission
+   * Effects on physical and mental well-being
 
 --
 
@@ -270,7 +297,6 @@ Deterrence example: Science says harsh punishment doesn't do much, but public an
 
    * Penological studies
    * Monitoring and evaluation of criminal justice
-   * Social control
    * Criminal law<sup>1</sup>
 
 
@@ -280,15 +306,24 @@ Deterrence example: Science says harsh punishment doesn't do much, but public an
 
 # Research Design
 
-Social science research is about understanding how the world works
+**Research design** is *strategy* for answering a question:
+
+* What data are needed
+* How to obtain those data
+* How to analyze data
+* How to interpret results
 
 --
 
-Good **research design** is that which can answer good research questions
+Good **research design** is that which can answer your (good) research question
 
 --
 
-There are many different ways to approach topics
+There are many different types of research
+
+--
+
+Your choice should be determined by your *question*
 
 ---
 
@@ -297,11 +332,11 @@ There are many different ways to approach topics
 * Description (‘what does this look like?’):
 
    * How do crime rates differ across neighbourhoods?
-   * How does exposure to violence vary over the life course? Over historical periods?
+   * How does exposure to violence vary over the life course?
 
 --
 
-* Exploration / interpretation (‘what is going on here?)
+* Exploration / Interpretation (‘what is going on here?)
 
    * How do residents feel about crime in their neighbourhoods?
    * Are children exposure to violence likely to have other negative experiences and outcomes?
@@ -311,18 +346,18 @@ There are many different ways to approach topics
 * Explanation (‘what explains or accounts for?’)
 
    * Do strong interpersonal networks reduce neighbourhood crime?
-   * Does being exposed to violence in childhood make young adults more likely to carry weapons?
+   * Does childhood victimization increase youth weapon carrying?
 
 --
 
 * Evaluation (‘what works?’)
 
    * Does creating a neighbourhood organization reduce crime?
-   * Does a violence reduction program for at-risk young adults reduce weapon carrying?
+   * Does a youth violence reduction program reduce weapon carrying?
 
 ---
 
-# Descriptive Research
+# Descriptive
 
 Many different forms of description
 
@@ -344,18 +379,14 @@ Many different forms of description
 
 * Experiences
 
-   * How do female prisoners experience release?
+   * How do incarcerated women experience reintegration?
    * How do crime victims feel about testifying in court?
 
 ---
 
-# Exploratory and Interpretive Research
+# Exploratory / Interpretive
 
 * Building insight into phenomenon with limited existing data
-
---
-
-* Often to develop research questions for explanatory research
 
 --
 
@@ -372,6 +403,10 @@ Many different forms of description
    * Meaning
    * Potential explanations
 
+--
+
+* Often used to develop research questions for explanatory research
+
 ---
 
 # Explanatory Research
@@ -385,7 +420,7 @@ Many different forms of description
 * Deductive
 
    * Start with a theory
-   * Collecting data to test it
+   * Collect data to test it
    * i.e., hypothetico-inductive model
 
 --
@@ -393,14 +428,20 @@ Many different forms of description
 * Inductive
 
    * Start collecting data
-   * Developing theory from data
+   * Develop theory from data
    * e.g., grounded theory
+
+--
+
+.text-center[
+*The quantitative half of this course focuses heavily on explanatory research*
+]
 
 ---
 
 # Evaluation Research
 
-* Is this intervention effective?
+* Is this intervention or policy *effective*?
 
 --
 
@@ -408,10 +449,10 @@ Many different forms of description
    
    * Data may not be collected on what turns out to be important *later*
    
-   * E.g. Minneapolis DV Experiments
+   * E.g. Minneapolis Domestic Violence Experiment
       * Arrest worked in reducing domestic violence
       * Replication studies found mixed results
-      * Research design can't test why
+      * Research design doesn't reveal *why*
 
 --
 
@@ -427,6 +468,23 @@ Many different forms of description
 > Theory is never completely isolated from problems of empirical research, any more than empirical research is free from theoretical assumptions (Layder 1994:vi)
 
 > Theory is inextricably involved in the process of data-gathering and data-interpretation (Bottoms 2007:75)
+
+--
+
+*There is no atheoretical research*
+
+--
+
+Research makes assumptions about:
+
+* What is worth studying
+* What questions to ask
+* How to measure
+* How to analyze
+* What counts as evidence
+
+
+
 
 ---
 
@@ -451,15 +509,18 @@ Also recognize that researchers from very different approaches aren't *wrong*, t
 library(tidyverse)
 library(knitr)
 tribble(
-  ~ `Theoretical Perspective`,
+  ~ `Paradigm`,
   ~ `Methodology`,
   ~ `Methods`,
   "View of the world and social life within it", "Strategy or plan of action", "Techniques for collecting and analysing data",
 "Post-positivism<br>Interpretivism<br>Constructivism<br>Feminism<br>Postmodernism<br>Pragmatism",
-"Causal Inference<br>Ethnography<br>Grounded Theory<br>Action Research<br>Experiments<br>Case Studies<br>Oral History",
-"Interviews<br>Focus Groups<br>Observations<br>Visual Methods<br>Documentary Analysis<br>Questionnaires<br>Structural Models"
+"Ethnography<br>Grounded Theory<br>Action Research<br>Experiments<br>Case Studies<br>Oral History",
+"Interviews<br>Focus Groups<br>Observation<br>Documentary Analysis<br>Questionnaires<br>Regression"
 ) |> kable()
 ```
+
+.footnote[**Paradigm** here is *metatheory* or scientific philosophy; related to epistemology]
+
 
 ---
 class: inverse
@@ -506,6 +567,9 @@ class: inverse
 
 # Quantitative Methods
 
+.pull-left[
+Examples
+
 * Survey data analysis
 
 * Experiments and quasi-experiments
@@ -515,6 +579,10 @@ class: inverse
 * Text mining
 
 * Meta-analyses
+]
+.pull-right[
+![:width 80%](img/sampson.jpg)
+]
 
 ---
 
@@ -545,6 +613,9 @@ class: inverse
 
 # Qualitative Methods
 
+.pull-left[
+Examples
+
 * Interviews
 
 * Ethnography and participant observation
@@ -554,12 +625,14 @@ class: inverse
 * Document and discourse analysis
 
 * Case studies
+]
+.pull-right[
+![](img/suttles.jpg)
+]
 
 ---
 
 # Mixed Methods Research
-
-* Intellectual and practical synthesis:
 
 > Research in which the investigator collects and analyses
 data, integrates the findings, and draws inferences using
@@ -569,91 +642,50 @@ Creswell 2007:4)
 
 --
 
-* Common in applied research
+.pull-left[
+* Intellectual and practical synthesis
 
---
+* Common in applied research
 
 * Qualitative data analysis helps:
 
    * Make sense of observations or statistical data
    * Guide the formulation of hypotheses to be tested
 
----
+]
 
-# A Full 'Methodological Toolbox'
+.pull-right[
+![](img/stjean.png)
+]
 
-Use the tool appropriate to the research topic/questions
 
-
-
----
-
-# Truths and Representations
-
-> Most research studies in the social sciences involve
-rather abstract concepts or constructs devised by
-the researcher or other members of the
-discipline, like intelligence, wealth, class, social
-mobility, knowledge of a language. This means
-that to investigate a problem, based on an
-abstract idea, a way of measuring that idea is
-going to be required. This will mean devising or
-selecting a measuring 'instrument' that will
-constitute an operational (observable) definition
-of this abstraction (Black, 1993:14-15)
-
-> Without the 'correcting influence' of
-ethnographic or participant observation
-approaches, it is all too easy for those studying
-crime to lose their sense of reality and begin to
-perceive offenders not as people, but merely as
-‘problems’ or ‘numbers’ (Maguire, 2007: 149)
-
-> Curiosity has itself to be
-under scrutiny while being
-exercised; we must not be
-directed towards
-understanding other
-problems by inhibiting
-observation of our own
-curiosity (Bion, 1976)
 
 ---
 
-# Hierarchies of Knowledge
+# A Methodological Toolbox
 
-> In any system of ranked groups, participants take it
-as given that members of the highest group have the
-right to define the way things really are. And since …
-matters of rank and status are contained in the
-mores, this belief has a moral quality. … Thus,
-credibility and the right to be heard are differently
-distributed through the ranks of the system (Becker, 1967: 241)
+Some *specialization* is beneficial, even necessary
+
+--
+
+But overspecialization is limiting, both *intellectually* and *professionally*
+
+--
+
+It is important to be able to:
+
+* Interpret findings of any kind
+
+* Collaborate with others with different specialties
+
+* Critique research using any approach
+
+* View projects from alternative perspectives
 
 
 ---
 class: inverse
-# Thinking about Research Quality
-
-
----
-# Research Aims
-
-Does the author convince us of the relevance and topicality of the research?
-
---
-
-Relevance for:
-
-* Theoretical understanding
-
-* Policy development
-
-* Practice
-
---
-
-*How well does the study contribute to existing knowledge?*
+# Research Quality
 
 ---
 
@@ -661,11 +693,19 @@ Relevance for:
 
 * What are the key research questions/ hypotheses?
 
+--
+
 * How well are they justified? 
-   * Do they respond to gaps theory?
+
+   * Do they respond to gaps theory or evidence?
+   * Do they improve our ability to do research?
    * Do they inform policy or practice?
 
+--
+
 * How clearly are the key concepts /constructs defined? Are they convincing?
+
+--
 
 * How will the research contribute to existing knowledge?
 
@@ -678,8 +718,10 @@ Relevance for:
 
 * Is the research design explained and justified?
 
-   * Is it described in full detail?
-   * Does it reference standards?
+   * Is it described in sufficient detail?
+   * Does it reference established standards?
+
+--
 
 * Does it allow the research questions or hypotheses to be answered effectively?
 
@@ -687,46 +729,61 @@ Relevance for:
 
 ---
 
-# Research Sample
+# Data Sampling
 
 How was the sample selected and recruited?
 
-What is the make-up of the actual sample? Does it reflect the intended sample?
+--
 
-Are strengths and limitations of the sample acknowledged?
+What is the make-up of the actual sample?
 
-How effectively will data from this sample answer the research questions or hypotheses?
+* Does it reflect the intended sample?
+* Are limitations of the sample acknowledged?
+
+--
+
+Does the sample reflect the research question or hypotheses?
+
+* Can results obtained from this sample answer the question?
 
 ---
 
-# Data Collection Methods
+# Data Collection
 
-Are the methods of data collection likely to generate data to answer the research questions effectively?
+Can this generate data to answer the research questions?
 
-Are the limitations as well as the strengths of the methods explained?
+--
+
+Is this approach better than alternative approaches?
+
+* Do the strengths justify the approach?
+* Are the limitations explained?
+
+--
 
 How valid is their measurement strategy?
 
-How rigorous was the methodological approach?
-
-
-
+* Do the measurements capture what is intended?
+* Do they refer to existing measurement standards?
+* Do they address limitations?
 
 ---
 
 # Mixed Methods Studies
 
-Is there a convincing justification for using a mixed methods approach to the research question?
+Is there a convincing justification for a mixed methods approach?
 
-How well has the design been explained in terms of the purpose, priority, and sequence of methods?
+* Are both qualitative and quantitative evidence needed to answer the question?
+* Do the approaches complement each other?
+   * Does one method compensate for limitations of the other?
 
-How well has each method been presented in terms of sampling, data collection and analysis?
+--
 
-How effectively have the methods been integrated?
+How well has the design been explained?
 
-Are there any limitations of one method associated with the presence of the other method?
-
-O’Cathain, Murphy, and Nicholl (2008)
+* How are sampling, data collection and analysis explained?
+* Do they complement each other?
+* How effectively have the methods been integrated?
 
 ---
 
@@ -734,9 +791,15 @@ O’Cathain, Murphy, and Nicholl (2008)
 
 Is there a discussion of ethical issues?
 
+--
+
 Any concerns about informed consent?
 
+--
+
 Has any potential for harm to participants been acknowledged or addressed?
+
+--
 
 Reference to ethical standards/guidelines?
 
@@ -746,11 +809,23 @@ Reference to ethical standards/guidelines?
 
 How have the data been analysed?
 
-Are the processes of analysis described fully? Are they convincingly rigorous?
+* Are the methods established?
+* If the approach is unusual, is it justified?
+
+--
+
+Are the processes described fully? 
+
+* Are they convincingly rigorous?
+* Are they **reproducible**?
+* Is it clear how results were derived from the data?
+
+--
 
 Do they make suitable use of the data collected?
 
-Is it clear how analytical themes were derived from the data?
+* Is the examination as thorough as is warranted by the design?
+* Are they attempting to do more than is possible with the data?
 
 ---
 
@@ -758,45 +833,29 @@ Is it clear how analytical themes were derived from the data?
 
 .pull-left[
 
-### Quantitative Research 
-]
-.pull-right[
+### Quantitative Research
 
-### Qualitative Research
-
-]
-
---
-
-.pull-left[
 Are they **valid**—measuring what was intended?
-]
-.pull-right[
-Are they **credible** (believable)?
-]
 
---
-
-.pull-left[
 Are the findings **reliable**?
 
 * If methods are followed again, would the results be the same?
-]
-.pull-right[
 
-Are the findings **dependable**?
-
-* Would results be repeated provided the same participants, coders, and context?
-]
-
---
-
-.pull-left[
 Are they **generalisable**?
 
 * To what extent can the findings applicable across other populations?
 ]
+
 .pull-right[
+
+### Qualitative Research
+
+Are they **credible** (believable)?
+
+Are the findings **dependable**?
+
+* Would results be repeated provided the same participants, coders, and context?
+
 Are they **transferable**?
 
 * To what extent can the findings be applied to other situations?
@@ -808,22 +867,27 @@ Are they **transferable**?
 
 * Are the conclusions justifiable in light of the research findings?
 
+--
+
 * Do they answer the research questions?
+
+--
 
 * Are other conclusions possible/considered?
 
+--
+
 * Are claims to generalisability appropriate?
 
-* Are there any stakeholder interests that may have shaped the conclusions of the research?
+--
 
-* Are the strengths and limitations of the research acknowledged?
+* Are there any stakeholder interests that may have shaped the conclusions of the research?
 
 ---
 
 # Have a Chat
 
-* 
-
+![](img/knife-crime.png)
 
 ---
 class: inverse
@@ -833,11 +897,7 @@ class: inverse
 ---
 # Causality
 
-Scientific research is about understanding how the world works
-
---
-
-Scientific *theories* are causal *explanations* (beliefs) about how the world works
+Scientific *theories* are *explanations* (beliefs) about how the world works
 
 * $y$ occurs because $x$
 
@@ -850,15 +910,14 @@ Quantitative half of this course emphasizes **causality**
 
 --
 
-Causal approaches usually follows **hypothetico-deductive** framework
+Causal approaches usually follow **hypothetico-deductive** framework
 
 --
 
 Causality isn't necessarily about numbers, nor factors that are physical, behavioural, or even *directly* observable:
 
    * *Meanings* can be cause actions
-
-   * Experiences can generate *meanings*
+   * Experiences can cause *meanings*
 
 ???
 
@@ -875,14 +934,14 @@ My own theoretical work drags routine activity and ecological theories kicking a
 # Broken Windows
 
 
-Serious crime is more common in neighbourhoods with disorder⁠—litter, panhandlers, and loitering youth
+An Observation: Serious crime is more common in neighbourhoods with disorder, such as litter, panhandlers, and loitering youth
 
 --
 
-.pull-left-60[
-Broken windows thesis:
+The Boken Windows Thesis:
 
-* Offenders see disorder as a sign of low social control
+.pull-left-60[
+* Offenders interpret disorder as a sign of low social control
 
    * If no one stops littering or pan-handling, no one will stop robbery or drug dealing
    
@@ -896,7 +955,7 @@ Broken windows thesis:
 --
 
 .text-center[
-At the neighbourhood level, disorder causes crime
+A Proposition: At the neighbourhood level, disorder *causes* crime
 ]
 
 --
@@ -952,11 +1011,13 @@ Sampson & Raudenbush (1999): What if low social control causes both disorder and
 .pull-left[
 * Measure disorder and social control in 80 Chicago neighborhoods
 
-* Test if disorder predicts crime when social control is *held constant*
+* Test if disorder predicts crime when social control is *held constant*<sup>1</sup>
 ]
 .pull-right[
 ![](img/sampson_raudenbush.png)
 ]
+
+.footnote[[1] We'll learn about holding things constant soon!]
 
 --
 
@@ -976,6 +1037,7 @@ No effect of disorder on crime once accounting for social control
 Broken windows thesis says offenders **interpret** disorder as a sign of low social control.
 
 --
+
 .pull-left-60[
 St. Jean (2007):
 
@@ -1000,6 +1062,10 @@ Offenders don't care about disorder, they care about **opportunity**, of which s
 ]
 
 ---
-Wrap-Up
+# Wrap-Up
 
-The Effect readings for next week are a bit more methods and design—they're about quantitative data and quantitative relationships. They're a quick intro to what people are talking about when they say distributions, correlations, and controlling for variables. It may seem odd to focus on linear models, but as it turns out, most things in applied quantitative research are well approximated by linear models.
+Readings for next week:
+
+* Focused on quantitative data and relationships
+* Building up to causal thinking
+* There's a lot—get started early!
