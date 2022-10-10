@@ -17,6 +17,11 @@ output:
 
 Population, sample, sampling, observations
 
-Latent variables
+Latent variables?
 
 Formative vs. reflective measurements
+
+Operationalization vs conceptualization
+* Exercise? Come up with measures? Critique measures?
+
+Independent vs dependent variables? Or save until later?
