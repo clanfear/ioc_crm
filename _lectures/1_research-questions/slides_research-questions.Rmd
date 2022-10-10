@@ -31,9 +31,15 @@ knitr::opts_chunk$set(eval=TRUE, echo=TRUE, message=TRUE, warning=TRUE)
    
    * Evaluation and interpretation
 
-* Recognize major debates and challenges in criminological research
+--
+
+* Recognize major challenges in criminological research
+
+--
 
 * Learn to critically evaluate research
+
+--
 
 * **Help you write a robust research proposal**
 
