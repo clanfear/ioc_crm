@@ -7,7 +7,7 @@ date: "2022-10-11"
 draft: false
 ---
 
-Lecture Slides (forthcoming)
+[Lecture Slides](https://clanfear.github.io/ioc_crm/_lectures/slides_research-questions.html)
 
 Reading:
 
