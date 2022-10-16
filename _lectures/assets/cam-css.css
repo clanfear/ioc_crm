@@ -33,6 +33,11 @@
   --table-band-color: #8A1538;
 }
 
+table {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
 body {
   font-family: 'Open Sans', avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   font-weight: normal;
@@ -53,6 +58,10 @@ body {
 }
 p {
   margin: 16px 0;
+}
+th, td {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .remark-slide-content {
@@ -158,8 +167,8 @@ blockquote {
   border-bottom: 1px solid #666;
 }
 .remark-slide table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: #003C714D }
+
+
 table.dataTable tbody {
   background-color: #FFFFFF;
   color: #272822;
@@ -214,7 +223,7 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 
 .text-big-center {
   text-align: center;
-  font-size: 10rem;
+  font-size: 8rem;
 }
 .text-center {
   text-align: center;

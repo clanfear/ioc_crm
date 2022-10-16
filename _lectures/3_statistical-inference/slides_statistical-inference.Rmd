@@ -1,0 +1,71 @@
+---
+title: "Statistical Inference"
+subtitle: "CRM Lecture 3"
+author: "Charles Lanfear"
+date: "25 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+output:
+  xaringan::moon_reader:
+    css: "../assets/cam-css.css"
+    lib_dir: libs
+    nature:
+      highlightStyle: tomorrow-night-bright
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "../assets/cam_macros.js"
+      titleSlideClass: ["center","top"]
+---
+
+# Today
+
+---
+
+# Inferential Statistics
+
+Using samples to learn something about populations
+
+Typically use **statistical tests**
+
+Sometimes parts of **models**
+
+---
+
+Hypothesis Testing
+
+---
+
+# Null-Hypothesis Significance Testing
+
+Null hypothesis: There is no relationship or effect
+Alternative: There is
+
+Use data to test
+
+We either reject or fail to reject the null; we do not *accept* the null
+
+In reality, things are pretty always at least *a little related somehow*
+
+---
+
+# Frequentism
+
+Based on logic of random sampling and experiments
+
+Sample infinitely, and results follow a known distribution
+
+---
+
+# p-values
+
+The probability of observing our result if the null hypothesis were true.
+
+
+Not the probability our result is false; it either is, or it isn't
+
+
+
+
+---
+
+# Choosing Tests
+
+Sometimes you get a chart 

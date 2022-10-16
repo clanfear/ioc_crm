@@ -11,4 +11,4 @@ render_lecture <- function(x, purl = FALSE){
   }
   purrr::walk(.x = input_paths, ~rmarkdown::render(.x, encoding = "UTF-8"))
 }
-render_lecture(1)
+render_lecture(2)

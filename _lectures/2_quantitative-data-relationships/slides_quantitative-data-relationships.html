@@ -1,45 +1,52 @@
----
-title: "Quantitative Data and Relationships"
-subtitle: "CRM Lecture 2"
-author: "Charles Lanfear"
-date: "18 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
-output:
-  xaringan::moon_reader:
-    css: "../assets/cam-css.css"
-    lib_dir: libs
-    nature:
-      highlightStyle: tomorrow-night-bright
-      highlightLines: true
-      countIncrementalSlides: false
-      beforeInit: "../assets/cam_macros.js"
-      titleSlideClass: ["center","top"]
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Quantitative Data and Relationships</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Charles Lanfear" />
+    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <link rel="stylesheet" href="../assets/cam-css.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, top, title-slide
+
+.title[
+# Quantitative Data and Relationships
+]
+.subtitle[
+## CRM Lecture 2
+]
+.author[
+### Charles Lanfear
+]
+.date[
+### 18 Oct 2022<br>Updated: 16 Oct 2022
+]
+
 ---
 
-```{r, include=FALSE}
-library(tidyverse)
-library(janitor)
-knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, eval=TRUE, dev = "svg")
-set.seed(7)
-```
+
+
 
 
 # Last Week
 
-&nbsp;
+&amp;nbsp;
 
 ## Was it interesting?
 
-&nbsp;
+&amp;nbsp;
 
 ## Was it almost fun?
 
 ---
 class: inverse
 
-&nbsp;
+&amp;nbsp;
 
 .text-big-center[
-Sorry about today!
+LOL, sorry about today!
 ]
 
 .footnote[
@@ -68,7 +75,7 @@ class: inverse
 
 # Populations and Samples
 
-&nbsp;
+&amp;nbsp;
 
 ![:width 70%](img/sampling.png)
 
@@ -111,7 +118,7 @@ class: inverse
 ---
 # Example
 
-> To estimate the level of crime victimisation in the United Kingdom, the British Crime Survey surveys a random sample of 3,000 UK household residents per month and asks them about incidents of victimisation (e.g., burglary) in the past year.
+&gt; To estimate the level of crime victimisation in the United Kingdom, the British Crime Survey surveys a random sample of 3,000 UK household residents per month and asks them about incidents of victimisation (e.g., burglary) in the past year.
 
 --
 
@@ -171,7 +178,7 @@ Samples are **representative** when they have a similar composition to the popul
 
 --
 
-&nbsp;
+&amp;nbsp;
 
 .text-center[
 
@@ -185,7 +192,7 @@ class: inverse
 
 # Crime Data
 
-&nbsp;
+&amp;nbsp;
 
 ![:width 80%](img/chicago.png)
 
@@ -252,7 +259,7 @@ Not all reported are recorded by police
 Observed Crime Rate = Actual Rate ∗ Probability of Reporting
 
 
-> According to the U.C.R., the incidence of rape nearly doubled from 1973 to 1990. The N.C.V.S., by contrast, shows that it declined by around forty per cent during the same period. Researchers... found that the upward trend in the U.C.R. data correlated with upticks in the number of female police officers, and with the advent of rape crisis centers and reformed investigative styles. It could be, in short, that a modernized approach to the policing of rape drastically increased the frequency with which it was reported while reducing its incidence.
+&gt; According to the U.C.R., the incidence of rape nearly doubled from 1973 to 1990. The N.C.V.S., by contrast, shows that it declined by around forty per cent during the same period. Researchers... found that the upward trend in the U.C.R. data correlated with upticks in the number of female police officers, and with the advent of rape crisis centers and reformed investigative styles. It could be, in short, that a modernized approach to the policing of rape drastically increased the frequency with which it was reported while reducing its incidence.
 
 [Matthew Hutson. 2020. "The Trouble with Crime Statistics." The New Yorker](https://www.newyorker.com/culture/annals-of-inquiry/the-trouble-with-crime-statistics)
 
@@ -335,7 +342,7 @@ That is, for a given opportunity, was the crime...
 --
 
 .pull-right[
-And was the offender...<br><br>
+And was the offender...&lt;br&gt;&lt;br&gt;
 
 * Seen or found?
 * Informally sanctioned?
@@ -354,7 +361,7 @@ class: inverse
 
 # Measurement
 
-&nbsp;
+&amp;nbsp;
 
 ![:width 28%](img/craniograph.jpg)
 
@@ -378,10 +385,10 @@ class: inverse
 ---
 # Types of Measures
 
-&zwj;**Observables**: Objective, externally measurable variables
+&amp;zwj;**Observables**: Objective, externally measurable variables
 
    * Individual height, occupation, stated opinions
-   * Neighborhood population, geographical area, crime rate<sup>1</sup>
+   * Neighborhood population, geographical area, crime rate&lt;sup&gt;1&lt;/sup&gt;
 
 .footnote[[1] Hard to measure doesn't mean unobservable!]
 
@@ -403,7 +410,7 @@ In Criminology, we're *very often* interested in unobservables.
 ---
 # Measurement Principles
 
-&zwj;**Conceptualization**: *What is X?*
+&amp;zwj;**Conceptualization**: *What is X?*
 
 * Define what a measure constitutes
 * Define relations to other concepts
@@ -411,12 +418,12 @@ In Criminology, we're *very often* interested in unobservables.
 
 --
 
-&zwj;**Operationalization**: *How do I measure X?*
+&amp;zwj;**Operationalization**: *How do I measure X?*
 
 * Define observable(s)—**indicators**—that are related to the concept
 * If single indicator, it is a **proxy** for the concept
    + e.g. *Years of School* is a proxy for *Education*
-* If multiple indicators, they can be combined into *composite* measure<sup>1</sup>
+* If multiple indicators, they can be combined into *composite* measure&lt;sup&gt;1&lt;/sup&gt;
 
 --
 
@@ -430,11 +437,11 @@ When reading articles, pay attention to how things are measured!
 
 ### Self-Control
 
-&zwj;Concept: The ability to delay gratification, tolerate frustration, and carefully consider before acting.
+&amp;zwj;Concept: The ability to delay gratification, tolerate frustration, and carefully consider before acting.
 
 --
 
-&zwj;Indicators: *Would you agree, neither agree nor disagree, or disagree that you...*
+&amp;zwj;Indicators: *Would you agree, neither agree nor disagree, or disagree that you...*
 
    * "Get upset when you have to wait for something?"
    * "Act without stopping to think?"
@@ -444,14 +451,14 @@ When reading articles, pay attention to how things are measured!
    
 --
 
-&zwj;Assumption: *Shared variation in the indicators represents underlying self-control.*
+&amp;zwj;Assumption: *Shared variation in the indicators represents underlying self-control.*
 
 ---
 # Neighborhood Example
 
 ### Child-Centered Informal Social Control
 
-&zwj;Concept: The shared neighborhood norms and expectations for intervening against child misbehavior.
+&amp;zwj;Concept: The shared neighborhood norms and expectations for intervening against child misbehavior.
 
 ???
 
@@ -463,7 +470,7 @@ Isn't about what respondent would do--is about what people around would do
 
 --
 
-&zwj;Indicators: *How likely<sup>1</sup> is it that people in your neighborhood would stop it if...*
+&amp;zwj;Indicators: *How likely&lt;sup&gt;1&lt;/sup&gt; is it that people in your neighborhood would stop it if...*
 
    * "a group of neighborhood children were skipping school and hanging out on a street corner."
    * "some children were spray-painting graffiti on a local building."
@@ -474,14 +481,14 @@ Isn't about what respondent would do--is about what people around would do
 
 --
 
-&zwj;Assumption: *Shared variation in the measures represents underlying expectations for social control of children.*
+&amp;zwj;Assumption: *Shared variation in the measures represents underlying expectations for social control of children.*
 
 ---
 class: inverse
 
 # Types of Quantitative Data
 
-&nbsp;
+&amp;nbsp;
 
 ![:width 70%](img/data.jpg)
 
@@ -530,7 +537,7 @@ Events or incidents are counts
 
 --
 
-We create **rates** by dividing counts by an **exposure** variable like population, time, or area<sup>1</sup>
+We create **rates** by dividing counts by an **exposure** variable like population, time, or area&lt;sup&gt;1&lt;/sup&gt;
 
 * **Exposures** measure what is "at risk" for an event
 * e.g., Homicides per 100,000 people
@@ -597,7 +604,7 @@ class: inverse
 
 # Describing Data
 
-&nbsp;
+&amp;nbsp;
 
 ![:width 70%](img/distributions.png)
 
@@ -625,7 +632,7 @@ Median
 
 Mode
 
-* The most common single value<sup>1</sup>
+* The most common single value&lt;sup&gt;1&lt;/sup&gt;
 * Everything
 
 
@@ -666,7 +673,7 @@ We typically only define these for continuous data
 **Probability distributions** are mathematical functions that give the **probability** of observing each value
 
 * This is just how likely it is for a variable to take any given value
-* Common notation: $P(X)$ (probability of $X$)
+* Common notation: `\(P(X)\)` (probability of `\(X\)`)
 
 --
 
@@ -697,22 +704,19 @@ Because they take a limited number of values, we typically summarize categorical
 --
 
 .text-72[
-```{r}
-shoot <- tibble(`Type of Crime` = sample(c("Robbery", "Assault", "Theft"), 250, replace=TRUE, prob = c(0.1, 0.3, 0.6)))
-shoot %>% 
-  count(`Type of Crime`, name = "Frequency") %>% 
-  mutate(`Proportion` = round(`Frequency`/sum(`Frequency`), 2)) %>%
-knitr::kable()
-```
+
+|Type of Crime | Frequency| Proportion|
+|:-------------|---------:|----------:|
+|Assault       |        89|       0.36|
+|Robbery       |        24|       0.10|
+|Theft         |       137|       0.55|
 ]
 
 --
 
 Bar plots are a good way to visualize categorical distributions
 
-```{r, fig.height = 2.75, fig.width = 6}
-ggplot(shoot, aes(x = `Type of Crime`)) + geom_bar(fill = "#003C71") + theme_minimal() + labs(y = "Frequency") + annotate("text", x = "Theft", y = 30, label = "Mode", color = "#64A70B", size = 8) + theme(panel.grid.major.x = element_blank())
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-3-1.svg)&lt;!-- --&gt;
 
 
 ---
@@ -722,32 +726,19 @@ ggplot(shoot, aes(x = `Type of Crime`)) + geom_bar(fill = "#003C71") + theme_min
 Ordinals can be summarized similarly to categoricals, but they have a median—where the cumulative proportion (percentile) passes 0.50.
 
 .text-72[
-```{r}
-fear <- tibble(`Fear of Crime` = 
-                 ordered(c(rep("Very High", 50), 
-                   rep("High", 60), 
-                   rep("Moderate", 75), 
-                   rep("Low", 100), 
-                   rep("Very Low", 25)), levels = c("Very Low", "Low", "Moderate", "High", "Very High")))
-fear %>% 
-  count(`Fear of Crime`, name = "Frequency") %>% 
-  mutate(`Proportion` = round(`Frequency`/sum(`Frequency`), 2),
-         `Cumulative Proportion` = cumsum(`Proportion`)) %>%
-knitr::kable()
-```
+
+|Fear of Crime | Frequency| Proportion| Cumulative Proportion|
+|:-------------|---------:|----------:|---------------------:|
+|Very Low      |        25|       0.08|                  0.08|
+|Low           |       100|       0.32|                  0.40|
+|Moderate      |        75|       0.24|                  0.64|
+|High          |        60|       0.19|                  0.83|
+|Very High     |        50|       0.16|                  0.99|
 ]
 
 --
 
-```{r, fig.height = 2.75, fig.width = 6}
-ggplot(fear, aes(x = `Fear of Crime`)) + 
-  geom_bar(fill = "#003C71") + 
-  theme_minimal() + 
-  labs(y = "Frequency") + 
-  annotate("text", x = "Low", y = 20, label = "Mode", color = "#64A70B", size = 6) +
-  annotate("text", x = "Moderate", y = 20, label = "Median", color = "#64A70B", size = 6) +
-  theme(panel.grid.major.x = element_blank())
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-5-1.svg)&lt;!-- --&gt;
 
 ---
 
@@ -755,67 +746,20 @@ ggplot(fear, aes(x = `Fear of Crime`)) +
 
 Continuous data can take a limitless number of values, so we summarize them with measures of central tendency and dispersion.
 
-```{r}
-robbery <- tibble(`Crime Rate` = 100000*(rnbinom(400, 1,  0.15) / rnbinom(400, 100, mu = 4000)))
 
-robbery %>%
-  summarize(`Mean`   = mean(`Crime Rate`), 
-            `Median` = median(`Crime Rate`),
-            `Mode` = density(`Crime Rate`)$x[which.max(density(`Crime Rate`)$y)],
-            `Std. Dev.` = sd(`Crime Rate`),
-            N = n()) %>%
-  mutate(across(everything(), ~round(.,2))) %>%
-  knitr::kable()
-```
+|   Mean| Median|  Mode| Std. Dev.|   N|
+|------:|------:|-----:|---------:|---:|
+| 131.14|  78.68| 33.57|    153.32| 400|
 
 --
 
 We visualize continuous distributions with **histograms** and **density plots**
 
 .pull-left[
-```{r, fig.height = 4.75}
-robbery %>% 
-  ggplot(aes(x = `Crime Rate`)) + 
-  geom_histogram(binwidth = 50, fill = "#003C71") +
-  labs(y = "Frequency", title = "Histogram of Crime Rate") +
-  theme_minimal(base_size = 18) +
-  theme(panel.grid.major.x = element_blank())
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-7-1.svg)&lt;!-- --&gt;
 ]
 .pull-right[
-```{r, fig.height = 4.75}
-robb_density <- density(robbery$`Crime Rate`)
-
-robbery %>% 
-  ggplot(aes(x = `Crime Rate`)) + 
-  geom_density(fill = "#28282B", alpha = 0.2) + 
-  geom_vline(xintercept = robb_density$x[which.max(robb_density$y)], color = "#003C71", size = 2) +
-  geom_vline(xintercept = median(robbery$`Crime Rate`), color = "#8A1538", size = 2) +
-  geom_vline(xintercept = mean(robbery$`Crime Rate`), size = 2, color = "#64A70B") + 
-  geom_text(data = tibble(
-             x = c(
-               robb_density$x[which.max(robb_density$y)],
-                 median(robbery$`Crime Rate`),
-                 mean(robbery$`Crime Rate`)) - 20,
-             y = c(0.001, 0.001, 0.001),
-             label = c("Mode", "Median", "Mean"),
-             color = c("Mode", "Median", "Mean")),
-           aes(x = x, y = y, label = label, color = color),
-           angle = 90) +
-  annotate("errorbarh", 
-           xmin = mean(robbery$`Crime Rate`), 
-           xmax = mean(robbery$`Crime Rate`) + sd(robbery$`Crime Rate`), 
-           height = 0.0005, 
-           y = 0.002) +
-  annotate("text", x = mean(robbery$`Crime Rate`) + 0.5*sd(robbery$`Crime Rate`),
-           label = "Std. Dev.", y = 0.00215) +
-  scale_color_manual(values = c("Mode" = "#003C71", "Median" = "#8A1538", "Mean" = "#64A70B")) +
-  labs(y = "Probability Density", title = "Density Plot of Crime Rate") +
-  theme_minimal(base_size = 18) + 
-  theme(panel.grid.major.x = element_blank(),
-        legend.position = "none")
-  
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-8-1.svg)&lt;!-- --&gt;
 
 ]
 
@@ -825,57 +769,27 @@ robbery %>%
 
 These all have the same mean and standard deviation!
 
-```{r}
 
-dists <-
-  tibble(
-  Normal = rnorm(100000, mean = 1, sd = 1),
-  Poisson = rpois(100000, 1),
-  Uniform = runif(100000, -0.75, 2.75)
-  ) %>% pivot_longer(everything())
+|Name    | Mean| Median| Std. Dev|
+|:-------|----:|------:|--------:|
+|Normal  |    1|      1|     1.00|
+|Poisson |    1|      1|     1.00|
+|Uniform |    1|      1|     1.01|
 
-dists %>%
-  group_by(name) %>%
-  summarize(Mean = mean(value), Median = median(value), `Std. Dev.` = sd(value)) %>%
-  mutate(across(-name, ~round(., 2))) %>%
-  knitr::kable(col.names = c("Name", "Mean", "Median", "Std. Dev"))
-
-```
-
-```{r, fig.height = 3}
-dists %>%
-  ggplot(aes(x = value)) + 
-  facet_wrap(~name) + 
-  geom_density(fill = "#28282B", alpha = 0.2) + 
-  theme_minimal() + 
-  geom_vline(data = dists %>% 
-               group_by(name) %>% 
-               summarize(Mean = mean(value)), 
-             aes(xintercept = Mean), color  = "#64A70B", size = 1) +
-  geom_errorbarh(aes(xmin = Mean, xmax = Mean + stddev, y = 0.6),
-                 data = 
-                   dists %>%
-                   group_by(name) %>% 
-                   summarize(Mean = mean(value), stddev = sd(value)),
-                 height = 0.05, inherit.aes = FALSE) +
-  xlim(-3, 5) +
-  theme(axis.text.y = element_blank()) +
-  labs(x = NULL, y = NULL)
-
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-10-1.svg)&lt;!-- --&gt;
 
 ---
 class: inverse
 # Quantitative Relationships
 
-&nbsp;
+&amp;nbsp;
 
 ![:width 80%](img/age-crime-curve.png)
 
 ---
 # Types of Relationships
 
-&zwj;**Association**: *X and Y tend to "go together"*
+&amp;zwj;**Association**: *X and Y tend to "go together"*
 
 * e.g., ice cream sales and violent crime rise at same time
 * *May* imply common causes, e.g. temperature
@@ -884,7 +798,7 @@ class: inverse
 
 --
 
-&zwj;**Effect**: *X causes Y*
+&amp;zwj;**Effect**: *X causes Y*
 
 * e.g., clearing a vacant lot reduces nearby violence 
 * Implies *direction* and *cause*:
@@ -904,10 +818,10 @@ class: inverse
 
 Associations are really about **conditional probabilities**
 
-* The probability of $Y$ taking a particular value(s) when $X$ takes a particular value(s)
-   * Notation: $P(Y|X)$ is "Probability of Y given X"
+* The probability of `\(Y\)` taking a particular value(s) when `\(X\)` takes a particular value(s)
+   * Notation: `\(P(Y|X)\)` is "Probability of Y given X"
 * e.g., if a drug possession suspect is white, their probability of arrest is 0.3.
-   * $P(arrest|white) = 0.3$
+   * `\(P(arrest|white) = 0.3\)`
 
 --
 
@@ -932,23 +846,20 @@ A **joint distribution** is the full distribution of *both* variables
 The simplest joint distributions are those between categorical variables, usually displayed as **cross-tabulations**
 
 .pull-left[
-```{r}
-sex_offense <- 
-  tibble(Sex = c(rep("Male", 50), rep("Female", 20)),
-         Offense = c(rep("Violent", 28), rep("Non-Violent", 22),
-                     rep("Violent", 7), rep("Non-Violent", 13)))
-tabyl(sex_offense, Sex, Offense) %>% 
-  knitr::kable()
-```
+
+|Sex    | Non-Violent| Violent|
+|:------|-----------:|-------:|
+|Female |          13|       7|
+|Male   |          22|      28|
 
 ]
 
 .pull-right[
-```{r}
-tabyl(sex_offense, Sex, Offense) %>% 
-  adorn_percentages() %>% 
-  knitr::kable()
-```
+
+|Sex    | Non-Violent| Violent|
+|:------|-----------:|-------:|
+|Female |        0.65|    0.35|
+|Male   |        0.44|    0.56|
 
 ]
 
@@ -956,9 +867,7 @@ tabyl(sex_offense, Sex, Offense) %>%
 
 We can also visualise them with a bar plot
 
-```{r, fig.height = 2.5}
-sex_offense %>% ggplot(aes(x=Sex, group = Offense, fill = Offense)) + geom_bar() + theme_minimal() + labs(y = "Frequency") + theme(legend.position = c(0.15, 0.8))
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-13-1.svg)&lt;!-- --&gt;
 
 ---
 
@@ -966,42 +875,22 @@ sex_offense %>% ggplot(aes(x=Sex, group = Offense, fill = Offense)) + geom_bar()
 
 If our association is between a categorical and a continuous variable, we can calculate statistics within each category
 
-```{r}
-rural <- tibble(Area = rep(c("Rural", "Urban"), each = 5000),
-                `Pop Density` = c(rnorm(5000, 10, 2),
-                                  rnorm(5000, 20, 3)),
-                `Crime Rate` = (rpois(10000, `Pop Density`)^2) * 5000 / 100000) %>%
-  sample_n(250)
-rural %>% group_by(Area) %>% summarize(`Mean Crime Rate` = round(mean(`Crime Rate`), 2), 
-                                       `Std. Dev.` = round(sd(`Crime Rate`),2 ),
-                                       N = n()) %>%
-  knitr::kable()
-```
+
+|Area  | Mean Crime Rate| Std. Dev.|   N|
+|:-----|---------------:|---------:|---:|
+|Rural |            5.40|      3.78| 131|
+|Urban |           23.72|     12.98| 119|
 
 --
 
 Or draw a histogram or density for each category
 
 .pull-left[
-```{r, fig.height = 4}
-rural %>% 
-  ggplot(aes(x = `Crime Rate`, group = Area, fill = Area, color = Area)) + 
-  geom_histogram(alpha = 0.3, bins = 20, position = "identity") + 
-  theme_minimal(base_size = 16) + 
-  labs(y = "Frequency") + 
-  theme(legend.position = c(0.8, 0.8))
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-15-1.svg)&lt;!-- --&gt;
 ]
 
 .pull-right[
-```{r, fig.height = 4}
-rural %>% 
-  ggplot(aes(x = `Crime Rate`, group = Area, fill = Area, color = Area)) + 
-  geom_density(alpha = 0.5) + 
-  theme_minimal(base_size = 16) + 
-  labs(y = "Density") + 
-  theme(legend.position = c(0.8, 0.8))
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
 ]
 
 ---
@@ -1010,22 +899,15 @@ rural %>%
 
 When both variables are continuous, we usually measure association with a **correlation** and visualise with a **scatterplot**
 
-```{r}
-data.frame(`Crime Rate` = round(cor(rural$`Pop Density`, rural$`Crime Rate`), 2), row.names = "Pop. Density") %>%
-  knitr::kable(col.names = "Crime Rate")
-```
+
+|             | Crime Rate|
+|:------------|----------:|
+|Pop. Density |       0.79|
 
 
 --
 
-```{r, fig.height = 3}
-rural %>%
-  ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
-  geom_point(alpha = 0.5) +
-  xlab("Population Density") +
-  geom_smooth(method = "lm", se = FALSE) +
-  theme_minimal(base_size = 16)
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-18-1.svg)&lt;!-- --&gt;
 
 Here I've added a **regression line** to illustrate the correlation
 
@@ -1035,14 +917,7 @@ Here I've added a **regression line** to illustrate the correlation
 
 We can go pretty far just visualising results!
 
-```{r, fig.height = 3}
-rural %>%
-  ggplot(aes(x = `Pop Density`, y = `Crime Rate`, color = Area, group = Area)) + 
-  geom_point(alpha = 0.5) +
-  geom_smooth(method = "lm", se = FALSE) +
-  theme_minimal(base_size = 16) + 
-  theme(legend.position = c(0.1, 0.8))
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-19-1.svg)&lt;!-- --&gt;
 
 --
 
@@ -1057,7 +932,7 @@ But they're pretty much all just based on cross-tabs, group means, or correlatio
 class: inverse
 # Correlation Cautions
 
-&nbsp;
+&amp;nbsp;
 
 ![:width 80%](img/caution.png)
 
@@ -1067,36 +942,15 @@ class: inverse
 
 Visualisation is important—these all have the same correlation!
 
-```{r, fig.height = 5, echo=FALSE, warning=FALSE, message=FALSE}
-library(datasauRus)
-anscombe %>%
-  mutate(id = row_number()) %>%
-  pivot_longer(x1:y4, names_to = c("var", "set"), names_pattern = "(x|y)(.$)") %>%
-  pivot_wider(names_from = var, values_from = value) %>%
-  ggplot(aes(x = x, y = y)) + 
-  geom_point() + 
-  facet_wrap(~set) + 
-  geom_smooth(method = "lm", se = FALSE) + 
-  theme_void() + 
-  theme(strip.text = element_blank())
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-20-1.svg)&lt;!-- --&gt;
 
 ---
 
 ## Dinosaur Deceit
 
-So do these! Their $X$ and $Y$ values also have the same means and standard deviations!
+So do these! Their `\(X\)` and `\(Y\)` values also have the same means and standard deviations!
 
-```{r, fig.height = 5, echo=FALSE, warning=FALSE, message=FALSE}
-datasaurus_dozen  %>%
-  filter(dataset != "slant_down") %>%
-  ggplot(aes(x = x, y = y)) + 
-  geom_point() + 
-  facet_wrap(~dataset) + 
-  geom_smooth(method = "lm", se = FALSE) + 
-  theme_void() + 
-  theme(strip.text = element_blank())
-```
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-21-1.svg)&lt;!-- --&gt;
 
 ---
 
@@ -1105,3 +959,140 @@ datasaurus_dozen  %>%
 * We'll pick up with more on relationships next week, and use that to lead into statistical inference
 
 * No Wednesday drop-in hours due to faculty meeting
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="../assets/cam_macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "tomorrow-night-bright",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
