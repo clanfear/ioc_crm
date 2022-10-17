@@ -6,7 +6,7 @@ date: "2022-10-18"
 draft: false
 ---
 
-Lecture Slides (forthcoming)
+[Lecture Slides](https://clanfear.github.io/ioc_crm/_lectures/2_quantitative-data-relationships/slides_quantitative-data-relationships.html)
 
 Readings:
 

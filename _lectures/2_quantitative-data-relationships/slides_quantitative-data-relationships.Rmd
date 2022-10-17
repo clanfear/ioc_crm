@@ -652,12 +652,13 @@ We typically only define these for continuous data
 
 --
 
-**Variance**
+**Variance**<sup>1</sup>
 
 * The square of the standard deviation
 * Not typically interpretable
 * Mainly useful in calculations
 
+.footnote[[1] Note there are different variance formulae for the population (divide by N) and sample (divide by N-1). We nearly always use the second one.]
 
 ---
 
