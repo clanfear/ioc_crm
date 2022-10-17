@@ -14,7 +14,7 @@ Readings:
    * Read pp. 19—85: (1) Chapter 3: Describing Variables, (2) Chapter 4: Describing Relationships, and (3) Chapter 5: Identification
 
 * Bueno de Mesquita, E. and Fowler, A. (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*, Princeton, NJ: Princeton University Press.
-   * Read pp. 53—93: (1) Chapter 2: Correlation: What Is It and What Is It Good For?, (2) Causation: What Is It and What Is It Good For?, (3) Chapter 4: Correlation Requires Variation, and (4) Chapter 5: Regression for Describing and Forecasting
+   * Read pp. 13—93: (1) Chapter 2: Correlation: What Is It and What Is It Good For?, (2) Causation: What Is It and What Is It Good For?, (3) Chapter 4: Correlation Requires Variation, and (4) Chapter 5: Regression for Describing and Forecasting
 
 * Sullivan, C.J. and McGloin, J.M. (2014) ‘Looking back to move forward: some thoughts on measuring crime and delinquency over the past 50 years’, *Journal of Research in Crime and Delinquency*, 51(4): 445-466. [http://dx.doi.org/10.1177/0022427813520446]()
 
