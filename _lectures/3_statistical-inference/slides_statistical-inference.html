@@ -522,6 +522,55 @@ Higher levels of confidence reduce false positives, but lead to more **false neg
 ]
 
 ---
+
+# Cross-Tab Chi-Square
+
+We can test categorical associations using a chi-square ( `\(\chi^2\)` ) test.
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Area &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Disadvantage &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Rural &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Urban &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; High &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 41 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 60 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Low &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 63 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 39 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Medium &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 49 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 48 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Here we get a test statistic of 9.11 (df=2) corresponding to a statistically significant (at 95% confidence) p-value of 0.010.
+
+--
+
+This suggests Disadvantage and Area are more strongly related in this sample than is likely to occur due only to sampling noise.
+
+* i.e. this is evidence for an association in the population
+
+
+
+
+---
 class: inverse
 
 # Focusing on Means
@@ -561,7 +610,7 @@ Imagine this is the distribution of a variable in the population
 
 
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-8-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-10-1.svg)&lt;!-- --&gt;
 
 The mean is in red, but the shape is definitely not a bell curve
 
@@ -571,7 +620,7 @@ The mean is in red, but the shape is definitely not a bell curve
 
 Let's say we sample 100 observations from it and take the mean
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-9-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-11-1.svg)&lt;!-- --&gt;
 
 Our estimate isn't bad! But if we couldn't compare to the population, how would we know that?
 
@@ -581,7 +630,7 @@ Our estimate isn't bad! But if we couldn't compare to the population, how would 
 
 If we take a ton of samples (n=100 each) and calculate all their means, their distribution looks like this—most are pretty accurate!
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-10-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-12-1.svg)&lt;!-- --&gt;
 
 --
 
@@ -595,7 +644,7 @@ If we take a ton of samples (n=100 each) and calculate all their means, their di
 
 Okay, look at this monster:
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-11-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-13-1.svg)&lt;!-- --&gt;
 
 There's barely any data near the mean at all!
 
@@ -605,7 +654,7 @@ There's barely any data near the mean at all!
 
 This is the sampling distribution of the means we get from *that*
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-12-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-14-1.svg)&lt;!-- --&gt;
 
 .text-center[
 *Yep, still works—just noisier!*

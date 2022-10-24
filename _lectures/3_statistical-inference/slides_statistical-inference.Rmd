@@ -582,6 +582,34 @@ Higher levels of confidence reduce false positives, but lead to more **false neg
 ]
 
 ---
+
+# Cross-Tab Chi-Square
+
+We can test categorical associations using a chi-square ( $\chi^2$ ) test.
+
+```{r}
+communities |> 
+  tabyl(Disadvantage, Area) |>
+  adorn_title() |>
+  knitr::kable()
+```
+
+Here we get a test statistic of 9.11 (df=2) corresponding to a statistically significant (at 95% confidence) p-value of 0.010.
+
+--
+
+This suggests Disadvantage and Area are more strongly related in this sample than is likely to occur due only to sampling noise.
+
+* i.e. this is evidence for an association in the population
+
+```{r, eval = FALSE}
+communities |> 
+  tabyl(Disadvantage, Area) |>
+  chisq.test()
+```
+
+
+---
 class: inverse
 
 # Focusing on Means
