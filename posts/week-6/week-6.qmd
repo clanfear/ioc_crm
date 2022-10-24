@@ -2,7 +2,7 @@
 title: "Seminar 6: Ethnographic and Observational Research"
 description: ""
 author: "Arushi Garg"
-date: "2022-11-15"
+date: "2022-11-08"
 draft: false
 ---
 

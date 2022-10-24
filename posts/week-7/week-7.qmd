@@ -2,7 +2,7 @@
 title: "Seminar 7: Interviews"
 description: ""
 author: "Arushi Garg"
-date: "2022-11-22"
+date: "2022-11-15"
 draft: false
 ---
 

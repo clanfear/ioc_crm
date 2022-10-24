@@ -2,7 +2,7 @@
 title: "Seminar 8: Mixed Methods"
 description: ""
 author: "Ben Laws"
-date: "2022-11-29"
+date: "2022-11-15"
 draft: false
 ---
 
