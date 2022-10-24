@@ -1,5 +1,5 @@
 ---
-title: "Week 8: Mixed Methods"
+title: "Seminar 11: Critiquing Qualitative and Mixed Methods Research"
 description: ""
 author: "Ben Laws"
 date: "2022-11-29"

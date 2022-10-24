@@ -71,6 +71,87 @@ The goal of causal research is figuring out how to accurate estimate these "miss
 ---
 
 # Nonlinearity
+
+
+---
+
+# More Complex Lines
+
+So far we've just fit a simple straight line using one variable predicting another
+
+--
+
+We can introduce multiple explanatory variables
+
+```{r}
+lm(`Crime Rate` ~ Area + `Pop Density`, data = communities) %>% 
+  broom::tidy() %>%
+  select(Term = term, Estimate = estimate) %>%
+  mutate(Term = case_when(
+    Term == "AreaUrban" ~ "Urban",
+    TRUE ~ Term
+  ),
+  Estimate = round(Estimate, 2)) %>%
+  arrange(desc(Term)) %>%
+  pander::pander()
+
+```
+
+
+The interpretation stay
+
+
+---
+
+# Curves
+
+```{r}
+form <- y ~ x + I(x^2)
+communities %>%
+  ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
+  geom_point(alpha = 0.5) +
+  xlab("Population Density") +
+  stat_poly_line(formula = form, se = FALSE) +
+  stat_poly_eq(formula = form, mapping = use_label("eq"), eq.x.rhs = "PopDensity", eq.with.lhs= "CrimeRate~`=`~") +
+  theme_minimal(base_size = 16)
+```
+
+---
+
+# More Variables
+
+&nbsp;
+
+```{r}
+lm_two_covars <- lm(crime_rate ~ control + pop_density, data = communities_orig)
+control_seq   <- seq(-3.5, 3.5, by = .5)
+pop_seq       <- seq(0, 30, by = 5)
+
+grid_wide <- 
+  expand_grid(control = control_seq, pop_density = pop_seq) %>% 
+  mutate(pred_lm = predict(lm_two_covars, newdata = data.frame(control, pop_density))) %>% 
+  pivot_wider(names_from = control, values_from = pred_lm) %>% 
+  select(-1) %>%  # kick the name's column out
+  as.matrix()
+p1 <- plot_ly(
+        x = communities_orig$control,
+        y = communities_orig$pop_density,
+        z = communities_orig$crime_rate,
+        type = "scatter3d",
+        color = I("black"),
+        size = 0.25,
+        alpha = 1,
+        alpha_stroke = 1) 
+p1 <-  add_trace(p1,
+            z = grid_wide,
+                x = control_seq,
+                y = pop_seq,
+                type = "surface",
+            alpha = 1)
+p1
+```
+
+
 ---
 class: inverse
 # Measuring Bias in Policing

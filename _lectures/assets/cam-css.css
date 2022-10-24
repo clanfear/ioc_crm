@@ -32,7 +32,9 @@
   --code-highlight-color: rgba(255,255,0,0.5);
   --table-band-color: #8A1538;
 }
-
+.html-widget {
+    margin: auto;
+}
 table {
     margin-top: 30px !important;
     margin-bottom: 30px !important;

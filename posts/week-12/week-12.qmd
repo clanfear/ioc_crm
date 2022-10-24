@@ -1,7 +1,7 @@
 ---
-title: "Week 8: Mixed Methods"
+title: "Seminar 12: Research Ethics"
 description: ""
-author: "Ben Laws"
+author: "Loraine Gelsthorpe"
 date: "2022-11-29"
 draft: false
 ---

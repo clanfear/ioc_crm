@@ -1,5 +1,5 @@
 ---
-title: "Week 8: Mixed Methods"
+title: "Seminar 8: Mixed Methods"
 description: ""
 author: "Ben Laws"
 date: "2022-11-29"
