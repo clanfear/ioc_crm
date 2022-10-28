@@ -1066,30 +1066,28 @@ Once you have a DAG, it is remarkably easy to proceed to an estimator
 
 --
 
-The process:
-
 1. Figure out what you can and cannot measure
 
 --
 
 2. If your measures let you close all back doors...
 
-   * Add any back door variables as controls
-   * Leave out any colliders or mechanisms
+   * Adjust for back door variables
+   * Don't adjust for colliders or mechanisms
    * Estimate the causal effect
 
 --
 
-3. If you can't close all back doors...
+3. If you can't close all back doors, either...
 
-   * Close what you can but settle without identification
-      * Note threats to identification
-      * Perform sensitivity tests
-      * Estimate a non-causal relationship
-   * Give up
-   * *Get clever*
+   * Close what you can and estimate association
+      * Might be *close* to identified!
+   * *Give up*
+   * **Get clever**
 
 ---
+class: inverse
+
 # Controlling for Variables
 
 
