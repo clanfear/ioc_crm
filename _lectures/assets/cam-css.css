@@ -98,6 +98,10 @@ th, td {
 strong{
   color: var(--secondary);
 }
+.strong-blue{
+  color: var(--primary);
+  font-weight: 800;
+}
 .inverse strong {
   color: #64A70B;
 }
