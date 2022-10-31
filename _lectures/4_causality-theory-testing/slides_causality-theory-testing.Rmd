@@ -17,6 +17,7 @@ output:
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo=FALSE, warning = FALSE, message = FALSE, dev = "svg", fig.height = 5, dev.args=list(bg="transparent"))
+library(tidyverse)
 ```
 
 
@@ -35,6 +36,14 @@ knitr::opts_chunk$set(echo=FALSE, warning = FALSE, message = FALSE, dev = "svg",
    * Turning graphs into estimators
 
 
+
+---
+class: inverse
+
+# Causality
+
+
+![:width 50%](img/galaxy-brain.png)
 
 ---
 
@@ -223,10 +232,11 @@ All of these problems are really one problem:
 
 These problems are resolved if the potential outcomes for cleared and uncleared lots are *the same on average* (unrelated to the treatment)
 
-The average difference in outcomess then provides an unbiased estimate of the causal effect (the estimand)
+The average difference in outcomes between treatment and control groups then provides an unbiased estimate of the causal effect (the estimand)
 
 --
 
+&nbsp;
 
 .text-center[
 *How do we make sure the cleared and uncleared lots are the same?*
@@ -245,7 +255,7 @@ The average difference in outcomess then provides an unbiased estimate of the ca
 * Randomly assign treatment: clear some lots but not others
 --
 
-* On average, cleared and uncleared will be similar *in every way except for clearing*
+* On average, cleared and uncleared lots will be similar *in every way except for clearing*
 
 --
 
@@ -257,7 +267,7 @@ Randomization makes treatment **independent** of potential outcomes
 
 If we randomly assign a treatment, we can estimate a causal effect as the average difference in outcomes between treated groups
 
-* We call this the **average treatment effect**
+* We call this the **average treatment effect** (**ATE**)
 * You can calculate this with a *cross-tab*
 
 --
@@ -281,15 +291,17 @@ We need to figure out the **data generating process** for our treatment and outc
 
 --
 
-This requires making **assumptions**, which are part of your **model**
+This requires making **assumptions**, which are part of your **model**<sup>1</sup>
 
 * $Z$ is unrelated to $X$
 * $B$ only causes $Y$ through $C$
 
+.footnote[[1] RCTs also make many assumptions, but they're usually weaker and fewer]
+
 --
 
 .text-center[
-*If our model is correct, it tells us exactly how to identify the causal effect we want*
+*If our model is correct, it tells us exactly how to identify the causal effect*
 ]
 
 --
@@ -323,7 +335,7 @@ $$Y = f(X,Z)$$
 
 .pull-right[
 
-We're going to work with graphs instead:
+We're going to work with **directed acyclic graphs** (DAGs) instead:
 
 ```{tikz dag-1, fig.width = 3, cache = TRUE}
 \usetikzlibrary{positioning}
@@ -375,7 +387,7 @@ Directed acyclic graphs have pretty simple rules:
 --
 
 .text-center[
-*Causal graphs are a way to write out a model that tells you how to identify effects*
+*DAGs are a way to write out a model that tells you how to identify effects*
 ]
 
 ---
@@ -441,8 +453,9 @@ Let's say we want to know the effect of $X$ on $Y$
 
 --
 
-We estimate effects *through front doors* by closing *all back doors*
-
+.text-center[
+We estimate effects *through front doors* by closing *all back doors* and *avoiding collisions*
+]
 
 
 ---
@@ -455,7 +468,7 @@ Variables that open back doors are called **confounders**
 
 --
 
-We close doors by **adjusting** or **controlling** or **holding constant** variables along the path in statistical models<sup>1</sup>
+We close doors by **adjusting**, **controlling**, or **holding constant** variables along the path—either by design or in our statistical estimator<sup>1</sup>
 
 .footnote[[1] We'll see this in a bit]
 
@@ -522,12 +535,12 @@ You don't adjust for these—they're ways $X$ impacts $Y$!
 
 .pull-left[
 
-We've still adjusted for $Z$
-
-But there are *two* front doors
+There are *two* front doors
 
 * $X \rightarrow Y$
 * $X \rightarrow A \rightarrow Y$
+
+We've adjusted for $Z$ but not $A$
 
 The effect of $X$ on $Y$ is identified!
 ]
@@ -573,13 +586,13 @@ The effect of $X$ on $Y$ is identified!
 
 &nbsp;
 
-The *total* estimated effect of $X$ on $Y$ will be the sum of all paths leading between them.
+The *total* estimated effect of $X$ on $Y$ will be the sum of all front door paths leading between them.
 
 ---
 
 # Colliders
 
-Colliders are the *opposite* of back door paths: They *block* associations from going down their path
+Colliders are the *opposite* of back door paths: They *block* associations from going down their path *unless we adjust for them*
 
 --
 
@@ -593,7 +606,7 @@ Adjusting for Z closes the back door
 
 But here we've adjusted for $W$ too
 
-This introduces bias!
+Now our estimate of $X \rightarrow Y$ contains parts of $Y \rightarrow W$ and $X \rightarrow W$
 
 
 ]
@@ -637,8 +650,58 @@ This introduces bias!
 
 --
 
-Controlling for a collider is sometimes called **selection bias** or **conditioning on a post-treatment variable**.
+Controlling for a collider is sometimes **conditioning on a post-treatment variable** or **Berkson's paradox**, and is one form of **selection bias**.
 
+
+---
+
+# Collider Bias
+
+
+```{r, fig.height = 3.5}
+ex_data <- tibble(Skill = runif(1000, 0, 10), Frequency = runif(1000, 0, 10), Who = c(rep("Arrested", 500), rep("Everyone", 500))) |>
+  filter(Who == "Everyone" | (10 + (-1*Skill) + Frequency > 10))
+ex_data |> 
+  ggplot(aes(x = Skill, y = Frequency, color = Who)) + 
+  geom_point() + 
+  labs(x = "Skill at Crime", y = "Frequency of Crime") +
+  geom_smooth(method = "lm", formula = "y~x", se = FALSE, color = "black") + 
+  facet_wrap(~Who)  + 
+  theme_minimal(base_size = 16) + 
+  theme(legend.position = "none",
+        panel.spacing.x = unit(0.4, "in"))
+```
+
+```{tikz dag-coll, cache = TRUE}
+\usetikzlibrary{positioning}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none,
+        scale = 3
+    },
+    every path/.append style = {
+        arrows = ->,
+        fill = none,
+        scale = 1,
+        line width = 1.5mm
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt
+    }
+}
+\tikz{
+    \node (X) at (0,0) {$Skill$};
+    \node (Y) at (12,0) {$Freq$};
+    \node (Z) at (6,3) {$Arrest$};
+    \path[color=gray] (X) edge (Y);
+    \path (X) edge (Z);
+    \path (Y) edge (Z);
+  }
+```
 
 
 ---
@@ -691,11 +754,11 @@ Here we can still block the path through $W$ by adjusting for $Z$
     \node (Y) at (0,5) {$Y$};
     \node (X) at (5,5) {$X$};
     \node[hidden] (W) at (5,0) {$W$};
-    \node (Z) at (0,0) {$Z$};
+    \node[color = gray] (Z) at (0,0) {$Z$};
     \path (X) edge (Y);
     \path (W) edge (X);
-    \path (W) edge (Z);
-    \path (Z) edge (Y);
+    \path[color = gray] (W) edge (Z);
+    \path[color = gray] (Z) edge (Y);
   }
 ```
 ]
@@ -711,7 +774,7 @@ Most of the time we can't observe *everything* that matters, but rigorous resear
 ]
 
 ---
-class:
+class: inverse
 
 # DAGs at Work
 
@@ -722,7 +785,7 @@ class:
 ![:width 80%](img/dag_work.jpg)
 
 ---
-class: inverse
+
 # Measuring Bias in Policing
 
 &nbsp;
@@ -742,7 +805,7 @@ Imagine you sample police encounters **identical** except for race
 *But* suppose bias leads police to:
 
  * Stop white civilians only for crimes
- * Stop black civilians with or without crime
+ * Stop black civilians with or without a crime
 
 --
 
@@ -798,11 +861,25 @@ If use of force were the **same**, *we'd have a serious problem*
 
 &nbsp;
 
-&zwj;Question: How does race impact use of force?
+&zwj;Question: How does race impact officer decisions to use force?
 
 --
 
 We could compare how often force is used on white vs. black subjects
+
+--
+
+We could even get sophisticated:
+
+* Compare similar encounters
+* Compare similar subjects
+* Compare similar officers
+
+--
+
+.text-center[
+*Good ideas, but none of them will help*
+]
 
 ---
 # The Problem
@@ -842,14 +919,14 @@ We could compare how often force is used on white vs. black subjects
 
 &nbsp;
 
-&zwj;Problem: Race impacts likelihood of stop, but *we never see unstopped people*
+&zwj;Problem: Race impacts likelihood of being stopped in the first place, but *we never see unstopped people*
 
 * We've conditioned on *being stopped*—a mediator!
 * We've blocked part of our front door!
 
 --
 
-If police stop black subjects for more minor things, then an equal proportions of use of force *actually indicates bias*
+We can't identify the causal effect!
 
 ---
 # It Gets Worse
@@ -899,7 +976,7 @@ More problems
 
 * Racial composition varies by neighborhood
 * Police deployments and strategy vary by neighborhood
-* Reasonable suspicion predicts both stops and use of force--and can't be observed
+* Reasonable suspicion predicts both stops and use of force—and can't be observed
 
 
 ---
@@ -909,20 +986,25 @@ More problems
 
 --
 
-* If any stop bias exists, it is difficult to measure bias in...
+* If any stop bias exists, it is difficult to measure bias in...<sup>1</sup>
 
    * Arrests
    * Use of force
    * Frisks
    * Shootings
 
+.footnote[[1] Clever use of plausible assumptions can allow *bounded identification* that indicates substantial use of force bias by US police]
+
 --
 
-* Raw numbers can easily show *opposite patterns* from underlying reality.
+* Raw numbers can easily show *opposite patterns* from underlying reality
 
-* Studies showing no bias—or anti-white bias—get *lots* of media, social media, and political traction.
+* Studies showing no bias—or anti-white bias—get *lots* of media, social media, and political traction
+
 
 ---
+class: inverse
+
 # Theory Testing
 
 &nbsp;
@@ -958,7 +1040,9 @@ This is less clear when the causal diagram provided doesn't conform to DAG rules
 
 --
 
-![:width 70%](img/lanfear_2018.png)
+![:width 65%](img/lanfear_2018.png)
+
+.footnote[Source: [Lanfear, Matsueda, & Beach (2018)](https://doi.org/10.1146/annurev-criminol-011419-041541)]
 
 --
 
@@ -1033,8 +1117,6 @@ Making a DAG is least clear when the authors provide no graphical representation
 
 --
 
-The process:
-
 * Record all the core variables they use
 
    * e.g., self control
@@ -1053,10 +1135,15 @@ The process:
    * Consider temporal order
    * Consider cross-level mechanisms
 
+
 ---
 class: inverse
 
 # From DAG to Estimator
+
+&nbsp;
+
+![:width 80%](img/animorph.png)
 
 ---
 
@@ -1066,30 +1153,46 @@ Once you have a DAG, it is remarkably easy to proceed to an estimator
 
 --
 
-1. Figure out what you can and cannot measure
+Figure out what you can and cannot measure
 
 --
 
-2. If your measures let you close all back doors...
+.pull-left[
+If your measures let you close all back doors...
 
-   * Adjust for back door variables
+   * Adjust for back doors
    * Don't adjust for colliders or mechanisms
+   * Choose appropriate method
    * Estimate the causal effect
+]
 
 --
 
-3. If you can't close all back doors, either...
+.pull-right[
+If you can't close all back doors, either...
 
-   * Close what you can and estimate association
+   * Close what you can and estimate an association
       * Might be *close* to identified!
    * *Give up*
    * **Get clever**
+]
+
+--
+
+Remember that clever estimation techniques are a last resort for problems with research design
+
+It is *always* better to solve hard problems with *design*
 
 ---
 class: inverse
 
 # Controlling for Variables
 
+&nbsp;
+
+&nbsp;
+
+![:width 40%](img/skeletor.jfif)
 
 ---
 
@@ -1099,6 +1202,9 @@ So far we've just fit a simple straight line using one variable predicting anoth
 
 .pull-left[
 ```{r}
+library(tidyverse)
+communities <- 
+  read_csv("https://clanfear.github.io/ioc_iqa/_data/communities.csv")
 lm(crime_rate ~ pop_density, data = communities) %>% 
   broom::tidy() %>%
   select(Term = term, Estimate = estimate) %>%
@@ -1108,7 +1214,7 @@ lm(crime_rate ~ pop_density, data = communities) %>%
   ),
   Estimate = round(Estimate, 2)) %>%
   arrange(desc(Term)) %>%
-  pander::pander()
+  knitr::kable()
 ```
 
 
@@ -1116,18 +1222,21 @@ lm(crime_rate ~ pop_density, data = communities) %>%
 .pull-right[
 
 ```{r}
-library(tidyverse)
-communities <- 
-  read_csv("https://clanfear.github.io/ioc_iqa/_data/communities.csv")
+
 ggplot(communities, aes(x = pop_density, y = crime_rate)) + 
   geom_point() + 
   geom_smooth(method = "lm") +
   labs(x = "Pop Density", y = "Crime Rate") +
-  theme_minimal()
+  theme_minimal(base_size = 18)
 ```
 
 ]
 
+This doesn't get us very far for testing theories
+
+--
+
+But there's no reason to have only one predictor
 
 ---
 
@@ -1135,6 +1244,7 @@ ggplot(communities, aes(x = pop_density, y = crime_rate)) +
 
 When we add predictors, we are **adjusting** or **controlling** for them to identify the effect we're interested in
 
+.pull-left[
 ```{r}
 library(tidyverse)
 
@@ -1147,13 +1257,56 @@ lm(crime_rate ~ area + pop_density, data = communities) %>%
   ),
   Estimate = round(Estimate, 2)) %>%
   arrange(desc(Term)) %>%
-  pander::pander()
+  knitr::kable()
+```
+]
+
+.pull-right[
+
+```{tikz lm-dag, fig.width = 3, cache = TRUE}
+\usetikzlibrary{positioning}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none,
+        scale = 3
+    },
+    every path/.append style = {
+        arrows = ->,
+        fill = none,
+        scale = 1,
+        line width = 1.5mm
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt,
+        line width = .5mm
+    }
+}
+\tikz{
+    \node (Y) at (0,2) {$\text{Crime}$};
+    \node (X) at (6,4) {$\text{Pop}$};
+    \node (W) at (6,0) {$\text{Urban}$};
+    \path (X) edge (Y);
+    \path (W) edge (Y);
+    \path (W) edge (X);
+  }
 ```
 
-New interpretation:
+]
 
-* "The association between density and crime, adjusting for the type of area*"
-* "The average crime rate difference for urban areas, compared to rural ones, adjusting for population density"
+New interpretations:
+
+* "The association between density and crime, adjusting for area type"
+* "The average crime rate difference between urban and rural areas, adjusting for population density"
+
+--
+
+.text-center[
+*We could argue this is causal if thought the diagram was complete*
+]
 
 ---
 
@@ -1209,7 +1362,7 @@ p <- ggplot(dffull, aes(y=crime_rate,x=pop_density,color=as.factor(area)))+
   ease_aes('sine-in-out')+
   exit_fade()+
   enter_fade() +
-  theme_minimal(base_size = 30) +
+  theme_minimal(base_size = 36) +
   theme(legend.position = c(0.1, 0.9))
 
 control_anim <- animate(p, nframes=200, height = 1024, width = 1368)
@@ -1218,29 +1371,180 @@ anim_save("img/control_anim.gif", control_anim)
 
 ![:width 80%](img/control_anim.gif)
 
----
-
-# Causality without Correlation
-
-No correlation between speed of a car and how far gas pedal is pushed when going up and down hills
-
-
-
-
-
-
+.footnote[Adapted from [`NickCH-K/causalgraphs`](https://github.com/NickCH-K/causalgraphs/blob/master/Animation%20of%20Controlling%20for%20Z.R)]
 
 ---
 
 # More Variables
 
-&nbsp;
+The same basic principle applies when more variables are introduced
+
+A verbal interpretation can sometimes get difficult
+
+
+.pull-left[
+```{r}
+library(tidyverse)
+
+lm(crime_rate ~ area + pop_density + incarceration, data = communities) %>% 
+  broom::tidy() %>%
+  select(Term = term, 
+         Estimate = estimate) %>%
+  mutate(Term = case_when(
+    Term == "areaUrban" ~ "Urban",
+    str_detect(Term, "incar") ~ str_c("Incarc.: ", str_to_title(str_remove(Term, "incarceration"))),
+    TRUE ~ str_to_title(str_replace(Term, "_", " "))
+  ),
+  Estimate = round(Estimate, 2)) %>%
+  arrange(desc(Term)) %>%
+  knitr::kable()
+```
+]
+
+--
+
+.pull-right[
+
+```{tikz lm-dag-2, fig.width = 3, cache = TRUE}
+\usetikzlibrary{positioning}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none,
+        scale = 3
+    },
+    every path/.append style = {
+        arrows = ->,
+        fill = none,
+        scale = 1,
+        line width = 1.5mm
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt,
+        line width = .5mm
+    }
+}
+\tikz{
+    \node (Y) at (0,4) {$\text{Crime}$};
+    \node (X) at (0,0) {$\text{Pop}$};
+    \node (W) at (6,0) {$\text{Urban}$};
+    \node (Z) at (6,4) {$\text{Incarc}$};
+    \node[hidden] (U) at (8,2)  {$U$};
+    \path (X) edge (Y);
+    \path (W) edge (Y);
+    \path (W) edge (X);
+    \path (Z) edge (Y);
+    \path (X) edge (Z);
+    \path (U) edge (W);
+    \path (U) edge (Z);
+  }
+```
+
+]
+
+But a graph always fully encodes our expectations about relationships<sup>1</sup>
+
+.footnote[[1] If we're not sure how two variables are related, sometimes we just assume there is an unobserved (U) confounder connecting them]
+
+--
+
+.text-center[
+*What paths are actually identified if this model is true?*
+]
+
+---
+# Interpreting Controls
+
+DAGs highlight one of the most common mistakes made in empirical research: *Researchers often write as if every path is identified*
+
+* Interpreting the main "effect" as adjusted for covariates
+* Interpreting all covariates as adjusted for everything else
+
+--
+
+.text-center[
+*In general, these interpretations are logically impossible*
+
+*Usually, at most **one path** is identified*
+]
+
+--
+
+The purpose of **controls** is to close back doors, not to add additional interpretable causal paths
+
+* If a variable closes a back door, by definition its effect on the outcome is not identified
+* Control variable associations are typically not worth interpreting<sup>1</sup>
+
+.footnote[
+[1] Reviewers or editors may make authors do this. Savvy authors will describe them appropriately.
+]
+
+---
+# Other Assumptions
+
+DAGs do not make **parametric** assumptions about relationships, such as:
+
+* Straight lines (versus curves)
+* Additive effects (versus multiplicative)
+* Error distributions
+
+--
+
+In contrast, all estimation techniques make some sort of assumptions about how relationships should be calculated
+
+So far our estimators have been straight lines with independent effects that add together
+
+--
+
+Common modifications to these methods include:
+
+* Polynomials or splines (curved lines)
+* Interaction / multiplicative terms (group-specific slopes)
+* Different error distributions (e.g., Poisson)
+
+--
+
+.text-center[
+*These are important but beyond the level of this course*
+]
 
 ---
 
-# Causality and QUalitative Data
+# Causal Qualitative Research
 
-Sometimes quantitative data is not up to the task of identifying an effect of interest
+DAGs aren't just non-parametric—they are not necessarily quantitative
 
+--
 
-McElreath gender, citations, NAS, quality DAG
+DAGs can be useful for thinking through qualitative research too
+
+--
+
+In particular, propositional (hypothesis testing) qualitative research:
+
+* Event studies
+* Case-comparisons
+
+--
+
+Qualitative research is also very useful for filling in the blind spots of quantitative research
+
+Sometimes quantitative data are not up to the task of identifying an effect of interest
+
+* Difficult to measure concepts
+* Confounding colliders
+* Very small samples / populations
+
+---
+class: inverse
+
+# Wrap-Up
+
+* Readings for Ethnography unit next week have been changed, see website or Moodle
+
+* One last unit to knit the quant section together
+
+* Practice drawing DAGs of theories you learn in your other courses!
