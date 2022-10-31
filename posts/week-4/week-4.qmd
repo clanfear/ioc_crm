@@ -1,12 +1,12 @@
 ---
-title: "Seminar 4: Causality and Testing Theories"
+title: "Seminar 4: Causality and Theory Testing"
 description: "Principles of causal inference and their relationship to social theory"
 author: "Charles Lanfear"
 date: "2022-11-01"
 draft: false
 ---
 
-Lecture Slides (forthcoming)
+[Lecture Slides](https://clanfear.github.io/ioc_crm/_lectures/3_causality-theory-testing/slides_causality-theory-testing.html)
 
 Reading:
 

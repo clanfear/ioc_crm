@@ -6,4 +6,26 @@ date: "2022-11-08"
 draft: false
 ---
 
-Forthcoming
+Required reading:
+
+* Haggerty et al (2021) ‘Introduction: The promises and challenges of crime ethnographies’ in  S.M. Bucerius et al (eds), *The Oxford Handbook of Ethnographies of Crime and Criminal Justice*, Oxford: OUP, Chapter 1. pp. 1-17
+
+* Krishnan, S. (2015) ‘Dispatches from a ‘rogue’ ethnographer: Exploring homophobia and queer visibility in the field’, *Journal of the Anthropological Society of Oxford Online*, 7(1): 64–79
+
+
+Further reading:
+
+* Crewe, B. (2006) ‘Prison drug dealing and the ethnographic lens’, *Howard Journal of Criminal Justice*, 45(4): 347-368.
+[http://dx.doi.org/10.1111/j.1468-2311.2006.00428.x]()
+
+* Hammersley, M. (1998) 'The nature of ethnography', in *Reading Ethnographic Research: A critical guide*, 2nd ed., London, Longman, pp. 1-20, or the equivalent chapter in the 1990 edition. (Download from Moodle)
+
+* Jauregui, B. (2021) ‘Police Labor and Exploitation: Case Study of North India’ in S.M. Bucerius et al (eds), *The Oxford Handbook of Ethnographies of Crime and Criminal Justice*, Oxford: OUP, Chapter 23. pp. 488-511.
+
+* Maher, L. (1997) 'Appendix: On reflexivity, reciprocity, and ethnographic research', in *Sexed Work: Gender, race and resistance in a Brooklyn drug market*, Oxford: Clarendon.
+
+* Wakeman, S. (2014) ‘Fieldwork, biography and emotion: Doing criminological autoethnography’, *British Journal of Criminology*, 54(5): 705-721.
+
+* Willis, R. (2019) ‘Observations online: Finding the ethical boundaries of Facebook research’, *Research Ethics*, 15(1): 1-17.
+
+* For a sophisticated and combative debate on ethnographic practice, see Wacquant’s (2002) ‘Scrutinizing the street: poverty, morality, and the pitfalls of urban ethnography’, and the responses by Duneier, Anderson and Newman, in the *American Journal of Sociology*, 107(6): 1468-1532, 1533- 1550, 1551–1576, and 1577–1599.[https://www.journals.uchicago.edu/toc/ajs/2002/107/6]()
