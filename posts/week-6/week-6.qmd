@@ -1,10 +1,12 @@
 ---
 title: "Seminar 6: Ethnographic and Observational Research"
-description: ""
+description: "Qualitative research using ethnographic methodology"
 author: "Arushi Garg"
 date: "2022-11-08"
 draft: false
 ---
+
+
 
 Required reading:
 
