@@ -1,6 +1,6 @@
 ---
 title: "Seminar 7: Interviews"
-description: ""
+description: "Qualitative research using interviews"
 author: "Arushi Garg"
 date: "2022-11-15"
 draft: false
