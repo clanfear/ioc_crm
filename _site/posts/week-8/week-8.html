@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.0.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,15 +13,10 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
-}
 </style>
 
 
@@ -71,11 +66,9 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+      <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Criminological Research Methods</span>
-    </a>
-  </div>
+  </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -133,7 +126,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Forthcoming</p>
+<p>Required reading:</p>
+<ul>
+<li>Bryman, A. (2004) ‘Quantitative and qualitative research: further reflections on their integration’, in C. Seale (ed.) Social Research Methods: A reader, London: Routledge, pp.&nbsp;505-509.</li>
+</ul>
+<p>Further reading:</p>
+<ul>
+<li><p>Liebling, A., Crewe, B. and Hulley, S. (2012) ‘Conceptualising and measuring the quality of prison life’, in D. Gadd, S. Karstedt and S.F. Messner (eds) The Sage Handbook of Criminological Research Methods, London: Sage Publishing, pp.&nbsp;358-372.</p></li>
+<li><p>Burke Johnson, R., Onwuegbuzie, A.J. and Turner, L.A. (2007) ‘Toward a definition of mixed methods research’, Journal of Mixed Methods Research, 1(2): 112-133. http://dx.doi.org/10.1177/1558689806298224</p></li>
+<li><p>Gorard, S. with Taylor, C. (2011) Combining Methods in Educational and Social Research, Maidenhead: Open University Press/McGraw-Hill.</p></li>
+<li><p>Greene, J.C., Caracelli, V.J. and Graham, W.F. (1989) ‘Toward a conceptual framework for mixed-method evaluation designs’, Educational Evaluation and Policy Analysis, 11(3): 255-274. http://dx.doi.org/10.2307/1163620</p></li>
+<li><p>Irwin, S. (2006) Combining Data, Enhancing Explanation, NCRM Working Paper. http://eprints.ncrm.ac.uk/422/</p></li>
+<li><p>Johnson, B. and Gray, R. (2010) ‘A history of philosophical and theoretical issues for mixed methods research’, in A. Tashakkori and C. Teddlie (eds) Sage Handbook of Mixed Methods in Social and Behavioral Research, 2nd ed., London: Sage, pp.&nbsp;69-94.</p></li>
+</ul>
 
 
 
@@ -207,8 +212,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      let href = ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

@@ -1,6 +1,6 @@
 ---
 title: "Causality and Theory Testing"
-subtitle: "CRM Lecture 3"
+subtitle: "CRM Lecture 4"
 author: "Charles Lanfear"
 date: "1 Nov 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
