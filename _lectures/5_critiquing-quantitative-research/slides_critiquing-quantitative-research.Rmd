@@ -229,7 +229,7 @@ tibble(x = seq(0, 25, by = 0.1),
        y2 = 3*x + -0.3*x^2,
        y3 = -3*x) |>
   pivot_longer(y1:y3) |>
-  ggplot(aes(x = x, y = value, color = name)) + 
+  ggplot(aes(x = x, y = value, color = name)) +
   geom_line(size = 2) +
   theme_void() +
   theme(legend.position = "none")
@@ -375,7 +375,7 @@ Common problems:
 * Poor discriminant validity
 
    * Measures that are indistinguishable from competing constructs
-   
+
 --
 
 * Measurement error and low reliability
