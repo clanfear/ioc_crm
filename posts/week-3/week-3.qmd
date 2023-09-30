@@ -1,17 +1,17 @@
 ---
-title: "Seminar 3: Statistical Inference"
+title: "Seminar 5: Statistical Inference"
 description: "A basic introduction to sampling, estimation, and hypothesis testing"
 author: "Charles Lanfear"
-date: "2022-10-25"
+date: "2023-10-24"
 draft: false
 ---
 
-[Lecture Slides](https://clanfear.github.io/ioc_crm/_lectures/3_statistical-inference/slides_statistical-inference.html)
+[Seminar 5 Slides](https://clanfear.github.io/ioc_crm/_lectures/3_statistical-inference/slides_statistical-inference.html)
 
 Reading:
 
 * Bueno de Mesquita, E. and Fowler, A. (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*, Princeton, NJ: Princeton University Press.
    * Read pp. 94—156: (1) Chapter 6: Statistical Inference, (2) Chapter 7: Over-Comparing, Under-Reporting, and (3) Chapter 8: Reversion to the Mean
 
-* Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press. 
+* [Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press.](https://theeffectbook.net/index.html) 
    * Re-read pp. 35—43: Chapter 3: Describing Variables, section 3.5: Theoretical Distributions

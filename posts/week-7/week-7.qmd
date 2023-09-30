@@ -1,10 +1,12 @@
 ---
-title: "Seminar 7: Interviews"
+title: "Seminar 9: Interviews"
 description: "Qualitative research using interviews"
 author: "Arushi Garg"
-date: "2022-11-15"
+date: "2023-11-14"
 draft: false
 ---
+
+Slides on Moodle 
 
 Required reading:
 

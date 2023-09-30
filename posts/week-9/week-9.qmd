@@ -1,8 +1,8 @@
 ---
-title: "Seminar 9: Qualitative Data Analysis"
+title: "Seminar 11: Qualitative Data Analysis"
 description: ""
 author: "Caroline Lanskey"
-date: "2022-11-22"
+date: "2023-11-21"
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "Seminar 10: Document and Discourse Analysis"
 description: ""
 author: "Loraine Gelsthorpe"
-date: "2022-11-29"
+date: "2023-11-28"
 draft: false
 ---
 

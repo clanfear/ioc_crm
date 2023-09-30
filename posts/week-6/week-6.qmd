@@ -1,11 +1,12 @@
 ---
-title: "Seminar 6: Ethnographic and Observational Research"
+title: "Seminar 8: Ethnographic and Observational Research"
 description: "Qualitative research using ethnographic methodology"
 author: "Arushi Garg"
-date: "2022-11-08"
+date: "2023-11-07"
 draft: false
 ---
 
+Slides on Moodle
 
 
 Required reading:

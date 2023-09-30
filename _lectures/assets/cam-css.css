@@ -39,7 +39,6 @@ table {
     margin-top: 30px !important;
     margin-bottom: 30px !important;
 }
-
 body {
   font-family: 'Open Sans', avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   font-weight: normal;
@@ -104,6 +103,20 @@ strong{
 }
 .inverse strong {
   color: #64A70B;
+}
+em {
+  filter: brightness(60%);
+}
+body em {
+  color: var(--primary);
+}
+.inverse em {
+  color: var(--white);
+  filter: brightness(80%);
+}
+h1 em, h2 em, h3 em {
+  color: var(--secondary);
+  filter: brightness(60%); /* Apply the brightness filter to italic text inside headers */
 }
 a, a > code {
   color: var(--secondary);

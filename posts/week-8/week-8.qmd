@@ -1,25 +1,12 @@
 ---
-title: "Seminar 8: Mixed Methods"
+title: "Seminar 10: TBA"
 description: ""
-author: "Ben Laws"
-date: "2022-11-15"
+author: "TBA"
+date: "2023-11-14"
 draft: false
 ---
 
 Required reading:
 
-* Bryman, A. (2004) ‘Quantitative and qualitative research: further reflections on their integration’, in C. Seale (ed.) Social Research Methods: A reader, London: Routledge, pp. 505-509.
 
 Further reading:
-
-* Liebling, A., Crewe, B. and Hulley, S. (2012) 'Conceptualising and measuring the quality of prison life', in D. Gadd, S. Karstedt and S.F. Messner (eds) The Sage Handbook of Criminological Research Methods, London: Sage Publishing, pp. 358-372. 
-
-* Burke Johnson, R., Onwuegbuzie, A.J. and Turner, L.A. (2007) ‘Toward a definition of mixed methods research’, Journal of Mixed Methods Research, 1(2): 112-133. http://dx.doi.org/10.1177/1558689806298224
-
-* Gorard, S. with Taylor, C. (2011) Combining Methods in Educational and Social Research, Maidenhead: Open University Press/McGraw-Hill. 
-
-* Greene, J.C., Caracelli, V.J. and Graham, W.F. (1989) ‘Toward a conceptual framework for mixed-method evaluation designs’, Educational Evaluation and Policy Analysis, 11(3): 255-274. http://dx.doi.org/10.2307/1163620
-
-* Irwin, S. (2006) Combining Data, Enhancing Explanation, NCRM Working Paper. http://eprints.ncrm.ac.uk/422/
-
-* Johnson, B. and Gray, R. (2010) ‘A history of philosophical and theoretical issues for mixed methods research’, in A. Tashakkori and C. Teddlie (eds) Sage Handbook of Mixed Methods in Social and Behavioral Research, 2nd ed., London: Sage, pp. 69-94.

@@ -9,7 +9,7 @@ title-block-banner: true
 ::: {.grid style="text-align: left"}
 
 ::: {.g-col-4}
-Tuesday 9:00-10:30 & 11:00-12:30
+Tuesday 9:30-11:00 & 11:30-13:00
 <br>B1 and B2
 :::
 
@@ -20,7 +20,8 @@ Tuesday 9:00-10:30 & 11:00-12:30
 ::: {.g-col-4}
 Charles C. Lanfear<br> [cl948\@cam.ac.uk](cl948@cam.ac.uk "Email")<br>Office 3.9, drop-in times:<br>
 -- Tuesday, 14:00-15:00<br>
--- Wednesday, 11:00-12:00
+-- Wednesday, 12:00-13:00
+[Schedule a meeting](https://calendar.app.google/KEYJzwgrBiASKzwH6)
 :::
 
 :::

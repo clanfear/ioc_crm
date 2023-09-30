@@ -185,41 +185,7 @@ What makes a research question *good*?
 *In either case, you're probably going to need to read a lot.*
 ]
 
----
 
-# Sources of Research
-
-.pull-left[
-Academic Researchers
-
-Contract Researchers
-
-* RTI International
-
-Government and Related Orgs
-
-* Ministry of Justice
-* Home Office
-* Youth Justice Board
-* Inspectorates
-
-Campaign Organisations
-
-* Prison Reform Trust
-* Howard League for Penal Reform
-]
-
---
-
-.pull-right[
-Agendas influence research
-
-* What to research
-* How to research
-* How to interpret
-
-*This includes academics*
-]
 
 ---
 
@@ -251,63 +217,7 @@ Evaluations and Critiques
 * Tests of policy and interventions
 * Normative critique or advocacy
 
----
 
-# Crime as a Subject
-
-Garland (2002:23):
-
-> Expert, research-based knowledge about crime and criminals
-still competes with views of the subject which are not
-‘criminological’ in their style of reasoning or their use of
-evidence. Judges, moralists, religious fundamentalists, and
-populist leader-writers still offer views on criminological
-subjects which are quite innocent of criminological science.
-Unlike physics or even economics, which have established a
-degree of monopoly over the right to speak authoritatively
-about their subjects, criminology operates in a culture which
-combines traditional and scientific modes of thought and
-action. Intuitive, ‘instinctive’, common-sense views about
-crime and criminals are still more persuasive to many –
-including many in positions of power and authority – than
-are the results of carefully executed empirical research’
-
-
-???
-
-Unlike many disciplines, there's both a lot of interest and no monopoly on authority
-
-Have to engage with political and moral views of public
-
-Deterrence example: Science says harsh punishment doesn't do much, but public and politicians go to it and it is popular to do so
-
----
-
-# Criminological Topics
-
-* Offending (e.g., opportunity)
-
-   * Incidence and distribution of criminal behaviour
-   * Causes or correlates of criminal conduct
-   * Ethnographies of deviant groups
-
---
-
-* Consequences of crime (e.g., victimizaton)
-
-   * Victim studies
-   * Effects on physical and mental well-being
-
---
-
-* Responses to crime (e.g., policing and incarceration)
-
-   * Penological studies
-   * Monitoring and evaluation of criminal justice
-   * Criminal law<sup>1</sup>
-
-
-.footnote[[1] Importantly *defines* what is crime in legal terms]
 
 ---
 
@@ -544,7 +454,7 @@ class: inverse
 
 # Quantitative Methodology
 
-* Has philosophical roots in positivism (and post-positivism) and the natural sciences
+* Has philosophical roots in positivism and the natural sciences
 
 --
 
@@ -569,6 +479,7 @@ class: inverse
 
    * Derive hypotheses from theory
    * Test hypotheses using data
+   * Update theory
 
 ---
 
@@ -583,8 +494,6 @@ Examples
 
 * Psychometrics
 
-* Text mining
-
 * Meta-analyses
 ]
 .pull-right[
@@ -595,7 +504,7 @@ Examples
 
 # Qualitative Methodology
 
-* Rooted in a broadly interpretivist and constructivist positions
+* Rooted in interpretivist and constructivist positions
 
 --
 
@@ -658,6 +567,7 @@ Creswell 2007:4)
 
    * Make sense of observations or statistical data
    * Guide the formulation of hypotheses to be tested
+   * Provide evidence for mechanisms
 
 ]
 
@@ -910,7 +820,7 @@ Scientific *theories* are *explanations* (beliefs) about how the world works
 
 --
 
-Quantitative half of this course emphasizes **causality**
+Quantitative half of this CRM emphasizes **causality**
 
 * Does $x$ make $y$ happen
 * If we do $x$ what happens to $y$?
@@ -945,7 +855,7 @@ An Observation: Serious crime is more common in neighbourhoods with disorder, su
 
 --
 
-The Boken Windows Thesis:
+The Broken Windows Thesis:
 
 .pull-left-60[
 * Offenders interpret disorder as a sign of low social control
@@ -1071,8 +981,5 @@ Offenders don't care about disorder, they care about **opportunity**, of which s
 ---
 # Wrap-Up
 
-Readings for next week:
+Readings for next session:
 
-* Focused on quantitative data and relationships
-* Building up to causal thinking
-* There's a lot—get started early!

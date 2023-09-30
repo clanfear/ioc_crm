@@ -1,8 +1,8 @@
 ---
-title: "Seminar 12: Research Ethics"
+title: "Bonus Seminar: Research Ethics"
 description: ""
 author: "Loraine Gelsthorpe"
-date: "2023-1-19"
+date: "2023-12-01"
 draft: false
 ---
 
@@ -30,3 +30,4 @@ http://dx.doi.org/10.1177/1468794107078515
 * Dingwall, R. (2012) ‘How did we ever get into this mess? The rise of ethical regulation in the social sciences’, in K. Love (ed.) Ethics in Social Research, Bingley: Emerald, pp. 3-26.
 
 * Mertens, D. and Ginsberg, P. (eds) (2009) Social Research Ethics, London: Sage.
+
