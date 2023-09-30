@@ -8,12 +8,12 @@ title-block-banner: true
 
 ::: {.grid style="text-align: left"}
 
-::: {.g-col-4}
+::: {.g-col-5}
 Tuesday 9:30-11:00 & 11:30-13:00
 <br>B1 and B2
 :::
 
-::: {.g-col-4}
+::: {.g-col-3}
 &nbsp;
 :::
 
