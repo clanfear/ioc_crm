@@ -331,6 +331,10 @@ h1, h2, h3 {
 .pull-right-30 ~ * {
   clear: both;
 }
+.pull-center-30{
+  float: center;
+  width: 30%;
+}
 
 .bottom {
   position: absolute;
@@ -339,6 +343,9 @@ h1, h2, h3 {
 }
 a {
   text-decoration: underline;
+}
+.invert {
+  filter: invert(100%);
 }
 .inverse a {
   color: #cbd3a3;

@@ -2,7 +2,7 @@
 title: "Introduction to Research"
 subtitle: "CRM Lecture 1"
 author: "Charles Lanfear"
-date: "12 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "10 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -21,19 +21,19 @@ knitr::opts_chunk$set(eval=TRUE, echo=TRUE, message=TRUE, warning=TRUE)
 ```
 
 
-# Course Goals
+#  CRM Goals
 
 * Understand what research is and how it is done
 
-   * Major research traditions in criminology
-
-   * Principles of research design
+   * Survey major types of research in criminology
    
-   * Evaluation and interpretation
+   * How to **ask good questions**
+
+   * How to **answer questions effectively**
 
 --
 
-* Recognize major challenges in criminological research
+* Recognize unique challenges in criminological research
 
 --
 
@@ -41,11 +41,11 @@ knitr::opts_chunk$set(eval=TRUE, echo=TRUE, message=TRUE, warning=TRUE)
 
 --
 
-* **Help you write a robust research proposal**
+* **Teach you to write an effective research proposal**
 
 ---
 
-# This Course
+# What I cover
 
 Mainly **methodology**:
 
@@ -69,29 +69,8 @@ Split design:
 &#8203;Materials: [clanfear.github.io/ioc_crm/]()
 
 * Lecture slides and readings (some on Moodle)
-* Recordings posted on once available
+* Recordings posted on Moodle
 
-
----
-
-# Other Courses
-
-* Introduction to Quantitative Analysis (IQA)
-
-   * Using quantitative methods
-      * Statistical estimation
-      * Data programming
-      * Visualization
-   * Closely follows this course
-
---
-
-* Lent:
-
-   * Using methods
-   * Practical workshops
-   * Topics to be decided (requests welcome!)
-   * Likely to lean qualitative
 
 ---
 class: inverse
@@ -119,14 +98,15 @@ To contribute to the conversation, you need to know:
 
 --
 
-This requires understanding of **theory** and **methodology**
+This requires understanding of **theory** and **methodology** and *how they relate to each other*
 
 --
 
-These lead us to:
+This understanding allows us to...
 
 * Ask good **research questions**
 * Develop good **research designs** to answer them
+* Evaluate others' research
 
 ---
 
@@ -136,7 +116,7 @@ What makes a research question *good*?
 
 --
 
-* It is empirically answerable<sup>1</sup>
+* It is empirically <strong>answerable</strong><sup>1</sup>
 
    * It is in some sense factual
    * It is identifiable *in principle*
@@ -145,7 +125,7 @@ What makes a research question *good*?
 
 --
 
-* It improves our understanding of the world (i.e., it informs **theory**)
+* It improves our understanding of the world (i.e., it **informs** theory and/or practice)
 
    * An answer would change how we think or behave
    * An answer would solve a significant problem
@@ -155,67 +135,74 @@ What makes a research question *good*?
 &nbsp;
 
 .text-center[
-*These are subjective; research questions require **justification***
+*These are subjective: You must make an argument!*
 ]
 
 ---
 
 # Sources of Questions
 
-* Theory
+* **Theory**
 
    * We have expectations—are they correct?
-   * Often theories offer differing expectations
-      * Adjudication makes for compelling questions!
+   * Are there *competing expectations* from different theories?
 
 --
 
-* Ignorance
+* **Ignorance**
 
-   * We have no expectations
-   * True scientific ignorance is rare<sup>1</sup>
-      * Usually: "is $x$ like $y$?"
+   * We have no expectations!
+   * True scientific ignorance is **very rare**<sup>1</sup>
+      * Usually: "is $x$ like $y$?" (back to theory!)
       * Almost never: "nothing is like $x$"
+   * Must make convincing argument no extant theory applies
 
-.footnote[[1] Criminology, like other social sciences, is plagued with reinvention of the wheel, partly due to rewarding (the appearance of) novelty.]
+.footnote[[1] Criminology, like other social sciences, is plagued with reinvention of the wheel, due to rewarding the appearance of novelty.]
 
 --
+
+<br>
 
 .text-center[
-*In either case, you're probably going to need to read a lot.*
+*In either case, you're probably going to need to read a **lot**.*
 ]
-
 
 
 ---
 
-# What is Generated?
+# Types of Questions
 
-Descriptions
+* **Description** - What does this look like?
 
-* Patterns and prevalences
-* Descriptive narratives
-
---
-
-Associations and Interpretations
-
-* Risk and protective factors
-* Interpretive narratives
+   * *How do crime rates differ across neighbourhoods?*
+   * *How does exposure to violence vary over the life course?*
 
 --
 
-Explanations / Explanatory Frameworks
+* **Exploration** - What is going on here?
 
-* Theory
-* Theory testing and causal research 
+   * *Do violent neighbourhoods have different interpersonal networks?*
+   * *Are children exposed to violence more likely to carry guns?*
 
 --
 
-Evaluations and Critiques
+* **Explanation** - Why is this happening?
 
-* Tests of policy and interventions
-* Normative critique or advocacy
+   * *Do strong interpersonal networks reduce neighbourhood violence?*
+   * *Does childhood victimization increase gun carrying?*
+
+--
+
+* **Evaluation** - Does this work?
+
+   * *Does creating a neighbourhood organization reduce violence?*
+   * *Does this child victims' program reduce gun carrying?*
+
+--
+
+.text-center[
+*Each of these requires a different research design!*
+]
 
 
 
@@ -223,135 +210,121 @@ Evaluations and Critiques
 
 # Research Design
 
-**Research design** is *strategy* for answering a question:
+**Research design** is *strategy* for answering research questions:
 
 * What data are needed
 * How to obtain those data
-* How to analyze data
+* How to analyze those data
 * How to interpret results
 
 --
 
-Good **research design** is that which can answer your (good) research question
+**Good research design** is that which can answer your (good) research question
 
 --
 
-There are many different types of research
+There are many different types of empirical research design
 
---
-
-Your choice should be determined by your *question*
+The type you choose is determined by your *question*
 
 ---
 
-# Types of Research
+# Descriptive Research
 
-* Description (‘what does this look like?’):
-
-   * How do crime rates differ across neighbourhoods?
-   * How does exposure to violence vary over the life course?
+* Accurate and systematic description of something
 
 --
 
-* Exploration / Interpretation (‘what is going on here?)
+* Can take many forms, e.g.:
 
-   * How do residents feel about crime in their neighbourhoods?
-   * Are children exposure to violence likely to have other negative experiences and outcomes?
+   * **Incidences** and **prevalences**
 
+      * *How often do Americans witness gun violence?*
 --
 
-* Explanation (‘what explains or accounts for?’)
+   * **Processes**
 
-   * Do strong interpersonal networks reduce neighbourhood crime?
-   * Does childhood victimization increase youth weapon carrying?
-
+      * *How are police stop records generated?*
 --
 
-* Evaluation (‘what works?’)
+   * **Experiences**
 
-   * Does creating a neighbourhood organization reduce crime?
-   * Does a youth violence reduction program reduce weapon carrying?
+      * *How do incarcerated women experience reintegration?*
+--
+
+<br>
+
+.text-center[
+*Description is the foundation of science: We must know **what** before we can explain **why***
+]
+
 
 ---
 
-# Descriptive
+# Exploratory Research
 
-Many different forms of description
+* Building insight into a phenomenon with limited data or expectations
 
---
-
-* Extents or prevalences
-
-   * How many prisoners have mental health problems?
-   * How many probation staff say that their morale is affected by having to fulfil targets?
-
---
-
-* Processes
-
-   * What are the dynamics of court cases? Who does what, at what point?
-   * How does a youth become a gang member?
-
---
-
-* Experiences
-
-   * How do incarcerated women experience reintegration?
-   * How do crime victims feel about testifying in court?
-
----
-
-# Exploratory / Interpretive
-
-* Building insight into phenomenon with limited existing data
-
---
-
-* Few expectations about what you might find
-
-   * No ‘hypotheses’
-   * Broad questions
+   * No theory testing or causal claims
+   * *Is there something interesting going on here?*
+   * *When does this thing occur?*
 
 --
 
 * Often similar to descriptive research, but searching for:
 
-   * Understanding
-   * Meaning
-   * Potential explanations
+   * **Meanings**
+      * *How is offending related to decision-making processes?*
+   * **Potential explanations**
+      * *Are officers convicted of misconduct different than others?*
+   * **Predictions**
+      * *What are risk factors for witnessing gun violence?*
 
 --
 
-* Often used to develop research questions for explanatory research
+* Often used to develop explanatory questions
+
+   * *Which of these risk factors are causes?*
+   * *Do these meanings cause behaviour or are they a result of it?*
 
 ---
 
 # Explanatory Research
 
-* Why does a phenomenon occur?
+* What causes $y$?
 
-* What is the result of a phenomenon?
+   * *Why did US gun violence increase in 2020?*
+   * *What causes desistance from crime over the life-course?*
+
+* What does $x$ cause?
+
+   * *Does clearing a vacant lot reduce nearby crime and fear?*
+   * *Does perceived risk of apprehension reduce offending?*
 
 --
 
-* Deductive
+.pull-left[
+* **Deductive**
 
    * Start with a theory
    * Collect data to test it
-   * i.e., hypothetico-inductive model
+   * e.g., hypothesis testing
+]
 
 --
 
-* Inductive
+.pull-right[
+* **Inductive**
 
    * Start collecting data
    * Develop theory from data
    * e.g., grounded theory
+]
 
 --
 
 .text-center[
-*The quantitative half of this course focuses heavily on explanatory research*
+*CRM focuses on **explanatory research** design*
 ]
 
 ---
@@ -400,151 +373,132 @@ Research makes assumptions about:
 * How to analyze
 * What counts as evidence
 
-
-
-
----
-
-![:width 70%](img/bottoms.png)
-
-???
-
-Strengths or limitations aren't about validity; recognition what they do and what they do not do
-
-Divides are not clean here---these are ideal types
-
-Don't pigeonhole yourself into a category
-
-Also recognize that researchers from very different approaches aren't *wrong*, they have different perspectives
-
----
-
-# Research Approaches
-
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE}
-library(tidyverse)
-library(knitr)
-tribble(
-  ~ `Paradigm`,
-  ~ `Methodology`,
-  ~ `Methods`,
-  "View of the world and social life within it", "Strategy or plan of action", "Techniques for collecting and analysing data",
-"Post-positivism<br>Interpretivism<br>Constructivism<br>Feminism<br>Postmodernism<br>Pragmatism",
-"Ethnography<br>Grounded Theory<br>Action Research<br>Experiments<br>Case Studies<br>Oral History",
-"Interviews<br>Focus Groups<br>Observation<br>Documentary Analysis<br>Questionnaires<br>Regression"
-) |> kable()
-```
-
-.footnote[**Paradigm** here is *metatheory* or scientific philosophy; related to epistemology]
-
-
 ---
 class: inverse
+# Research Approaches 
 
-# Qualitative and Quantitative Research Methodologies
-
-### Distinct but complementary
-
-&nbsp;
-
-![:width 45%](img/quant_qual_loop.svg)
-
----
-
-# Quantitative Methodology
-
-* Has philosophical roots in positivism and the natural sciences
-
---
-
-* Distinction between scientific issues and normative ones
-
---
-
-* Emphasis on:
-
-   * Enumeration
-   * Explanation
-   * Prediction
-   * Intervention
-
---
-
-* Interest in 'laws', patterns, generalisations
-
---
-
-* Hypothetico-deductive framework
-
-   * Derive hypotheses from theory
-   * Test hypotheses using data
-   * Update theory
-
----
-
-# Quantitative Methods
+### Qualitative and quantitative
 
 .pull-left[
-Examples
-
-* Survey data analysis
-
-* Experiments and quasi-experiments
-
-* Psychometrics
-
-* Meta-analyses
+![:width 70%](img/suttles.jpg)
 ]
+
 .pull-right[
-![:width 80%](img/sampson.jpg)
+![:width 70%](img/sampson.jpg)
+]
+
+
+---
+# A Qualitative Example
+
+.pull-left[
+![:width 75%](img/stjean.jpg)
+]
+
+.pull-right[
+> In this unique and original book, Peter St. Jean examines why some blocks in urban areas experience more crime than others.  Based on a number of sources--most importantly, in-depth interviews with drug dealers and routine robbers about their strategies for selecting a location or victim...
+
+- Mario Small
+]
+
+.text-center[
+*How do offenders **interpret** disorder and act based on that?*
+]
+
+
+---
+# A Quantitative Example
+
+.pull-left[
+![:width 75%](img/peterson_krivo.png)
+]
+
+.pull-right[
+> This important dataset on neighborhoods within each of ninety-one of the largest cities of the United States allows Peterson and Krivo to craft a structural race theory of neighborhood crime based on racial inequality, residential segregation, and spatial inequality.
+
+- Ross Matsueda
+]
+
+.text-center[
+*How does urban racial inequality relate to crime in the United States?*
 ]
 
 ---
+# Qualitative
 
-# Qualitative Methodology
+*Contextual, categorical, interpretive, inductive*
 
-* Rooted in interpretivist and constructivist positions
-
---
-
-* Emphasis on interpretation, e.g.:
-
-   * How reality is understood and constructed
-   * How power is exercised
-
---
-
-* Interest contextual understandings
-
-   * Prioritizes meanings over measurement and prediction
-
---
-
-* Inductive and deductive analysis
-
-   * Flexible and adaptive methods of data generation
-   
----
-
-# Qualitative Methods
-
-.pull-left[
-Examples
+Data
 
 * Interviews
+* Observation (Overt/Covert)
+* Participation (Overt/Covert)
+* *Non-numeric*
 
-* Ethnography and participant observation
+--
 
-* Focus groups
+.pull-left[
+Strengths
 
-* Document and discourse analysis
-
-* Case studies
+* Access hidden populations
+* Capture context and meaning
+* Observe mechanisms
+* Easier to communicate
 ]
+
+--
+
 .pull-right[
-![](img/suttles.jpg)
+Challenges
+
+* Research time requirements
+   + Scales poorly
+* Subjectivity at forefront
+* Risk and access
+* Replication / Generalizability
 ]
+
+---
+# Quantitative
+
+*Abstract, numeric, hypothetical, deductive*
+
+Data
+
+* Surveys
+* Secondary data
+   + Police Data
+   + Government Data
+
+--
+
+.pull-left[
+Strengths
+
+* Replication / Generalizability
+* Testing and validating
+* Measuring effects
+* Scales well
+]
+
+--
+
+.pull-right[
+Challenges
+
+* Up-front time requirements
+* Homogenizes population and context
+* Data demands
+* Hidden subjectivity
+* Harder to communicate
+]
+
+---
+# Feedback Loop
+
+<br>
+
+![:width 50%](img/quant_qual_loop.svg)
 
 ---
 
@@ -553,7 +507,7 @@ Examples
 > Research in which the investigator collects and analyses
 data, integrates the findings, and draws inferences using
 both qualitative and quantitative approaches or methods
-in a single study or program of inquiry’ (Tashakkori and
+in a single study or program of inquiry (Tashakkori and
 Creswell 2007:4)
 
 --
@@ -576,233 +530,29 @@ Creswell 2007:4)
 ]
 
 
-
 ---
 
 # A Methodological Toolbox
 
-Some *specialization* is beneficial, even necessary
+Some *specialization* is necessary but overspecialization is limiting, both *intellectually* and *professionally*. It is important to be able to:
 
 --
 
-But overspecialization is limiting, both *intellectually* and *professionally*
+* **Interpret** findings of any kind
 
 --
 
-It is important to be able to:
+* **Collaborate** with others with different specialties
 
-* Interpret findings of any kind
+--
 
-* Collaborate with others with different specialties
+* **Critique** research using any approach
 
-* Critique research using any approach
-
-* View projects from alternative perspectives
+> And another good reason to have a strong – and more importantly, eclectic – methodological skill‐set is so that you will not have to define (and therefore confine) yourself as either a quantitative or qualitative criminologist (although some people enthusiastically embrace such labels). You can instead call yourself a criminologist and be safe in the knowledge that you have command of whatever methodological “tool” you will need to answer whatever criminological question you have decided to ask. (Pratt 2015)
 
 
 ---
-class: inverse
-# Research Quality
-
----
-
-# Research Questions
-
-* What are the key research questions/ hypotheses?
-
---
-
-* How well are they justified? 
-
-   * Do they respond to gaps theory or evidence?
-   * Do they improve our ability to do research?
-   * Do they inform policy or practice?
-
---
-
-* How clearly are the key concepts /constructs defined? Are they convincing?
-
---
-
-* How will the research contribute to existing knowledge?
-
-   * How effectively does it draw on previous research findings?
-   * How does it reference existing academic debates?
-
----
-
-# The Research Design
-
-* Is the research design explained and justified?
-
-   * Is it described in sufficient detail?
-   * Does it reference established standards?
-
---
-
-* Does it allow the research questions or hypotheses to be answered effectively?
-
-   * Do the methods match the questions?
-
----
-
-# Data Sampling
-
-How was the sample selected and recruited?
-
---
-
-What is the make-up of the actual sample?
-
-* Does it reflect the intended sample?
-* Are limitations of the sample acknowledged?
-
---
-
-Does the sample reflect the research question or hypotheses?
-
-* Can results obtained from this sample answer the question?
-
----
-
-# Data Collection
-
-Can this generate data to answer the research questions?
-
---
-
-Is this approach better than alternative approaches?
-
-* Do the strengths justify the approach?
-* Are the limitations explained?
-
---
-
-How valid is their measurement strategy?
-
-* Do the measurements capture what is intended?
-* Do they refer to existing measurement standards?
-* Do they address limitations?
-
----
-
-# Mixed Methods Studies
-
-Is there a convincing justification for a mixed methods approach?
-
-* Are both qualitative and quantitative evidence needed to answer the question?
-* Do the approaches complement each other?
-   * Does one method compensate for limitations of the other?
-
---
-
-How well has the design been explained?
-
-* How are sampling, data collection and analysis explained?
-* Do they complement each other?
-* How effectively have the methods been integrated?
-
----
-
-# Ethics
-
-Is there a discussion of ethical issues?
-
---
-
-Any concerns about informed consent?
-
---
-
-Has any potential for harm to participants been acknowledged or addressed?
-
---
-
-Reference to ethical standards/guidelines?
-
----
-
-# Data Analysis
-
-How have the data been analysed?
-
-* Are the methods established?
-* If the approach is unusual, is it justified?
-
---
-
-Are the processes described fully? 
-
-* Are they convincingly rigorous?
-* Are they **reproducible**?
-* Is it clear how results were derived from the data?
-
---
-
-Do they make suitable use of the data collected?
-
-* Is the examination as thorough as is warranted by the design?
-* Are they attempting to do more than is possible with the data?
-
----
-
-# Research Findings
-
-.pull-left[
-
-### Quantitative Research
-
-Are they **valid**—measuring what was intended?
-
-Are the findings **reliable**?
-
-* If methods are followed again, would the results be the same?
-
-Are they **generalisable**?
-
-* To what extent can the findings applicable across other populations?
-]
-
-.pull-right[
-
-### Qualitative Research
-
-Are they **credible** (believable)?
-
-Are the findings **dependable**?
-
-* Would results be repeated provided the same participants, coders, and context?
-
-Are they **transferable**?
-
-* To what extent can the findings be applied to other situations?
-]
-
----
-
-# Research Conclusions
-
-* Are the conclusions justifiable in light of the research findings?
-
---
-
-* Do they answer the research questions?
-
---
-
-* Are other conclusions possible/considered?
-
---
-
-* Are claims to generalisability appropriate?
-
---
-
-* Are there any stakeholder interests that may have shaped the conclusions of the research?
-
----
-
-# Have a Chat
+# What would you do?
 
 ![](img/knife-crime.png)
 
@@ -811,23 +561,81 @@ class: inverse
 
 # Causality
 
+.image-full[
+.invert[
+```{tikz fig-2-theory-dag, echo = FALSE, fig.id = "fig-2-theory-dag",  fig.cap = "Theoretical model. CE is collective efficacy, O is criminal opportunity, C is crime, A is short-term lettings, U is omitted confounders", fig.ext = 'svg', fig.width = 12.7/5, fig.height = 10.16/5}
+\usetikzlibrary{positioning}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none
+    },
+    every path/.append style = {
+        arrows = ->,
+        draw = black,
+        fill = none
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt
+    }
+}
+\tikz{
+    \node (a1) at (0,0) {$A_1$};
+    \node[hidden] (u) at (1,-1) {$U$};
+    \node (c1) at (0,2)  {$C_1$};
+    \node (a2) at (2,0)  {$A_2$};
+    \node (c2) at (2,2)  {$C_2$};
+    \node[hidden] (o1) at (0,1)  {$O_1$};
+    \node[hidden] (o2) at (2,1)  {$O_2$};
+    \node[hidden] (s1) at (-1,1) {$\textit{CE}_1$};
+    \node[hidden] (s2) at (1,1)  {$\textit{CE}_2$};
+    \path (a1) edge (o1);
+    \path (c1) edge [bend left=25] (o2);
+    \path (c1) edge [bend left=10] (s2);
+    \path (o1) edge (c1);
+    \path (a2) edge (o2);
+    \path (o2) edge (c2);
+    \path (a1) edge (a2);
+    \path (a1) edge (s2);
+    \path (a1) edge (s2);
+    \path (s2) edge (o2);
+    \path (s1) edge (o1);
+    \path (c1) edge [bend right=27] (a2);
+    \path (s1) edge [bend left=40] (s2);
+    \path (o1) edge [bend left=40] (o2);
+    \path (u) edge (a1);
+    \path (u) edge (a2);
+    \path (u) edge [bend left=45] (s1);
+    \path (u) edge (s2);
+    \path (u) edge (o1);
+    \path (u) edge (o2);
+    \path (u) edge [bend left=60] (c1);
+    \path (u) edge [bend right=60] (c2);
+  }
+```
+]
+]
+
 ---
 # Causality
 
-Scientific *theories* are *explanations* (beliefs) about how the world works
+Scientific *theories* are *causal explanations* about how the world works
 
 * $y$ occurs because $x$
 
 --
 
-Quantitative half of this CRM emphasizes **causality**
+Quantitative half of CRM emphasizes **causality**:
 
-* Does $x$ make $y$ happen
+* Does $x$ make $y$ happen?
 * If we do $x$ what happens to $y$?
 
 --
 
-Causal approaches usually follow **hypothetico-deductive** framework
+Causal research usually follows **hypothetico-deductive** framework
 
 --
 
@@ -851,7 +659,7 @@ My own theoretical work drags routine activity and ecological theories kicking a
 # Broken Windows
 
 
-An Observation: Serious crime is more common in neighbourhoods with disorder, such as litter, panhandlers, and loitering youth
+An Observation: *Serious crime is more common in neighbourhoods with disorder, such as litter, panhandlers, and loitering youth*
 
 --
 
@@ -860,7 +668,7 @@ The Broken Windows Thesis:
 .pull-left-60[
 * Offenders interpret disorder as a sign of low social control
 
-   * If no one stops littering or pan-handling, no one will stop robbery or drug dealing
+   * *If no one stops littering or pan-handling, no one will stop robbery or drug dealing*
    
 * Offenders are thus more likely to commit crime
 ]
@@ -878,14 +686,14 @@ A Proposition: At the neighbourhood level, disorder *causes* crime
 --
 
 .text-center[
-*How might we test this?*
+*What questions might we ask and how might we test them?*
 ]
 
 ---
 
 # An Experiment
 
-Keizer et al. (2008): Does seeing disorder make individuals more likely to commit a crime?
+Keizer et al. (2008): *Does seeing disorder make individuals more likely to commit a crime?*
 
 --
 
@@ -921,7 +729,7 @@ Theft was twice as common with either litter or graffiti.<sup>1</sup>
 ---
 # Observational
 
-Sampson & Raudenbush (1999): What if low social control causes both disorder and crime?
+Sampson & Raudenbush (1999): *What if low social control causes both disorder and crime?*
 
 --
 
@@ -958,9 +766,9 @@ Broken windows thesis says offenders **interpret** disorder as a sign of low soc
 .pull-left-60[
 St. Jean (2007):
 
-* Ask robbers and drug dealers how they interpret disorder (and social control)
+* *How do robbers and drug dealers interpret disorder?*
 
-* Ask why they choose particular locations for crime
+* *Why do they choose particular locations for crime?*
 ]
 .pull-right-40[
 ![](img/stjean.png)
@@ -975,11 +783,31 @@ Offenders don't care about disorder, they care about **opportunity**, of which s
 --
 
 .text-center[
-*Interpreted as evidence against the broken windows thesis and a **complication** of social control*
+*Interpreted as evidence against the broken windows thesis—and for a more complicated social control theory*
 ]
+
+---
+
+EXPAND HERE
+
+> Link causal analysis back to descriptive and exploratory, forward to evaluation
+
+> Theories are causal so explanatory, causal research is only way to test theory
+
+> Maybe something about absence of association in exploratory not indicative of absence of causal effect
 
 ---
 # Wrap-Up
 
+* Theory generates questions
+* Questions determine methods
+
+
 Readings for next session:
+
+* Bernard, T.J. (1990) 'Twenty years of testing theories: what have we learned and why?', *Journal of Research in Crime and Delinquency*, 27(4): 325–347. http://dx.doi.org/10.1177/0022427890027004002
+
+* Wikstrom, P-O H. (2017) ‘Character, circumstances, and the causes of crime: Towards an analytical criminology’ In A. Liebling, S. Maruna and L. McAra (eds) *Oxford Handbook of Criminology*, 6th edition. Oxford University Press. Pg 501-521 
+
+
 
