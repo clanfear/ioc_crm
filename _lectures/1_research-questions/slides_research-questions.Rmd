@@ -2,7 +2,7 @@
 title: "Introduction to Research"
 subtitle: "CRM Lecture 1"
 author: "Charles Lanfear"
-date: "10 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "10 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%e %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -145,7 +145,9 @@ What makes a research question *good*?
 * **Theory**
 
    * We have expectations—are they correct?
-   * Are there *competing expectations* from different theories?
+      * *I think these expectations are wrong!*
+   * Are there competing expectations from different theories?
+      * *Adjudicate between them!*
 
 --
 
@@ -161,12 +163,10 @@ What makes a research question *good*?
 
 --
 
-<br>
 
 .text-center[
 *In either case, you're probably going to need to read a **lot**.*
 ]
-
 
 ---
 
@@ -209,6 +209,7 @@ What makes a research question *good*?
 ---
 
 # Research Design
+
 
 **Research design** is *strategy* for answering research questions:
 
@@ -258,6 +259,13 @@ The type you choose is determined by your *question*
 *Description is the foundation of science: We must know **what** before we can explain **why***
 ]
 
+---
+
+![:width 80%](img/jama.PNG)
+
+.text-center[
+*What does exposure to gun violence look like over the life course?*
+]
 
 ---
 
@@ -287,26 +295,52 @@ The type you choose is determined by your *question*
    * *Which of these risk factors are causes?*
    * *Do these meanings cause behaviour or are they a result of it?*
 
+
+---
+
+![:width 80%](img/hsiao.png)
+
+.text-center[
+*How are online gang conflicts related to offline gang violence?*
+]
+
+---
+
+# Exploratory &#8800; Atheoretical
+
+**Reminder:** *There is no atheoretical research*
+
+> Theory is never completely isolated from problems of empirical research, any more than empirical research is free from theoretical assumptions (Layder 1994:vi)
+
+> Theory is inextricably involved in the process of data-gathering and data-interpretation (Bottoms 2007:75)
+
+
+--
+
+Research makes assumptions about:
+
+* What is worth studying
+* What questions to ask
+* How to measure
+* How to analyze
+* What counts as evidence
+
 ---
 
 # Explanatory Research
 
-* What causes $y$?
+* What causes $y$? What does $x$ cause?
 
    * *Why did US gun violence increase in 2020?*
-   * *What causes desistance from crime over the life-course?*
-
-* What does $x$ cause?
-
-   * *Does clearing a vacant lot reduce nearby crime and fear?*
    * *Does perceived risk of apprehension reduce offending?*
 
 --
 
+
 .pull-left[
 * **Deductive**
 
-   * Start with a theory
+   * Start with a **theory**
    * Collect data to test it
    * e.g., hypothesis testing
 ]
@@ -317,14 +351,35 @@ The type you choose is determined by your *question*
 * **Inductive**
 
    * Start collecting data
-   * Develop theory from data
+   * Develop **theory** from data
    * e.g., grounded theory
 ]
 
 --
 
 .text-center[
-*CRM focuses on **explanatory research** design*
+*Theory testing and development is explanatory research!*
+]
+
+--
+
+.text-center[
+*CRM focuses on **explanatory research** designs*
+]
+
+---
+background-color: white
+
+# Explanatory Process
+
+![:width 80%](img/kyle-cycle.PNG)
+
+---
+
+![](img/home-free.jpg)
+
+.text-center[
+*Does residential change reduce recidivism?*
 ]
 
 ---
@@ -340,8 +395,7 @@ The type you choose is determined by your *question*
    * Data may not be collected on what turns out to be important *later*
    
    * E.g. Minneapolis Domestic Violence Experiment
-      * Arrest worked in reducing domestic violence
-      * Replication studies found mixed results
+      * Arrest reduced domestic violence—but not in replications
       * Research design doesn't reveal *why*
 
 --
@@ -353,25 +407,60 @@ The type you choose is determined by your *question*
 
 ---
 
-# On Research and Theory
+![:width 80%](img/braga.png)
 
-> Theory is never completely isolated from problems of empirical research, any more than empirical research is free from theoretical assumptions (Layder 1994:vi)
+.text-center[
+*Do body-worn cameras improve police stop outcomes?*
+]
 
-> Theory is inextricably involved in the process of data-gathering and data-interpretation (Bottoms 2007:75)
+---
+
+# Linking Together
+
+<br>
+
+![:width 90%](img/research-stages.svg)
+
+
+---
+
+## Aside: Correlation &#8800; Causation
+
+
+We often hear correlation doesn't imply causation, which is true
+
+---
+background-color: white
+
+<br>
+
+![:width 100%](img/nick-cage.jpg)
+
+---
+count:false
+## Aside: Correlation &#8800; Causation
+
+We know correlation doesn't imply causation
+
+
+More problematic: Causation can occur without correlation
+
 
 --
 
-*There is no atheoretical research*
+![:width 80%](img/car_example.PNG)
 
 --
 
-Research makes assumptions about:
+* Correlations tell us nothing about causes without theory
+* Be careful extrapolating from exploratory results
+* Beware research conflating association and causation
 
-* What is worth studying
-* What questions to ask
-* How to measure
-* How to analyze
-* What counts as evidence
+--
+
+.text-center[
+*We'll dive into this in a few weeks*
+]
 
 ---
 class: inverse
@@ -626,16 +715,13 @@ Scientific *theories* are *causal explanations* about how the world works
 
 * $y$ occurs because $x$
 
+Thus all explanatory research is *causal research*
+
 --
 
 Quantitative half of CRM emphasizes **causality**:
 
 * Does $x$ make $y$ happen?
-* If we do $x$ what happens to $y$?
-
---
-
-Causal research usually follows **hypothetico-deductive** framework
 
 --
 
@@ -644,14 +730,77 @@ Causality isn't necessarily about numbers, nor factors that are physical, behavi
    * *Meanings* can be cause actions
    * Experiences can cause *meanings*
 
-???
-
-My own theoretical work drags routine activity and ecological theories kicking and screaming into what Bottoms calls active-subject socially-oriented criminology—but my approach is generally quantitative.
-
 --
 
 .text-center[
-*Let's start with an example*
+*But what is a cause anyway?*
+]
+
+---
+# Causes and Mechanisms
+
+A **cause** is something that can initiate a **mechanism** to produce an effect
+
+* $x$ causes $y$ via the mechanism of $z$
+
+--
+
+A **mechanism** is a *process* linking input to output under specific conditions
+
+* *How a cause **works***
+* Theories specify mechanisms
+* Mechanisms are typically not directly observable
+
+>  the hallmark of modern science is the search for lawful mechanisms behind the observed facts, rather than the mindless accumulation of data and the mindless search for statistical correlations among them. (Bunge 2004)
+
+.footnote[
+See [Wikström & Kroneberg (2022)](https://www.annualreviews.org/doi/full/10.1146/annurev-criminol-030920-091320) and [Bunge (2004)](https://doi.org/10.1177/00483931032625)
+]
+
+--
+
+Example: "..collective efficacy may also reduce crime by empowering residents to remove or prevent the development of sources of criminal opportunities..." (Lanfear 2022)
+
+
+---
+
+# Testing Theories
+
+The typical (deductive) process:
+
+1. Start with research question
+2. Generate hypothesis
+   * A theory-based **falsifiable** prediction
+3. Test hypothesis using data
+   * Quantitative statistical hypothesis testing
+   * Qualitative interpretation
+4. Re-evaluate theory
+
+---
+count: false
+background-color: white
+
+# Testing Theories
+
+![:width 80%](img/kyle-cycle.PNG)
+
+---
+count: false
+# Testing Theories
+
+The typical (deductive) process:
+
+1. Start with research question
+2. Generate hypothesis
+   * A theory-based **falsifiable** prediction
+3. Test hypothesis using data
+   * Quantitative statistical hypothesis testing
+   * Qualitative interpretation
+4. Re-evaluate theory
+
+
+.text-center[
+*Let's see some examples*
 ]
 
 ---
@@ -666,7 +815,7 @@ An Observation: *Serious crime is more common in neighbourhoods with disorder, s
 The Broken Windows Thesis:
 
 .pull-left-60[
-* Offenders interpret disorder as a sign of low social control
+* Offenders interpret disorder as a sign of low social control (mechanism)
 
    * *If no one stops littering or pan-handling, no one will stop robbery or drug dealing*
    
@@ -759,7 +908,7 @@ No effect of disorder on crime once accounting for social control
 ---
 # Interviews
 
-Broken windows thesis says offenders **interpret** disorder as a sign of low social control.
+Broken windows thesis says offenders **interpret** disorder as a sign of low social control
 
 --
 
@@ -786,21 +935,11 @@ Offenders don't care about disorder, they care about **opportunity**, of which s
 *Interpreted as evidence against the broken windows thesis—and for a more complicated social control theory*
 ]
 
----
-
-EXPAND HERE
-
-> Link causal analysis back to descriptive and exploratory, forward to evaluation
-
-> Theories are causal so explanatory, causal research is only way to test theory
-
-> Maybe something about absence of association in exploratory not indicative of absence of causal effect
 
 ---
+class: inverse
 # Wrap-Up
 
-* Theory generates questions
-* Questions determine methods
 
 
 Readings for next session:
