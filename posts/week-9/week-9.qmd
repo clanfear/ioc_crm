@@ -1,6 +1,6 @@
 ---
 title: "Seminar 11: Qualitative Data Analysis"
-description: ""
+description: "Analyzing data from interviews, observation, and other qualitative collection methods"
 author: "Caroline Lanskey"
 date: "2023-11-21"
 draft: false

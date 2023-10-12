@@ -1,5 +1,5 @@
 ---
-title: "Seminar 5: Statistical Inference"
+title: "Seminar 6: Statistical Inference"
 description: "A basic introduction to sampling, estimation, and hypothesis testing"
 author: "Charles Lanfear"
 date: "2023-10-24"

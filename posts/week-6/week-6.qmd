@@ -1,5 +1,5 @@
 ---
-title: "Seminar 8: Ethnographic and Observational Research"
+title: "Seminar 9: Ethnographic and Observational Research"
 description: "Qualitative research using ethnographic methodology"
 author: "Arushi Garg"
 date: "2023-11-07"

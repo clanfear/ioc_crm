@@ -1,5 +1,5 @@
 ---
-title: "Seminar 6: Causality and Theory Testing"
+title: "Seminar 7: Causality and Theory Testing"
 description: "Principles of causal inference and their relationship to social theory"
 author: "Charles Lanfear"
 date: "2023-10-31"

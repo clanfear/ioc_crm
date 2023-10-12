@@ -3,7 +3,9 @@ title: "Criminological Research Methods"
 subtitle: "Institute of Criminology<br>University of Cambridge"
 listing:
   contents: posts
-  sort: "date asc"
+  sort:
+    - "date asc"
+    - "title"
   type: default
   categories: false
 page-layout: full

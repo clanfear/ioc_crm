@@ -1,12 +1,20 @@
 ---
-title: "Seminar 10: TBA"
-description: ""
-author: "TBA"
-date: "2023-11-14"
+title: "Seminar 5: Writing a Research Proposal"
+description: "An introduction to writing proposals for research designs"
+author: "Charles Lanfear"
+date: "2023-10-23"
 draft: false
 ---
 
 Required reading:
 
+* Davies, P. and Francis, P. (2018), Doing Criminological Research, Los Angeles:  Sage Publications. Read chapter 2, pp. 35-66; ‘Planning and proposing criminological research’.
+   * Download from Moodle
+
+* [Matsueda, R. (2019) ‘Structuring a conventional empirical social science article.’ Download from Moodle or from this link.](https://clanfear.github.io/ioc_crm/_lectures/6_writing-research-proposals/reading/Matsueda%20(2019)%20Structuring%20a%20conventional%20empirical%20social%20science%20article.pdf)
 
 Further reading:
+
+* Denscombe, M. (2012) Research Proposals: A practical guide, Maidenhead:  McGraw-Hill Education.
+* Wentz, E. (2014) How to Design, Write, and Present a Successful Dissertation Proposal. London: Sage Press. 
+* Becker, H.S. (2020) Writing for Social Scientists: How to Start and Finish Your Thesis, Book, or Article (3rd ed.). Chicago: University of Chicago Press.
