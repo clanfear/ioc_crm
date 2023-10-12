@@ -1,8 +1,8 @@
 ---
 title: "Quantitative Data and Relationships"
-subtitle: "CRM Lecture 2"
+subtitle: "CRM Week 2"
 author: "Charles Lanfear"
-date: "18 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "17 Oct 2023<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -275,8 +275,8 @@ Not all crimes are reported
 
 Not all reported are recorded by police
 
-* Varies by agency
-* Varies by crime
+* Varies by agency and crime
+* Hierarchy rules
 * Political incentives
 * Differential treatment
 ]
@@ -294,6 +294,12 @@ Observed Crime Rate = Actual Rate ∗ Probability of Reporting
 > According to the U.C.R., the incidence of rape nearly doubled from 1973 to 1990. The N.C.V.S., by contrast, shows that it declined by around forty per cent during the same period. Researchers... found that the upward trend in the U.C.R. data correlated with upticks in the number of female police officers, and with the advent of rape crisis centers and reformed investigative styles. It could be, in short, that a modernized approach to the policing of rape drastically increased the frequency with which it was reported while reducing its incidence.
 
 [Matthew Hutson. 2020. "The Trouble with Crime Statistics." The New Yorker](https://www.newyorker.com/culture/annals-of-inquiry/the-trouble-with-crime-statistics)
+
+--
+
+.text-center[
+*Note the complex causal process generating the data!*
+]
 
 ---
 ## Victimization Data
@@ -545,9 +551,9 @@ class: inverse
 
 If they have a *true non-arbitrary zero*, they are **ratio** data
 
-* If something is 0cm long, it has *no length*
+* If something is 0cm long, it has *no length* (ratio!)
 
-* If the temperature is 0C, there isn't *no temperature*
+* If the temperature is 0C, there isn't *no temperature* (not ratio!)
    * The 0 is arbitrary: In Fahrenheit it is 32 degrees!
 
 --
