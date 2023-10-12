@@ -131,7 +131,7 @@ class: inverse
 
 --
 
-**Observation**: 1 person
+**Observation**: A person
 
 --
 
@@ -425,7 +425,7 @@ class: inverse
 
 &zwj;**Observables**: Objective, externally measurable variables
 
-   * Individual height, occupation, stated opinions
+   * Individual height, occupation, stated beliefs
    * Neighborhood population, geographical area, crime rate<sup>1</sup>
 
 .footnote[[1] Hard to measure doesn't mean unobservable!]
@@ -434,16 +434,20 @@ class: inverse
 
 --
 
+<br>
+
 **Unobservables** (or **Constructs**): Subjective, internal, or only indirectly measurable
 
-   * Individual self-control, wellness, social class, education
+   * Individual self-control, wellness, social class, actual beliefs
    * Neighborhood social capital, disadvantage, collective efficacy
 
 *Unobservables do not exist in the real world: they are conceptual*
 
 --
 
+.text-center[
 In Criminology, we're *very often* interested in unobservables.
+]
 
 ---
 # Measurement Principles
@@ -562,8 +566,12 @@ If they have a *true non-arbitrary zero*, they are **ratio** data
 
    * 15cm is half as long as 30cm
    * 15C is not half as hot as 30C
-      * 15C is 59F
-      * 30C is 86F
+      * 15C is 59F is 288K<sup>1</sup>
+      * 30C is 86F is 303K
+
+.pull-right[
+.footnote[[1] Kelvin *is* ratio though!]
+]
 
 ---
 
@@ -877,7 +885,7 @@ robbery %>%
 
 # Visualise Your Data
 
-These all have the same mean and standard deviation!
+These all have the same mean, median, and standard deviation!
 
 ```{r}
 
@@ -891,8 +899,8 @@ dists <-
 dists %>%
   group_by(name) %>%
   summarize(Mean = mean(value), Median = median(value), `Std. Dev.` = sd(value)) %>%
-  mutate(across(-name, ~round(., 2))) %>%
-  knitr::kable(col.names = c("Name", "Mean", "Median", "Std. Dev"))
+  mutate(across(-name, ~format(., nsmall = 1, digits = 2))) %>%
+  knitr::kable(col.names = c("Distribution", "Mean", "Median", "Std. Dev"))
 
 ```
 
@@ -1121,12 +1129,17 @@ class: inverse
 &nbsp;
 
 ![:width 80%](img/caution.png)
+<br>
+
+.text-center[
+*He **will** kill again*
+]
 
 ---
 
 ## Anscombe's Quartet
 
-Visualisation is important—these all have the same correlation!
+Visualisation is important—these all have the same correlation (0.82)!
 
 ```{r, fig.height = 5, echo=FALSE, warning=FALSE, message=FALSE}
 library(datasauRus)

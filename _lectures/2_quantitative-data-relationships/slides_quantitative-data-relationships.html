@@ -4,7 +4,7 @@
     <title>Quantitative Data and Relationships</title>
     <meta charset="utf-8" />
     <meta name="author" content="Charles Lanfear" />
-    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.23/header-attrs.js"></script>
     <link rel="stylesheet" href="../assets/cam-css.css" type="text/css" />
   </head>
   <body>
@@ -15,13 +15,13 @@ class: center, top, title-slide
 # Quantitative Data and Relationships
 ]
 .subtitle[
-## CRM Lecture 2
+## CRM Week 2
 ]
 .author[
 ### Charles Lanfear
 ]
 .date[
-### 18 Oct 2022<br>Updated: 17 Oct 2022
+### 17 Oct 2023<br>Updated: 12 Oct 2023
 ]
 
 ---
@@ -138,7 +138,7 @@ class: inverse
 
 --
 
-**Observation**: 1 person
+**Observation**: A person
 
 --
 
@@ -282,8 +282,8 @@ Not all crimes are reported
 
 Not all reported are recorded by police
 
-* Varies by agency
-* Varies by crime
+* Varies by agency and crime
+* Hierarchy rules
 * Political incentives
 * Differential treatment
 ]
@@ -301,6 +301,12 @@ Observed Crime Rate = Actual Rate ∗ Probability of Reporting
 &gt; According to the U.C.R., the incidence of rape nearly doubled from 1973 to 1990. The N.C.V.S., by contrast, shows that it declined by around forty per cent during the same period. Researchers... found that the upward trend in the U.C.R. data correlated with upticks in the number of female police officers, and with the advent of rape crisis centers and reformed investigative styles. It could be, in short, that a modernized approach to the policing of rape drastically increased the frequency with which it was reported while reducing its incidence.
 
 [Matthew Hutson. 2020. "The Trouble with Crime Statistics." The New Yorker](https://www.newyorker.com/culture/annals-of-inquiry/the-trouble-with-crime-statistics)
+
+--
+
+.text-center[
+*Note the complex causal process generating the data!*
+]
 
 ---
 ## Victimization Data
@@ -426,7 +432,7 @@ class: inverse
 
 &amp;zwj;**Observables**: Objective, externally measurable variables
 
-   * Individual height, occupation, stated opinions
+   * Individual height, occupation, stated beliefs
    * Neighborhood population, geographical area, crime rate&lt;sup&gt;1&lt;/sup&gt;
 
 .footnote[[1] Hard to measure doesn't mean unobservable!]
@@ -435,16 +441,20 @@ class: inverse
 
 --
 
+&lt;br&gt;
+
 **Unobservables** (or **Constructs**): Subjective, internal, or only indirectly measurable
 
-   * Individual self-control, wellness, social class, education
+   * Individual self-control, wellness, social class, actual beliefs
    * Neighborhood social capital, disadvantage, collective efficacy
 
 *Unobservables do not exist in the real world: they are conceptual*
 
 --
 
+.text-center[
 In Criminology, we're *very often* interested in unobservables.
+]
 
 ---
 # Measurement Principles
@@ -552,9 +562,9 @@ class: inverse
 
 If they have a *true non-arbitrary zero*, they are **ratio** data
 
-* If something is 0cm long, it has *no length*
+* If something is 0cm long, it has *no length* (ratio!)
 
-* If the temperature is 0C, there isn't *no temperature*
+* If the temperature is 0C, there isn't *no temperature* (not ratio!)
    * The 0 is arbitrary: In Fahrenheit it is 32 degrees!
 
 --
@@ -563,8 +573,12 @@ If they have a *true non-arbitrary zero*, they are **ratio** data
 
    * 15cm is half as long as 30cm
    * 15C is not half as hot as 30C
-      * 15C is 59F
-      * 30C is 86F
+      * 15C is 59F is 288K&lt;sup&gt;1&lt;/sup&gt;
+      * 30C is 86F is 303K
+
+.pull-right[
+.footnote[[1] Kelvin *is* ratio though!]
+]
 
 ---
 
@@ -815,14 +829,14 @@ We visualize continuous distributions with **histograms** and **density plots**
 
 # Visualise Your Data
 
-These all have the same mean and standard deviation!
+These all have the same mean, median, and standard deviation!
 
 
-|Name    | Mean| Median| Std. Dev|
-|:-------|----:|------:|--------:|
-|Normal  |    1|      1|     1.00|
-|Poisson |    1|      1|     1.00|
-|Uniform |    1|      1|     1.01|
+|Distribution |Mean |Median |Std. Dev |
+|:------------|:----|:------|:--------|
+|Normal       |1.0  |1.0    |1.0      |
+|Poisson      |1.0  |1.0    |1.0      |
+|Uniform      |1.0  |1.0    |1.0      |
 
 ![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-10-1.svg)&lt;!-- --&gt;
 
@@ -990,12 +1004,17 @@ class: inverse
 &amp;nbsp;
 
 ![:width 80%](img/caution.png)
+&lt;br&gt;
+
+.text-center[
+*He **will** kill again*
+]
 
 ---
 
 ## Anscombe's Quartet
 
-Visualisation is important—these all have the same correlation!
+Visualisation is important—these all have the same correlation (0.82)!
 
 ![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-20-1.svg)&lt;!-- --&gt;
 
