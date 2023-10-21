@@ -8,9 +8,9 @@ draft: false
 
 Required reading:
 
-* Davies, P. and Francis, P. (2018), Doing Criminological Research, Los Angeles:  Sage Publications. Read chapter 2, pp. 35-66; ‘Planning and proposing criminological research’.
+* Davies, P. and Francis, P. (2018) Doing Criminological Research, Los Angeles:  Sage Publications. Read chapter 2, pp. 35-66; ‘Planning and proposing criminological research’.
    * Download from Moodle
-
+* [Treiber (2021) 'How to write a research proposal.' Download from Moodle or from this link](https://clanfear.github.io/ioc_crm/_lectures/6_writing-research-proposals/reading/CRM_Treiber_How_to_Write_a_Research_Proposal.pdf)
 * [Matsueda, R. (2019) ‘Structuring a conventional empirical social science article.’ Download from Moodle or from this link.](https://clanfear.github.io/ioc_crm/_lectures/6_writing-research-proposals/reading/Matsueda%20(2019)%20Structuring%20a%20conventional%20empirical%20social%20science%20article.pdf)
 
 Further reading:
