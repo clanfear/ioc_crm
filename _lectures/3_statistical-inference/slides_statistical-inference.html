@@ -4,7 +4,7 @@
     <title>Statistical Inference</title>
     <meta charset="utf-8" />
     <meta name="author" content="Charles Lanfear" />
-    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.23/header-attrs.js"></script>
     <link rel="stylesheet" href="../assets/cam-css.css" type="text/css" />
   </head>
   <body>
@@ -15,13 +15,13 @@ class: center, top, title-slide
 # Statistical Inference
 ]
 .subtitle[
-## CRM Lecture 3
+## CRM Week 3
 ]
 .author[
 ### Charles Lanfear
 ]
 .date[
-### 25 Oct 2022<br>Updated: 24 Oct 2022
+### 24 Oct 2023<br>Updated: 22 Oct 2023
 ]
 
 ---
@@ -50,6 +50,8 @@ class: inverse
 
 # Regression
 
+![:width 60%](img/kids-regress.png)
+
 ---
 
 # Correlations
@@ -66,20 +68,20 @@ Correlation ( `\(R\)` ) summarizes relationship between continuous variables
 
 --
 
-`\(R^2\)` indicates the *proportion* of variation in one variable explained by another
+`\(R^2\)` indicates the *proportion* of variation in one variable **linearly** predicted by another
 
 --
 
 `\(R^2\)` values:
 
 * Range from 0 to 1
-* 0 indicates unrelated
-* 1 indicates perfect relationship
+* 0 indicates linearly unrelated
+* 1 indicates perfect linear relationship
 
 --
 
 .text-center[
-*A correlation of 0.5 between `\(x\)` and `\(y\)` indicates 25% of the variation in `\(y\)` is explained by `\(x\)` (and vice versa)*
+*A correlation of 0.5 between `\(x\)` and `\(y\)` indicates 25% of the variation in `\(y\)` is "explained" by `\(x\)` (and vice versa)*
 ]
 
 ---
@@ -118,7 +120,9 @@ If pop density is 20, what do we expect crime to be?
 ---
 class: inverse
 
-# Models
+# Modeling
+
+![:width 50%](img/modeling.png)
 
 ---
 
@@ -305,11 +309,11 @@ The regression formula—the intercept and coefficient(s)—tells us what those 
 
 We expect `\(CrimeRate\)` to be 3.09 higher for every additional unit of `\(PopDensity\)`
 
-When `\(PopDensity\)` is zero, the expected `\(CrimeRate\)` is -20.8
+When `\(PopDensity\)` is zero, the expected `\(CrimeRate\)` is `\(-20.8\)`
 
 --
 
-If `\(PopDensity\)` is 20, then we expect `\(CrimeRate\)` to be:
+If `\(PopDensity\)` is `\(20\)`, then we expect `\(CrimeRate\)` to be:
 
 `$$41 = -20.8 + 3.09*20$$`
 
@@ -324,6 +328,11 @@ class: inverse
 
 # Inferential Statistics
 
+&lt;br&gt;
+&lt;br&gt;
+
+![:width 80%](img/sampling.png)
+
 ---
 
 # Null Hypothesis Testing
@@ -336,13 +345,14 @@ We cannot observe it directly, but we can use data to infer things about it
 
 --
 
-**Hypothesis** testing is one approach to learning about DGPs
+**Hypothesis testing** is one approach to learning about DGPs
 
 --
 
 The basic idea:
 
 * Make an informed guess—a **hypothesis**—about what the DGP looks like
+   * **Theory** is about DGPs!
 * Test if it is likely observed data were created by the hypothetical DGP
 * If it seems unlikely, we **reject** our hypothesis
 
@@ -373,7 +383,7 @@ Process:
 
 --
 
-3. Test how likely this estimate would be if our null hypothesis is true
+3. Test how likely this estimate would be *if our null hypothesis is true*
 
    * This requires choosing a threshold for what we consider "unlikely"
    * e.g., less than 5% chance
@@ -404,7 +414,7 @@ Frequentism is based on the logic of *infinite* random sampling
 
 --
 
-* The distribution of values in the samples (e.g., the means) will follow a known **theoretical distribution**
+* The distribution of values in the samples (e.g., the means) would follow a known **theoretical distribution**
 
    * i.e., we know how likely it is to obtain any particular estimate *if the theoretical DGP is true*
 
@@ -422,6 +432,10 @@ Frequentism is based on the logic of *infinite* random sampling
 class: inverse
 
 # Theoretical Distributions
+
+&lt;br&gt;
+
+![:width 80%](img/distributions.png)
 
 ---
 
@@ -527,37 +541,13 @@ Higher levels of confidence reduce false positives, but lead to more **false neg
 
 We can test categorical associations using a chi-square ( `\(\chi^2\)` ) test.
 
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Area &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Disadvantage &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Rural &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Urban &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; High &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 41 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 60 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Low &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 63 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 39 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Medium &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 49 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 48 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+|             |Area  |      |
+|:------------|:-----|:-----|
+|Disadvantage |Rural |Urban |
+|High         |41    |60    |
+|Low          |63    |39    |
+|Medium       |49    |48    |
 
 Here we get a test statistic of 9.11 (df=2) corresponding to a statistically significant (at 95% confidence) p-value of 0.010.
 
@@ -574,6 +564,10 @@ This suggests Disadvantage and Area are more strongly related in this sample tha
 class: inverse
 
 # Focusing on Means
+
+&lt;br&gt;
+
+![:width 80%](img/means.jpg)
 
 ---
 
@@ -597,7 +591,11 @@ This is because means have a useful sampling property, described by the **centra
 
 .text-center[
 *This sounds weird because it is weird*
+]
 
+--
+
+.text-center[
 *It makes slightly more sense visually*
 ]
 
@@ -736,39 +734,11 @@ Confidence intervals are closely related to p-values:
 Here is a table of results from our regression earlier
 
 .text-85[
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Term &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Estimate &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Std Error &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Statistic &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; P Value &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Conf Low &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Conf High &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Pop Density &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.09 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.13 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 23.54 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.84 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3.35 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; (Intercept) &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -20.78 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2.09 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -9.94 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -24.89 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -16.66 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+|Term        |Estimate |Std Error |Statistic |P Value |Conf Low |Conf High |
+|:-----------|:--------|:---------|:---------|:-------|:--------|:---------|
+|Pop Density |3.09     |0.13      |23.54     |0.00    |2.84     |3.35      |
+|(Intercept) |-20.78   |2.09      |-9.94     |0.00    |-24.89   |-16.66    |
 ]
 
 This suggests a strong, statistically significant relationship between density and the crime rate
@@ -793,6 +763,12 @@ class: inverse
 
 # Hypothesis Testing Issues
 
+![:width 65%](img/replication.jpeg)
+
+.footnote[
+&amp;zwj;Source: Open Science Collaboration (2015) "Estimating the reproducibility of psychological science"
+]
+
 ---
 
 # Unethical Practices
@@ -810,6 +786,8 @@ It is trivial to perform many analyses, cherry-pick significant ones, then submi
 Similarly, one can invest enormous time and money into a project and receive null results
 
 * Inability to publish these is frustrating and damaging to careers
+
+
 
 ---
 
@@ -865,6 +843,19 @@ It can be *very hard* to detect unethical researchers
 * As is the case for many types of white-collar crime, it is mainly the incompetent who get caught
 
 ---
+
+## Incompetent... but rich
+
+&lt;br&gt;
+
+.pull-left[
+![](img/ariely_gino.jpg)
+]
+.pull-right[
+![](img/lies.PNG)
+]
+
+---
 class: inverse
 
 # Wrapping-Up
@@ -885,7 +876,7 @@ Hypothesis tests are about comparing observed data and to theoretical distributi
 Be wary of the scientific literature
 
 * Constraints and incentives result in many false positives
-
+* Enforcement of research ethics is difficult
 
 ---
 class: inverse

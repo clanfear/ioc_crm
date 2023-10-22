@@ -1,8 +1,8 @@
 ---
 title: "Statistical Inference"
-subtitle: "CRM Lecture 3"
+subtitle: "CRM Week 3"
 author: "Charles Lanfear"
-date: "25 Oct 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "24 Oct 2023<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -51,6 +51,8 @@ class: inverse
 
 # Regression
 
+![:width 60%](img/kids-regress.png)
+
 ---
 
 # Correlations
@@ -67,20 +69,20 @@ $R$ values:
 
 --
 
-$R^2$ indicates the *proportion* of variation in one variable explained by another
+$R^2$ indicates the *proportion* of variation in one variable **linearly** predicted by another
 
 --
 
 $R^2$ values:
 
 * Range from 0 to 1
-* 0 indicates unrelated
-* 1 indicates perfect relationship
+* 0 indicates linearly unrelated
+* 1 indicates perfect linear relationship
 
 --
 
 .text-center[
-*A correlation of 0.5 between $x$ and $y$ indicates 25% of the variation in $y$ is explained by $x$ (and vice versa)*
+*A correlation of 0.5 between $x$ and $y$ indicates 25% of the variation in $y$ is "explained" by $x$ (and vice versa)*
 ]
 
 ---
@@ -100,6 +102,7 @@ r_df$R <- factor(r_df$R, levels = r_seq)
 ggplot(r_df, aes(x = x, y =y)) + 
   geom_point() + 
   facet_wrap(~R) + 
+  geom_smooth(method = "lm", se = FALSE, color = "#8A1538") +
   theme_void(base_size = 16) +
   theme(panel.background = element_rect(fill='transparent', color=NA), 
     plot.background = element_rect(fill='transparent', color=NA))
@@ -143,7 +146,9 @@ If pop density is 20, what do we expect crime to be?
 ---
 class: inverse
 
-# Models
+# Modeling
+
+![:width 50%](img/modeling.png)
 
 ---
 
@@ -355,11 +360,11 @@ $$CrimeRate = -20.8 + 3.09 PopDensity$$
 
 We expect $CrimeRate$ to be 3.09 higher for every additional unit of $PopDensity$
 
-When $PopDensity$ is zero, the expected $CrimeRate$ is -20.8
+When $PopDensity$ is zero, the expected $CrimeRate$ is $-20.8$
 
 --
 
-If $PopDensity$ is 20, then we expect $CrimeRate$ to be:
+If $PopDensity$ is $20$, then we expect $CrimeRate$ to be:
 
 $$41 = -20.8 + 3.09*20$$
 
@@ -374,6 +379,11 @@ class: inverse
 
 # Inferential Statistics
 
+<br>
+<br>
+
+![:width 80%](img/sampling.png)
+
 ---
 
 # Null Hypothesis Testing
@@ -386,13 +396,14 @@ We cannot observe it directly, but we can use data to infer things about it
 
 --
 
-**Hypothesis** testing is one approach to learning about DGPs
+**Hypothesis testing** is one approach to learning about DGPs
 
 --
 
 The basic idea:
 
 * Make an informed guess—a **hypothesis**—about what the DGP looks like
+   * **Theory** is about DGPs!
 * Test if it is likely observed data were created by the hypothetical DGP
 * If it seems unlikely, we **reject** our hypothesis
 
@@ -423,7 +434,7 @@ Process:
 
 --
 
-3. Test how likely this estimate would be if our null hypothesis is true
+3. Test how likely this estimate would be *if our null hypothesis is true*
 
    * This requires choosing a threshold for what we consider "unlikely"
    * e.g., less than 5% chance
@@ -454,7 +465,7 @@ Frequentism is based on the logic of *infinite* random sampling
 
 --
 
-* The distribution of values in the samples (e.g., the means) will follow a known **theoretical distribution**
+* The distribution of values in the samples (e.g., the means) would follow a known **theoretical distribution**
 
    * i.e., we know how likely it is to obtain any particular estimate *if the theoretical DGP is true*
 
@@ -472,6 +483,10 @@ Frequentism is based on the logic of *infinite* random sampling
 class: inverse
 
 # Theoretical Distributions
+
+<br>
+
+![:width 80%](img/distributions.png)
 
 ---
 
@@ -614,6 +629,10 @@ class: inverse
 
 # Focusing on Means
 
+<br>
+
+![:width 80%](img/means.jpg)
+
 ---
 
 # Means
@@ -636,7 +655,11 @@ This is because means have a useful sampling property, described by the **centra
 
 .text-center[
 *This sounds weird because it is weird*
+]
 
+--
+
+.text-center[
 *It makes slightly more sense visually*
 ]
 
@@ -821,7 +844,7 @@ Here is a table of results from our regression earlier
 lm(`Crime Rate` ~ `Pop Density`, data = communities) |> 
   broom::tidy(conf.int=TRUE) |>
   mutate(term = str_remove_all(term, "`"),
-         across(where(is.numeric), ~round(., 2))) |>
+         across(where(is.numeric), ~sprintf(., fmt = '%#.2f'))) |>
   arrange(desc(term)) |>
   janitor::clean_names(case = "title") |> 
   knitr::kable()
@@ -850,6 +873,12 @@ class: inverse
 
 # Hypothesis Testing Issues
 
+![:width 65%](img/replication.jpeg)
+
+.footnote[
+&zwj;Source: Open Science Collaboration (2015) "Estimating the reproducibility of psychological science"
+]
+
 ---
 
 # Unethical Practices
@@ -867,6 +896,8 @@ It is trivial to perform many analyses, cherry-pick significant ones, then submi
 Similarly, one can invest enormous time and money into a project and receive null results
 
 * Inability to publish these is frustrating and damaging to careers
+
+
 
 ---
 
@@ -922,6 +953,19 @@ It can be *very hard* to detect unethical researchers
 * As is the case for many types of white-collar crime, it is mainly the incompetent who get caught
 
 ---
+
+## Incompetent... but rich
+
+<br>
+
+.pull-left[
+![](img/ariely_gino.jpg)
+]
+.pull-right[
+![](img/lies.PNG)
+]
+
+---
 class: inverse
 
 # Wrapping-Up
@@ -942,7 +986,7 @@ Hypothesis tests are about comparing observed data and to theoretical distributi
 Be wary of the scientific literature
 
 * Constraints and incentives result in many false positives
-
+* Enforcement of research ethics is difficult
 
 ---
 class: inverse
