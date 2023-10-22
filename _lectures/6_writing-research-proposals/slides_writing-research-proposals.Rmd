@@ -43,7 +43,7 @@ class: inverse
 
 # Target your writing
 
-Professional (academic) writing is purposeful **communication** to an audience
+Professional writing is purposeful **communication** to an audience
 
 --
 
@@ -61,10 +61,10 @@ Professional (academic) writing is purposeful **communication** to an audience
 .pull-right[
 * Know the audience
 
-   + Examiners (e.g., essay or thesis)
-   + Academics (e.g., journal)
-   + Policy actors (e.g., policy brief)
-   + Lay people (e.g., public scholarship)
+   + Examiners (essay or thesis)
+   + Academics (journal article)
+   + Policy actors (policy brief)
+   + Lay people (public scholarship)
 ]
 
 --
@@ -131,7 +131,7 @@ count:false
 
 * Have others read your work
 
-   * *When someone says something is confusing they are always right*
+   * *When someone says something is confusing, assume they are right*
 ]
 
 .pull-right[
@@ -168,64 +168,10 @@ count:false
 ]
 
 ---
-
-# Structure
-
-Empirical articles or chapters rarely stray far from this:
-
-1. **Abstract**
-2. **Introduction**
-3. **Literature Review**
-4. Methods
-5. Results
-6. Discussion<sup>1</sup>
-
-* Non-empirical works trade **methods** and **results** for more discussion
-   * "Results" come from *others'* research (i.e., lit review)
-* Proposals: 
-   * Only a *tentative plan* for methods
-   * Expectations / argument for value of results 
-
-.footnote[
-[1] A conclusion is really just a closing to the discussion!
-]
-
---
-
-.text-center[
-*We'll talk about writing methods and results in detail next term*
-]
-
----
-
-## Abstract
-
-* An elevator speech: Summarize the entire paper in 200 words
-
---
-
-## Introduction
-
-* **Hook the reader**
-* State the research question
-* Highlight contribution or main findings (optional)
-* Foreshadow the structure of paper
-
---
-
-## Literature Review
-
-* **Motivate the research question and design**
-   * This section is an **argument** not a summary
-* Support key assumptions and arguments
-   * *Your theoretical model and every variable should be covered*
-* Lay out hypotheses (if you have them)
-   * *This is often done in its own section before methods*
-
----
+class: inverse
 # Proposals
 
-IMAGE
+![:width 75%](img/proposals.png)
 
 ---
 
@@ -245,13 +191,13 @@ Proposals are:
 .pull-left[
 &zwj;Reasons for proposals:
 
-* Obtaining approval
-* Securing funding
+* Instutional approval
+* Scholarships
 ]
 .pull-right[
 &zwj;<br>
 * Applying to PhD programs
-* *Preregistration*
+* Grants
 ]
 
 --
@@ -259,3 +205,325 @@ Proposals are:
 .text-center[
 *Convincing someone it is **worth doing** and **you** can do it*
 ]
+
+---
+# Know Your Audience
+
+Before you start, you need to ask...
+
+* What proposals do they accept?
+
+   * *Would my research even be considered?*
+
+--
+
+* What are their expectations and requirements?
+
+   * *When is it due?*
+   * *What information do I need to provide?*
+   * *How must it be formatted?*
+   * *Do I need a sponsor or supervisor?*
+
+--
+
+* Who is going to read the proposal?
+
+   * *Experts in your field—or another?*
+   * *An interdisciplinary committee?*
+   * *Lay people or public officials?*
+
+---
+## Our PhD Program
+
+![:width 70%](img/ioc-proposal.PNG)
+
+---
+# Seven Questions
+
+
+![:width 70%](img/denscombe-base.svg)
+
+.footnote[
+Adapted from Denscombe (2012) *Research Proposals: A Practical Guide*
+]
+
+---
+
+## What is it all about?
+
+.pull-left-40[
+
+&zwj;**Goals:**
+
+* Hook the reader!
+* Define primary practical or theoretical problem
+* Highlight importance
+
+]
+.pull-right-60[
+<br><br>
+![:width 100%](img/denscombe-aims.svg)
+]
+
+---
+### Example
+
+> Neighborhood disorder is also
+highly-correlated with crime rates, which has led to a **significant controversy** in the social sciences
+over the proper interpretation of the correlation. Does the correlation reflect a causal relationship, in
+which social and physical disorder increases the likelihood of norm-violations and crime, as broken
+windows theory suggests? Or does the correlation reflect a spurious relationship, in which the
+correlation disappears when the confounding variable, neighborhood collective efficacy, is
+controlled? The answer to this question has **important theoretical and policy implications**. This
+project examines this controversy using mixed methods: field experiments embedded in
+neighborhoods that are diverse on measures from the U.S. Census and the Seattle Neighborhoods
+and Crime Survey.
+
+.footnote[
+&zwj;Source: Matsueda (2016) *Collective Efficacy and Norm Violation: An Experimental Test *
+]
+
+---
+
+## What do we already know?
+
+.pull-left-40[
+&zwj;**Goals:**
+* Demonstrate knowledge
+* Set up questions or "gap"
+* Show relevance and value
+
+&zwj;**Approach:**
+* Describe past findings
+* Compare and contrast
+* Be critical
+
+]
+.pull-right-60[
+<br><br>
+![:width 100%](img/denscombe-lit.svg)
+]
+
+---
+### Example
+
+Using literature review to "set yourself up":
+
+> A feature of recent research on broken windows, collective efficacy, and social capital is that it
+uses a variety of research designs, including household surveys within neighborhoods, systematic
+social observation, and field experiments. Viewed separately, these research designs have specific
+strengths and weaknesses involving causality, endogeneity, and external validity. By embedding a
+series of experiments within neighborhoods, we hope to capitalize on the unique strengths of distinct
+methods and overcome many of their weaknesses.
+
+.footnote[
+&zwj;Source: Matsueda (2016) *Collective Efficacy and Norm Violation: An Experimental Test*
+]
+
+---
+
+## What do we need to find out?
+
+.pull-left-40[
+
+&zwj;**Goals:**
+
+* Anchor the proposal
+* Make reader hungry for answers
+
+&zwj;**Approach:**
+
+* State research questions
+   * Usually around 3–8
+* Link back to lit review
+* Be clear and concise
+]
+.pull-right-60[
+<br><br>
+![:width 100%](img/denscombe-questions.svg)
+]
+
+---
+### Example
+
+From a proposal for three papers:
+
+> 1) Changing Exposures: How does exposure to guns and gun violence as well as gun use vary throughout childhood, adolescence, and early-to-mid adulthood? How has it changed over the last 25 years? In particular, how do exposures differ by cohort and race?<br>
+> 2) Changing Risk and Protective Factors: To what extent have the main individual, family, and community risk and protective factors of gun violence evolved and changed over the last 25 years?<br>
+> 3) Consequences: What are the long-term consequences of personal victimisation and exposure to neighbourhood gun violence for mental and physical health and criminal involvement, and how do they vary by race?
+
+.footnote[
+&zwj;Source: Lanfear (2021) *Racial inequality in exposure to gun violence across 25+ years in urban America*
+]
+
+---
+
+## How will we get this information?
+
+.pull-left-40[
+&zwj;**Goals:**
+* Demonstrate you know appropriate methods
+* Convince reader of feasibility
+* Recognize potential challenges and discuss how they will be addressed
+
+&zwj;**Describe:**
+* How you will collect data
+* How much data
+* Specific analysis techniques
+
+]
+.pull-right-60[
+<br><br>
+![:width 100%](img/denscombe-methods.svg)
+]
+
+---
+### Example
+
+Specific but with some "wiggle room":
+
+> For the first objective, measuring changing exposures, Generalized Linear Mixed Models (GLMM) will be used to estimate growth curves of stability and change in probabilities of reporting four measures of exposure: (1) carrying a concealed firearm, (2) shooting or shooting at someone, (3) being shot or shot at, and (4) seeing or hearing someone else get shot or shot at. Growth curve analyses will also be used to examine neighbourhood exposure to gun violence—defined as the annual rate of shootings in the participant’s neighbourhood from official police records. Analyses will also examine how variation by age, race, ethnicity, and socioeconomic status (SES) in exposure to gun violence interact with historical change.
+
+.footnote[
+&zwj;Source: Lanfear (2021) *Racial inequality in exposure to gun violence across 25+ years in urban America*
+]
+
+---
+
+## What will it take?
+
+.pull-left-40[
+
+&zwj;**Goal:**
+
+* Convince reader of feasibility
+* Justify funding
+
+&zwj;**Describe:**
+
+* Resources required
+   * Money
+   * Time
+   * **People!**
+* Realistic timeline with milestones
+   * Data collection
+   * Analysis
+   * Writing
+]
+.pull-right-60[
+<br><br>
+![:width 100%](img/denscombe-resources.svg)
+]
+
+---
+### Example
+
+![:width 80%](img/timeline.PNG)
+
+.footnote[
+&zwj;Source: Lanfear (2019) *Integrating Collective Efficacy and Criminal Opportunity: Disorder, the Built Environment, and Policing*
+]
+
+---
+
+## Is the research ethical?
+
+.pull-left-40[
+&zwj;**Describe:**
+
+* Compliance with rules
+* Risk assessment
+* Informed consent
+* Data management
+* Data protection
+
+
+*You'll have ethics seminar next month!*
+
+]
+.pull-right-60[
+<br><br>
+![:width 100%](img/denscombe-ethics.svg)
+]
+
+---
+
+## What will be the benefits?
+
+.pull-left-40[
+&zwj;**Describe:**
+
+* *Dissemination plans*
+   * Clear deliverables
+* Who will benefit and how?
+* Policy / practice relevance
+* Impact on future research
+* Training or professional benefits
+]
+.pull-right-60[
+<br><br>
+![:width 100%](img/denscombe-outcomes.svg)
+]
+
+---
+### Example
+
+> The research is intended to produce three peer-reviewed journal articles, one focusing on each of the three research questions of the proposed study, targeted at outlets such as *Proceedings of the National Academy of Sciences*, *Criminology*, and *The Lancet*. Findings will also be disseminated in accessible briefs for policymakers and practitioners, which the lead applicant has experience preparing, as well as op-eds and blog posts such as *The Conversation*. Finally, the data will be archived in a public repository, and code used to prepare the data and conduct analyses will be made publicly available on the applicant’s GitHub site. This will ensure research transparency and facilitate replication and extension of the research products by other researchers.
+
+.footnote[
+&zwj;Source: Lanfear (2021) *Racial inequality in exposure to gun violence across 25+ years in urban America*
+]
+
+
+---
+
+## Dissemination
+
+Example dissemination activities:
+
+* Internal seminars
+* Regular reporting to stakeholders (e.g., health service, industrial partner)
+* Publications (e.g., journal articles, reviews, book chapters)
+* Conference presentations
+* Outreach and public engagement
+
+.text-center[
+*Every audience will weight these differently!*
+]
+
+---
+# Read and Consider
+
+.pull-left-40[
+* Is anything...
+   * Unclear?
+   * Missing?
+   * Unconvincing?
+* What if the audience were...
+   * Lay people?
+   * Government?
+   * PhD admissions?
+]
+
+.pull-right-60[
+<br><br>
+![:width 100%](img/denscombe-base.svg)
+]
+
+---
+class: inverse
+
+# Wrap-Up
+
+* Know the purpose
+* Know the audience
+* Make sure key questions are answered
+
+**Statistical inference tomorrow!**
+
+&zwj;Reading:
+
+* Bueno de Mesquita, E. and Fowler, A. (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*, Princeton, NJ: Princeton University Press.
+   * Read pp. 94—156: (1) Chapter 6: Statistical Inference, (2) Chapter 7: Over-Comparing, Under-Reporting, and (3) Chapter 8: Reversion to the Mean
+* Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press.
+   * Re-read pp. 35—43: Chapter 3: Describing Variables, section 3.5: Theoretical Distributions
