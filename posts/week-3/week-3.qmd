@@ -6,7 +6,7 @@ date: "2023-10-24"
 draft: false
 ---
 
-[Seminar 5 Slides](https://clanfear.github.io/ioc_crm/_lectures/3_statistical-inference/slides_statistical-inference.html)
+[Seminar 6 Slides](https://clanfear.github.io/ioc_crm/_lectures/3_statistical-inference/slides_statistical-inference.html)
 
 Reading:
 
