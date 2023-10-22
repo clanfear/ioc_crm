@@ -6,6 +6,8 @@ date: "2023-10-23"
 draft: false
 ---
 
+[Seminar 5 Slides](https://clanfear.github.io/ioc_crm/_lectures/6_writing-research-proposals/slides_writing-research-proposals.html)
+
 Required reading:
 
 * Davies, P. and Francis, P. (2018) Doing Criminological Research, Los Angeles:  Sage Publications. Read chapter 2, pp. 35-66; ‘Planning and proposing criminological research’.
