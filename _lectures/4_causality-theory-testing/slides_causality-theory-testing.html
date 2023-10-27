@@ -4,7 +4,7 @@
     <title>Causality and Theory Testing</title>
     <meta charset="utf-8" />
     <meta name="author" content="Charles Lanfear" />
-    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.23/header-attrs.js"></script>
     <link rel="stylesheet" href="../assets/cam-css.css" type="text/css" />
   </head>
   <body>
@@ -15,13 +15,13 @@ class: center, top, title-slide
 # Causality and Theory Testing
 ]
 .subtitle[
-## CRM Lecture 4
+## CRM Week 4
 ]
 .author[
 ### Charles Lanfear
 ]
 .date[
-### 1 Nov 2022<br>Updated: 07 Nov 2022
+### 31 Oct 2023<br>Updated: 27 Oct 2023
 ]
 
 ---
@@ -105,8 +105,8 @@ In criminology:
 * "Increasing the perceived risk of being caught reduces the likelihood of a person committing a particular crime"
 * "Increasing a person's self-control reduces their involvement in all crime"
 * "Learning violent definitions of situations increases a person's likelihood of using violence"
-* "Strong social institutions in neighbourhoods reduce crime."
-* "Reducing interactions between potential offenders and targets reduces crime in places."
+* "Strong social institutions in neighbourhoods reduce crime"
+* "Reducing interactions between potential offenders and targets reduces crime in places"
 
 --
 
@@ -148,11 +148,20 @@ Causal effects are *differences* between these **potential outcomes**:
 1. What actually happened, which we see (factual)
 2. An alternative, which we do not observe (counterfactual)
 
+
+---
+# Potential Outcomes
+
+&lt;br&gt;
+
+![:width 90%](img/po_basic.svg)
 --
 
 .text-center[
 *How do we calculate a difference when we only see one outcome?*
 ]
+
+
 
 ---
 
@@ -162,22 +171,23 @@ Causal effects are *differences* between these **potential outcomes**:
 
 We could compare two lots:
 
-* **One not cleared (T=0)**
-* .strong-blue[One cleared (T=1)]
+* **One cleared (T=1)**
+* .strong-blue[One not cleared (T=0)]
 
 
-And use the difference in crime (bT) as a causal effect
+And use the difference in crime (δT) as a causal effect
 
 ]
 .pull-right[
 ![:width 80%](img/lots.svg)
 ]
 
+
 --
 
 &amp;nbsp;
 
-*But what if the difference is because the lots are different?*
+*What if the difference is because the lots are different?*
 
 --
 
@@ -185,10 +195,18 @@ And use the difference in crime (bT) as a causal effect
 
 --
 
-*But, if those lots are identical, why did one get cleared and not the other?*
+*But if those lots are identical, why did one get cleared and not the other?*
 
 * We might have missed an important difference
-* We wouldn't be sure unless we knew *why* each lots get cleared
+* We wouldn't be sure unless we knew *why* each lot got cleared
+
+---
+# Put another way
+
+&lt;br&gt;
+
+![:width 90%](img/po_ignorability.svg)
+
 
 ---
 
@@ -198,10 +216,10 @@ And use the difference in crime (bT) as a causal effect
 
 We could compare the same lot:
 
-* **Before clearing (T=0)**
-* .strong-blue[After (T=1)]
+* **After clearing (T=1)**
+* .strong-blue[Before clearing (T=0)]
 
-And use the before-and-after crime difference (bT) as a causal effect
+And use the before-and-after crime difference (δT) as a causal effect
 
 ]
 .pull-right[
@@ -240,6 +258,8 @@ All of these problems are really one problem:
 --
 
 These problems are resolved if the potential outcomes for cleared and uncleared lots are *the same on average* (unrelated to the treatment)
+
+--
 
 The average difference in outcomes between treatment and control groups then provides an unbiased estimate of the causal effect (the estimand)
 
@@ -358,7 +378,7 @@ Directed acyclic graphs have pretty simple rules:
 
 --
 
-* No arrow means no (direct) causal relationship
+* No arrow means no direct causal relationship
 
 --
 
@@ -376,9 +396,9 @@ Directed acyclic graphs have pretty simple rules:
 
 .pull-left[
 
-A "path" is any set of arrows linking two variables together
+A **path** is any set of arrows linking two variables together
 
-There are three paths from X to Y:
+There are three paths from `\(X\)` to `\(Y\)`:
 
 * `\(X \rightarrow Y\)`
 * `\(X \leftarrow Z \rightarrow Y\)`
@@ -741,7 +761,9 @@ Converting a model with **cycles** into an **acyclic** one can take some thought
 
 --
 
+.text-center[
 *All causal relationships really are acyclic though*
+]
 
 ---
 
@@ -831,7 +853,7 @@ If you can't close all back doors, either...
 
 --
 
-Remember that clever estimation techniques are a last resort for problems with research design
+zwj;Remember: *clever estimation techniques are a last resort for problems with research design*
 
 It is *always* better to solve hard problems with *design*
 
@@ -902,7 +924,7 @@ New interpretations:
 --
 
 .text-center[
-*We could argue this is causal if thought the diagram was complete*
+*We could argue this is causal if we think the diagram is complete*
 ]
 
 ---
@@ -1040,8 +1062,6 @@ Sometimes quantitative data are not up to the task of identifying an effect of i
 class: inverse
 
 # Wrap-Up
-
-* Readings for Ethnography unit next week have been changed, see website or Moodle
 
 * One last unit to knit the quant section together
 
