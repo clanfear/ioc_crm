@@ -21,7 +21,7 @@ class: center, top, title-slide
 ### Charles Lanfear
 ]
 .date[
-### 31 Oct 2023<br>Updated: 27 Oct 2023
+### 31 Oct 2023<br>Updated: 30 Oct 2023
 ]
 
 ---
@@ -401,8 +401,8 @@ A **path** is any set of arrows linking two variables together
 There are three paths from `\(X\)` to `\(Y\)`:
 
 * `\(X \rightarrow Y\)`
-* `\(X \leftarrow Z \rightarrow Y\)`
-* `\(X \rightarrow W \leftarrow Y\)`
+* `\(\color{#003C71}{X \leftarrow Z \rightarrow Y}\)`
+* `\(\color{#8A1538}{X \rightarrow W \leftarrow Y}\)`
 
 ]
 
@@ -529,8 +529,9 @@ Controlling for a collider is sometimes **conditioning on a post-treatment varia
 
 ---
 
-# Collider Bias
+## Collider Bias
 
+*Do people commit more crime when they're good at it?*
 
 ![](slides_causality-theory-testing_files/figure-html/unnamed-chunk-1-1.svg)&lt;!-- --&gt;
 
@@ -657,6 +658,14 @@ We could even get sophisticated:
 ]
 
 ---
+
+![:width 90%](img/klm-538.png)
+
+.footnote[
+Source: [Bronner (2020) "Why statistics don’t capture the full extent of the systemic bias in policing"](https://fivethirtyeight.com/features/why-statistics-dont-capture-the-full-extent-of-the-systemic-bias-in-policing/)
+]
+
+---
 # The Problem
 
 &amp;nbsp;
@@ -673,6 +682,8 @@ We could even get sophisticated:
 --
 
 We can't identify the causal effect!
+
+
 
 ---
 # It Gets Worse
@@ -771,7 +782,7 @@ Converting a model with **cycles** into an **acyclic** one can take some thought
 
 Usually the trick to converting a cyclic graph to an acyclic one is realizing effects *occur over **time***
 
-&amp;nbsp;
+* This requires assumptions about (relative) timing
 
 ![](slides_causality-theory-testing_files/figure-html/bwt-1.svg)&lt;!-- --&gt;
 
@@ -853,7 +864,7 @@ If you can't close all back doors, either...
 
 --
 
-zwj;Remember: *clever estimation techniques are a last resort for problems with research design*
+&amp;zwj;Remember: *clever estimation techniques are a last resort for problems with research design*
 
 It is *always* better to solve hard problems with *design*
 

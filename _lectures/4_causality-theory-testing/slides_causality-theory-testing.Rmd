@@ -421,8 +421,8 @@ A **path** is any set of arrows linking two variables together
 There are three paths from $X$ to $Y$:
 
 * $X \rightarrow Y$
-* $X \leftarrow Z \rightarrow Y$
-* $X \rightarrow W \leftarrow Y$
+* $\color{#003C71}{X \leftarrow Z \rightarrow Y}$
+* $\color{#8A1538}{X \rightarrow W \leftarrow Y}$
 
 ]
 
@@ -430,6 +430,8 @@ There are three paths from $X$ to $Y$:
 ```{tikz dag-2, fig.width = 3, cache = TRUE}
 \usetikzlibrary{positioning}
 \definecolor{black}{HTML}{000000}
+\definecolor{blue}{HTML}{003C71}
+\definecolor{red}{HTML}{8A1538}
 \tikzset{
     > = stealth,
     every node/.append style = {
@@ -438,7 +440,6 @@ There are three paths from $X$ to $Y$:
     },
     every path/.append style = {
         arrows = ->,
-        draw = black,
         fill = none,
         scale = 1,
         line width = 1.5mm
@@ -455,10 +456,10 @@ There are three paths from $X$ to $Y$:
     \node (Z) at (0,5) {$Z$};
     \node (W) at (5,0) {$W$};
     \path (X) edge (Y);
-    \path (Z) edge (Y);
-    \path (Z) edge (X);
-    \path (Y) edge (W);
-    \path (X) edge (W);
+    \path (Z) [color = blue] edge (Y);
+    \path (Z) [color = blue] edge (X);
+    \path (Y) [color = red] edge (W);
+    \path (X) [color = red] edge (W);
   }
 ```
 ]
@@ -675,8 +676,9 @@ Controlling for a collider is sometimes **conditioning on a post-treatment varia
 
 ---
 
-# Collider Bias
+## Collider Bias
 
+*Do people commit more crime when they're good at it?*
 
 ```{r, fig.height = 3.5}
 ex_data <- tibble(Skill = runif(1000, 0, 10), Frequency = runif(1000, 0, 10), Who = c(rep("Arrested", 500), rep("Everyone", 500))) |>
@@ -902,6 +904,14 @@ We could even get sophisticated:
 ]
 
 ---
+
+![:width 90%](img/klm-538.png)
+
+.footnote[
+Source: [Bronner (2020) "Why statistics don’t capture the full extent of the systemic bias in policing"](https://fivethirtyeight.com/features/why-statistics-dont-capture-the-full-extent-of-the-systemic-bias-in-policing/)
+]
+
+---
 # The Problem
 
 &nbsp;
@@ -947,6 +957,8 @@ We could even get sophisticated:
 --
 
 We can't identify the causal effect!
+
+
 
 ---
 # It Gets Worse
@@ -1080,7 +1092,7 @@ Converting a model with **cycles** into an **acyclic** one can take some thought
 
 Usually the trick to converting a cyclic graph to an acyclic one is realizing effects *occur over **time***
 
-&nbsp;
+* This requires assumptions about (relative) timing
 
 ```{tikz bwt, fig.width = 3, cache = TRUE}
 \usetikzlibrary{positioning}
@@ -1201,7 +1213,7 @@ If you can't close all back doors, either...
 
 --
 
-zwj;Remember: *clever estimation techniques are a last resort for problems with research design*
+&zwj;Remember: *clever estimation techniques are a last resort for problems with research design*
 
 It is *always* better to solve hard problems with *design*
 
