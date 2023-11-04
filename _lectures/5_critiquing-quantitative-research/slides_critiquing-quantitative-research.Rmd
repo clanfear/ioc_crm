@@ -1,8 +1,8 @@
 ---
 title: "Critiquing Quantitative Research"
-subtitle: "CRM Lecture 5"
+subtitle: "CRM Seminar 8"
 author: "Charles Lanfear"
-date: "8 Nov 2022<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "7 Nov 2023<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -366,13 +366,13 @@ For example:
 
 Common problems:
 
-* Bad proxies / poor convergent validity
+* Bad proxies / poor **convergent validity**
 
    * Measures that don't capture the unobservable of interest
 
 --
 
-* Poor discriminant validity
+* Poor **discriminant validity**
 
    * Measures that are indistinguishable from competing constructs
 
@@ -428,21 +428,21 @@ Consistency is a *major threat* to experimental research
 
 Threats to external validity:
 
-* Non-representative samples
+* **Non-representative samples**
 
    * Treatment effect may only exist in this sample
    * Treatment effects may *differ* across populations
 
 --
 
-* Inconsistent treatments
+* **Inconsistent treatments**
 
    * Treatment effect may not exist when treatment is assigned naturally
    * Realistic treatments may only exist in less-controlled contexts
 
 --
 
-* Context-dependent results
+* **Context-dependent results**
 
    * Same units may behave differently in other contexts
    * Underlying data generating process can *change*
@@ -465,7 +465,7 @@ Rigorous research typically displays most or all of these signs:
 
    * Everything that was done is reported in detail
    * Decisions are noted and justified
-   * **Reproducibility** and **open data**
+   * **Reproducible** with **open data**
    * **Pre-registration**
 
 --
@@ -473,7 +473,7 @@ Rigorous research typically displays most or all of these signs:
 * Careful
 
    * Acknowledges alternative explanations
-   * Uses sensitivity or robustness tests
+   * Uses (non-trivial) sensitivity or robustness tests
 
 --
 
@@ -517,7 +517,7 @@ When it is **triangulated**
 
 * The more something is found using different data sets and analysis approaches, the more you should be convinced
 
-* *Corollary*: If something is only found using the same methods or with the same kind of data, you should be more skeptical
+* *Corollary*: If something is only found using the same methods or with the same kind of data, you should be *more skeptical*
 
 --
 
@@ -538,7 +538,7 @@ It is **compatible** with other trustworthy findings
 Goodhardt's law produces **perverse incentives**: Incentives that encourage *the opposite* of what was intended
 
 
-* *The Cobra Effect*
+* *Great Hanoi Rat Massacre*
 
 * Crime rates and politics
 
