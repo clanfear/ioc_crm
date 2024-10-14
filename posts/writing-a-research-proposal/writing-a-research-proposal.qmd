@@ -1,8 +1,8 @@
 ---
-title: "Seminar 5: Writing a Research Proposal"
+title: "Seminar 9: Writing a Research Proposal"
 description: "An introduction to writing proposals for research designs"
 author: "Charles Lanfear"
-date: "2023-10-23"
+date: "2024-11-21"
 draft: false
 ---
 

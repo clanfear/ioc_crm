@@ -2,7 +2,7 @@
 title: "Seminar 12: Research Ethics"
 description: "Conducting ethical research"
 author: "Loraine Gelsthorpe"
-date: "2023-11-21"
+date: "2024-11-28"
 draft: false
 ---
 

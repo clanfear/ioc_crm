@@ -1,8 +1,8 @@
 ---
-title: "Seminar 11: Qualitative Data Analysis"
+title: "Seminar 8: Qualitative Data Analysis"
 description: "Analyzing data from interviews, observation, and other qualitative collection methods"
 author: "Caroline Lanskey"
-date: "2023-11-21"
+date: "2024-11-19"
 draft: false
 ---
 
@@ -12,14 +12,11 @@ Required reading:
 * Rapley, T. (2011) ‘Some pragmatics of data analysis’, in D. Silverman (ed.) Qualitative Research, 3rd edition, London: Sage, pp. 273-290.
    * Download from Moodle
 
-* Leech, N. L., & Onwuegbuzie, A. J. (2007) ‘An array of qualitative data analysis tools: a call for data analysis triangulation’, School Psychology Quarterly, 22(4): 557.
-   * http://idiscover.lib.cam.ac.uk/permalink/f/t9gok8/44CAM_ALMA51530352690003606 then follow PsycARTICLES link.
+* Mason, J. (2002) Qualitative Researching, 2nd edition, London: Sage. Read chapter 8, ‘Organizing and indexing qualitative data’, pp. 147-172, and chapter 9, ‘Making convincing arguments with qualitative data’, pp. 173-204.
 
 Further reading:
 
 * Coffey, A. and Atkinson, P. (1996) Making Sense of Qualitative Data Analysis: Complementary research strategies, Thousand Oaks, CA: Sage.
-
-* Mason, J. (2002) Qualitative Researching, 2nd edition, London: Sage. Read chapter 8, ‘Organizing and indexing qualitative data’, pp. 147-172, and chapter 9, ‘Making convincing arguments with qualitative data’, pp. 173-204.
 
 * Ritchie, J. and Lewis, J. (2003) Qualitative Research Practice, London: Sage. Read chapters 8 to 10.
 
@@ -33,20 +30,4 @@ Further reading:
 
 * Strauss, A. and Corbin, J. (2015) Basics of Qualitative Research: Techniques and procedures for developing Grounded Theory, 4th ed., London: Sage. Or see 3rd edition (2008).
 
-* Greenhalgh, T. and Peacock, R. (2005) ‘Effectiveness and efficiency of search methods in systematic reviews of complex evidence: audit of primary sources’, BMJ (Clinical Research ed.), 331(7524): 1064-1065.
-http://dx.doi.org/10.1136/bmj.38636.593461.68
-
-* Lipsey, M.W. and Wilson, D.B. (2001) Practical Meta-Analysis, Thousand Oaks: Sage.
-
-* Moher, D., Liberati, A., Tetzlaff, J. and Altman, D.G. (2009) ‘Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement’, Annals of Internal Medicine, 151(4): 264-269. 
-
-* Petticrew, M. and Roberts, H. (2006) Systematic Reviews in the Social Sciences: A practical guide, Oxford: Blackwell.
-
-* Rosenthal, R. (1979) ‘The file drawer problem and tolerance for null results’, Psychological Bulletin, 86(3): 638–641.
-https://doi.org/10.1037/0033-2909.86.3.638
-
-* Schmidt, F.L. (1992) ‘What do data really mean? Research findings, meta-analysis, and cumulative knowledge in psychology’, American Psychologist, 47(10): 1173–1181.
-http://dx.doi.org/10.1037/0003-066X.47.10.1173
-
-* Sterne, J.A.C., Jüni, P., Schulz, K.F., Altman, D.G., Bartlett, C. and Egger, M. (2002) ‘Statistical methods for assessing the influence of study characteristics on treatment effects in ‘meta-epidemiological’ research’, Statistics in Medicine, 21(11): 1513–1524.
-http://dx.doi.org/10.1002/sim.1184
+* Flick U. (ed). 2004. The SAGE Handbook of Qualitative Data Analysis. SAGE Publications Ltd.
