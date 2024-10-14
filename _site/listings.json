@@ -2,18 +2,18 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/week-1/week-1.html",
-      "/posts/week-2/week-2.html",
-      "/posts/week-8/week-8.html",
-      "/posts/week-3/week-3.html",
-      "/posts/week-4/week-4.html",
-      "/posts/week-5/week-5.html",
-      "/posts/week-6/week-6.html",
-      "/posts/week-7/week-7.html",
-      "/posts/week-9/week-9.html",
-      "/posts/week-12/week-12.html",
-      "/posts/week-10/week-10.html",
-      "/posts/week-11/week-11.html"
+      "/posts/intro-to-research/intro-to-research.html",
+      "/posts/quantitative-data-and-relationships/quantitative-data-and-relationships.html",
+      "/posts/writing-a-research-proposal/writing-a-research-proposal.html",
+      "/posts/statistical-inference/statistical-inference.html",
+      "/posts/causality-and-theory-testing/causality-and-theory-testing.html",
+      "/posts/critiquing-quantitative-research/critiquing-quantitative-research.html",
+      "/posts/ethnography/ethnography.html",
+      "/posts/interviews/interviews.html",
+      "/posts/qualitative-data-analysis/qualitative-data-analysis.html",
+      "/posts/research-ethics/research-ethics.html",
+      "/posts/document-and-discourse-analysis/document-and-discourse-analysis.html",
+      "/posts/mixed-methods/mixed-methods.html"
     ]
   }
 ]

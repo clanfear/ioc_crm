@@ -1,0 +1,34 @@
+---
+title: "Seminars 1–3: Introduction to Research"
+subtitle: "Theory, questions, and answers"
+description: "A week-long introduction to theory-guided empirical research in criminology"
+author: "Charles Lanfear"
+date: "2023-10-09"
+draft: false
+---
+
+### Seminar 1 (Mon, Oct-9): Introduction to Theory-Guided Criminological Research (slides on Moodle)
+
+* Tittle, C. R. (2015). Introduction: Theory and contemporary criminology. *The Handbook of Criminological Theory*. Wiley Blackwell, 1-17.
+  * Download from Moodle
+* Bottoms (2000) ‘The relationship between theory and research in criminology’ in R. King and E. Wincup (eds), *Doing Research on Crime and Justice*, Oxford: OUP, Chapter 3. pp. 15-60.
+   * Download from Moodle
+
+
+### [Seminar 2 (Tue, Oct-10): Developing and applying research questions and studying the causes of crime](https://clanfear.github.io/ioc_crm/_lectures/research-questions/slides_research-questions.html)
+
+* [Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press.](https://theeffectbook.net/index.html)
+   * Read pp. xix–18: (1) Introduction, (2) Chapter 1: Designing Research, and (3) Chapter 2: Research Questions
+
+* [Wikström, P. O. H., & Kroneberg, C. (2022). Analytic criminology: Mechanisms and methods in the explanation of crime and its causes. *Annual Review of Criminology*, 5, 179-203.](https://doi.org/10.1146/annurev-criminol-030920-091320)
+* Bueno de Mesquita, E. and Fowler, A. (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*, Princeton, NJ: Princeton University Press. 
+   * Read pp. 1–52: (1) Chapter 1: Thinking Clearly in a Data-Driven Age, (2) Chapter 2: Correlation: What Is It and What Is It Good For?, and (3) Causation: What Is It and What Is It Good For?
+
+### Seminar 3 (Thu, Oct-12): Key challenges in criminological theory and research
+
+* [Bernard, T.J. (1990) ‘Twenty years of testing theories: what have we learned and why?’, *Journal of Research in Crime and Delinquency*, 27(4): 325–347.](http://dx.doi.org/10.1177/0022427890027004002)
+* Wikstrom, P-O H. (2017) ‘Character, circumstances, and the causes of crime: Towards an analytical criminology’ In A. Liebling, S. Maruna and L. McAra (eds) *Oxford Handbook of Criminology*, 6th edition. Oxford University Press. Pg 501-521 
+  * Search for the title in Law Trove
+
+
+
