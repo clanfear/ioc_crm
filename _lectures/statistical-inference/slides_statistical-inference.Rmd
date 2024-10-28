@@ -89,6 +89,8 @@ $R^2$ values:
 
 # Visualizing Correlations
 
+&nbsp;
+
 ```{r}
 make_sample <- function(r, n){
   sig <- matrix(c(1,r,r,1),2,2)
@@ -97,15 +99,19 @@ make_sample <- function(r, n){
   }
 r_seq <- round(c(seq(0, 0.9, by = .15), 0.95, 1),2)
 
-r_df <- map_dfr(setNames(r_seq, r_seq), ~ make_sample(., 100), .id = "R")
-r_df$R <- factor(r_df$R, levels = r_seq)
+r_df <- map_dfr(setNames(r_seq, r_seq), ~ make_sample(., 100), .id = "R") |>
+  mutate(R = factor(R, levels = r_seq),
+         R = fct_relabel(R, \(x) str_c("r=", x, "\nExplained: ", round(100*(as.numeric(x)^2)), "%"))) 
 ggplot(r_df, aes(x = x, y =y)) + 
   geom_point() + 
   facet_wrap(~R) + 
-  geom_smooth(method = "lm", se = FALSE, color = "#8A1538") +
+  # geom_smooth(method = "lm", se = FALSE, color = "#8A1538") +
   theme_void(base_size = 16) +
-  theme(panel.background = element_rect(fill='transparent', color=NA), 
-    plot.background = element_rect(fill='transparent', color=NA))
+  scale_y_continuous(expand  = c(0, 0.2)) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA)
+    )
 
 ```
 
@@ -114,10 +120,13 @@ ggplot(r_df, aes(x = x, y =y)) +
 
 # Last Week's Correlation
 
+&nbsp;
+
 ```{r, fig.height = 3}
 communities %>%
   ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
   geom_point(alpha = 0.5) +
+  # geom_smooth(method = "lm", se = FALSE, color = "#8A1538") +
   xlab("Population Density") +
   stat_correlation(size = 5) +
   theme_minimal(base_size = 16)
@@ -226,7 +235,7 @@ Regression is an estimation method for *fitting lines* to data
 
 --
 
-Regression is just a way to summarize a relationship between variables using a line<sup>1</sup>
+Regression is just a way to summarize a relationship between variables using a line
 
 * e.g., predicting $Y$ using $X$
 
@@ -248,6 +257,8 @@ The regression line describes the **conditional expectation** of the dependent v
 
 # A Regression Line
 
+&nbsp;
+
 ```{r}
 communities %>%
   ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
@@ -256,6 +267,10 @@ communities %>%
   geom_smooth(method = "lm", se = FALSE, formula = "y ~ x") +
   theme_minimal(base_size = 16)
 ```
+
+&nbsp;
+
+"If population density is 20, we expect the crime rate to be about 41"
 
 ---
 
@@ -281,6 +296,8 @@ OLS draws a line through the data that minimizes the *sum of squared residuals*
 ---
 
 # Residuals
+
+&nbsp;
 
 ```{r}
 form <- y ~ x
@@ -332,6 +349,8 @@ $e_i$ is the **residual**
 ---
 
 # Regression Equation 
+
+&nbsp;
 
 ```{r}
 form <- y ~ x
@@ -425,8 +444,8 @@ Process:
 
 1. State hypotheses about estimand:
 
-   * Null Hypothesis: There is no relationship
-   * Alternative Hypothesis: There is a relationship
+   * **Null Hypothesis**: There is no relationship
+   * **Alternative Hypothesis**: There is a relationship
 
 --
 
@@ -514,7 +533,21 @@ We can calculate how likely it is to observe any particular number of heads flip
 * e.g., how likely is it to get 15 heads on 20 flips with a fair coin
 * We can do this just by tabulating every possible outcome of 20 coin flips
 
+---
 
+# Ways to get...
+
+* There is only 1 way to get 0 heads: They're all tails!
+* There are 20 ways to get 1 head: Any 1 coin is heads!
+* There are 190 ways to get 2 heads
+* There are 4845 ways to 5 heads
+* There are *184,756* ways to get 10 heads!
+
+We're *1,000 times* more likely to get 10 heads than 2 heads!
+
+--
+
+The probability we get any particular number of heads is can be described by a theoretical distribution: the **binomial distribution**
 
 ---
 
@@ -645,9 +678,9 @@ This is because means have a useful sampling property, described by the **centra
 
 --
 
-*No matter what the distribution of the population you sample from, the distribution of the **means** of all samples will be normally distributed around the population mean*<sup>1</sup>
+*No matter what the distribution of the variable in the population you sample from, the distribution of the **means** of all samples will be normally distributed around the population's mean*<sup>1</sup>
 
-.footnote[[1] Assuming the real distribution has a finite mean and variance and at least a modest sample size]
+.footnote[[1] Assuming at least a modest sample size and that the population distribution has a finite mean and variance---get out of here with your Cauchy-distributed variables!]
 
 --
 
@@ -938,6 +971,7 @@ Some approaches:
 
 * Estimating publication bias
 * Pre-registration of analyses
+* Registered reports
 * Requirements for computational reproducibility
 * Replication studies
 * Publishing null findings
