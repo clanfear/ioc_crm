@@ -21,7 +21,7 @@ class: center, top, title-slide
 ### Charles Lanfear
 ]
 .date[
-### 29 Oct 2024<br>Updated: 28 Oct 2024
+### 29 Oct 2024<br>Updated: 30 Oct 2024
 ]
 
 ---
@@ -90,7 +90,7 @@ Correlation ( `\(R\)` ) summarizes relationship between continuous variables
 
 &amp;nbsp;
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-6-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-7-1.svg)&lt;!-- --&gt;
 
 
 ---
@@ -99,7 +99,7 @@ Correlation ( `\(R\)` ) summarizes relationship between continuous variables
 
 &amp;nbsp;
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-7-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-8-1.svg)&lt;!-- --&gt;
 
 This is a strong relationship: About 66% of the variation is explained
 
@@ -228,7 +228,7 @@ The regression line describes the **conditional expectation** of the dependent v
 
 &amp;nbsp;
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-8-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-9-1.svg)&lt;!-- --&gt;
 
 &amp;nbsp;
 
@@ -261,7 +261,7 @@ OLS draws a line through the data that minimizes the *sum of squared residuals*
 
 &amp;nbsp;
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-9-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-10-1.svg)&lt;!-- --&gt;
 
 .footnote[
 [See here for an interactive explanation](https://setosa.io/ev/ordinary-least-squares-regression/)
@@ -305,7 +305,7 @@ Regression line equations look like this:
 
 &amp;nbsp;
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-10-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-11-1.svg)&lt;!-- --&gt;
 
 ---
 
@@ -499,7 +499,7 @@ The probability we get any particular number of heads is can be described by a t
 
 If we flip a fair coin 20 times, the binomial distribution says we're this likely to see each count of heads:
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-11-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-12-1.svg)&lt;!-- --&gt;
 
 Roughly 95% of the time, we'd expect to see between 6 and 14 heads.
 
@@ -573,9 +573,9 @@ We can test categorical associations using a chi-square ( `\(\chi^2\)` ) test.
 |             |Area  |      |
 |:------------|:-----|:-----|
 |Disadvantage |Rural |Urban |
-|High         |41    |60    |
 |Low          |63    |39    |
 |Medium       |49    |48    |
+|High         |41    |60    |
 
 Here we get a test statistic of 9.11 (df=2) corresponding to a statistically significant (at 95% confidence) p-value of 0.010.
 
@@ -636,7 +636,7 @@ Imagine this is the distribution of a variable in the population
 
 
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-15-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
 
 The mean is in red, but the shape is definitely not a bell curve
 
@@ -646,7 +646,7 @@ The mean is in red, but the shape is definitely not a bell curve
 
 Let's say we sample 100 observations from it and take the mean
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-17-1.svg)&lt;!-- --&gt;
 
 Our estimate isn't bad! But if we couldn't compare to the population, how would we know that?
 
@@ -656,7 +656,7 @@ Our estimate isn't bad! But if we couldn't compare to the population, how would 
 
 If we take a ton of samples (n=100 each) and calculate all their means, their distribution looks like this—most are pretty accurate!
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-17-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-18-1.svg)&lt;!-- --&gt;
 
 --
 
@@ -670,7 +670,7 @@ If we take a ton of samples (n=100 each) and calculate all their means, their di
 
 Okay, look at this monster:
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-18-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-19-1.svg)&lt;!-- --&gt;
 
 There's barely any data near the mean at all!
 
@@ -680,7 +680,7 @@ There's barely any data near the mean at all!
 
 This is the sampling distribution of the means we get from *that*
 
-![](slides_statistical-inference_files/figure-html/unnamed-chunk-19-1.svg)&lt;!-- --&gt;
+![](slides_statistical-inference_files/figure-html/unnamed-chunk-20-1.svg)&lt;!-- --&gt;
 
 .text-center[
 *Yep, still works—just noisier!*

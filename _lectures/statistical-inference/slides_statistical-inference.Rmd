@@ -27,7 +27,8 @@ set.seed(7)
 communities_orig <- read_csv("https://clanfear.github.io/ioc_iqa/_data/communities.csv") |>
   mutate(control = 0.5*standardize(crime_rate) - 0.1*standardize(pop_density) + rnorm(n()))
 communities <- communities_orig |>
-  janitor::clean_names(case = "title")
+  janitor::clean_names(case = "title") |>
+  mutate(across(c(Disadvantage, Incarceration), ~factor(., levels = c("Low", "Medium", "High"))))
 ```
 
 
