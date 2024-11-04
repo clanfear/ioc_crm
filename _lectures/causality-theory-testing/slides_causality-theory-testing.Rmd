@@ -47,7 +47,7 @@ class: inverse
 
 ---
 
-# Causality (in Brief)
+# Counterfactual Causality
 
 
 $X$ causes $Y$ if changing *only* $X$ would change $Y$
@@ -1576,6 +1576,8 @@ Sometimes quantitative data are not up to the task of identifying an effect of i
 class: inverse
 
 # Wrap-Up
+
+IMPORTANT: 11:30 Nov 12th rescheduled to Thursday 11:30 Nov 21
 
 * One last unit to knit the quant section together
 

@@ -91,6 +91,15 @@ Professional writing is purposeful **communication** to an audience
 ---
 count:false
 
+![:width 75%](img/ghost_crim.jpg)
+
+&nbsp;
+
+![:width 75%](img/keep-your-secrets-frodo.gif)
+
+---
+count:false
+
 # When you write
 
 .pull-left[
