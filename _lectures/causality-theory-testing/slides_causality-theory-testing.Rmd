@@ -46,6 +46,26 @@ class: inverse
 ![:width 50%](img/galaxy-brain.png)
 
 ---
+# Perspectives
+
+.pull-left-60[
+Different philosophical perspectives
+
+* Probabilistic
+* Manipulation
+* Mechanistic
+* **Counterfactual**
+
+For a primer, consider Illari & Russo 
+]
+
+.pull-right-40[
+
+![](img/illari_russo.jpg)
+
+]
+
+---
 
 # Counterfactual Causality
 
@@ -75,7 +95,7 @@ $X$ causes $Y$ if changing *only* $X$ would change $Y$
 --
 
 .text-center[
-*All that matters for the relationship to be causal is that changing the distribution of $X$ would result in a different distribution of $Y$*
+*All that matters for the relationship to be causal is that if the distribution of $X$ was different, it would result in a different distribution of $Y$*
 ]
 
 --
