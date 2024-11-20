@@ -2,7 +2,7 @@
 title: "Writing Research Proposals"
 subtitle: "CRM Lecture 5"
 author: "Charles Lanfear"
-date: "28 Oct 2024<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "21 Nov 2024<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -48,7 +48,7 @@ Professional writing is purposeful **communication** to an audience
 --
 
 .pull-left[
-* Know the purpose
+* Know the **purpose**
 
    + Argument
    + Description
@@ -59,7 +59,7 @@ Professional writing is purposeful **communication** to an audience
 --
 
 .pull-right[
-* Know the audience
+* Know the **audience**
 
    + Examiners (essay or thesis)
    + Academics (journal article)
@@ -70,7 +70,7 @@ Professional writing is purposeful **communication** to an audience
 --
 
 .text-center[
-*Everything you write should serve your purpose and be understood by your audience*
+*Everything you write should **serve your purpose** and **be understood by your audience***
 ]
 
 
@@ -200,7 +200,7 @@ Proposals are:
 .pull-left[
 &zwj;Reasons for proposals:
 
-* Instutional approval
+* Institutional approval
 * Scholarships
 ]
 .pull-right[
@@ -447,7 +447,7 @@ Specific but with some "wiggle room":
 * Data protection
 
 
-*You'll have ethics seminar next month!*
+*You'll have ethics seminar next week!*
 
 ]
 .pull-right-60[
@@ -524,15 +524,7 @@ class: inverse
 
 # Wrap-Up
 
+* Write clearly
 * Know the purpose
 * Know the audience
 * Make sure key questions are answered
-
-**Statistical inference tomorrow!**
-
-&zwj;Reading:
-
-* Bueno de Mesquita, E. and Fowler, A. (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*, Princeton, NJ: Princeton University Press.
-   * Read pp. 94—156: (1) Chapter 6: Statistical Inference, (2) Chapter 7: Over-Comparing, Under-Reporting, and (3) Chapter 8: Reversion to the Mean
-* Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press.
-   * Re-read pp. 35—43: Chapter 3: Describing Variables, section 3.5: Theoretical Distributions
