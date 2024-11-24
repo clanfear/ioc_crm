@@ -455,7 +455,7 @@ Threats to external validity:
 
 ---
 
-# General Signs of Rigor
+# General Signs of Rigour
 
 Rigorous research typically displays most or all of these signs:
 
@@ -466,7 +466,7 @@ Rigorous research typically displays most or all of these signs:
    * Everything that was done is reported in detail
    * Decisions are noted and justified
    * **Reproducible** with **open data**
-   * **Pre-registration**
+   * **Pre-registered** if testing hypotheses
 
 --
 
@@ -482,6 +482,22 @@ Rigorous research typically displays most or all of these signs:
    * Provides realistic implications—doesn't overhype
    * Describes assumptions and consequences if violated
    * Suggests ways to further test the findings
+
+---
+# Severe Testing
+
+.pull-left-60[
+> One does not have evidence for a claim if nothing has been done to rule out ways the claim may be false. (Mayo 2018:5)
+
+&nbsp;
+
+> If little or nothing has been done to rule out flaws in inferring a claim, then it has not passed a severe test... A claim is severely tested to the extent it has been subjected to and passes a test that probably would have found flaws, were they present. (Mayo 2018:xii)
+]
+
+.pull-right-40[
+![](img/mayo.jpg)
+]
+
 
 
 ---
