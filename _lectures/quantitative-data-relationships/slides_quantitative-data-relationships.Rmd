@@ -626,7 +626,7 @@ We create **rates** by dividing counts by an **exposure** variable like populati
 A common **Likert scale** item:
 
 * Strongly Agree
-* Disagree
+* Agree
 * Neither Agree nor Disagree
 * Disagree
 * Strongly Disagree
