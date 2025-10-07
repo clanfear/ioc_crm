@@ -2,7 +2,7 @@
 title: "Seminar 5: Statistical Inference"
 description: "A basic introduction to sampling, estimation, and hypothesis testing"
 author: "Charles Lanfear"
-date: "2024-10-29"
+date: "2025-10-28"
 draft: false
 ---
 

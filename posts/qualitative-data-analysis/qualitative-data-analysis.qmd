@@ -1,8 +1,8 @@
 ---
-title: "Seminar 8: Qualitative Data Analysis"
+title: "Seminar 10: Qualitative Data Analysis"
 description: "Analyzing data from interviews, observation, and other qualitative collection methods"
 author: "Caroline Lanskey"
-date: "2024-11-19"
+date: "2025-11-25"
 draft: false
 ---
 
@@ -16,11 +16,11 @@ Required reading:
 
 Further reading:
 
+* Avis, M (2005) Is there an epistemology for qualitative research? In Holloway, I (ed) Qualitative Research in Health Care. Milton Keynes: Open University Press. Available at:https://lsms.ac/wp-content/uploads/2023/02/11_.pdf#page=22. (This book offers a helpful guide to different approaches to qualitative inquiry).
+
 * Coffey, A. and Atkinson, P. (1996) Making Sense of Qualitative Data Analysis: Complementary research strategies, Thousand Oaks, CA: Sage.
 
 * Ritchie, J. and Lewis, J. (2003) Qualitative Research Practice, London: Sage. Read chapters 8 to 10.
-
-* Becker, H.S. (1998) Tricks of the Trade: How to think about your research while you're doing it, Chicago, IL: University of Chicago Press.
 
 * Miles, M.B. and Huberman, A.M. (1994) Qualitative Data Analysis: An expanded sourcebook, 2nd ed., London: Sage.
 
@@ -28,6 +28,6 @@ Further reading:
 
 * Silverman, D. (2013) Doing Qualitative Research, 4th ed., London: Sage. (See part 3.) 
 
-* Strauss, A. and Corbin, J. (2015) Basics of Qualitative Research: Techniques and procedures for developing Grounded Theory, 4th ed., London: Sage. Or see 3rd edition (2008).
+* Charmaz, K. (2012). The power and potential of grounded theory. Medical sociology online, 6(3), 2-15. Available at: https://www.epicpeople.org/wp-content/uploads/2023/06/Charmaz-2012.pdf
 
 * Flick U. (ed). 2004. The SAGE Handbook of Qualitative Data Analysis. SAGE Publications Ltd.

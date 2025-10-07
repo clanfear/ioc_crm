@@ -2,7 +2,7 @@
 title: "Seminar 7: Interviews"
 description: "Qualitative research using interviews"
 author: "Arushi Garg"
-date: "2024-11-12"
+date: "2025-11-11"
 draft: false
 ---
 
@@ -11,6 +11,8 @@ Slides on Moodle
 Required reading:
 
 * Yeo, A. et al (2014). ‘In-depth interviews’ in J. Ritchie et al. (eds) Qualitative research practice: A guide for social science students and researchers, 2nd ed., London: Sage, Chapter 7.
+
+* Based on your research interests, please read any three ‘Further reading’ items below to be able to participate in classroom discussions.
 
 Further reading:
 
@@ -23,3 +25,5 @@ Further reading:
 * Ritchie, J. et al (2014). ‘Designing and selecting samples’ and in J. Ritchie et al. (eds) Qualitative research practice: A guide for social science students and researchers, 2nd ed., London: Sage, Chapters 5 and 8.
 
 * Ullrich, L. (2021). ‘Digital epistemologies in socially distanced times: Exploring knowledge production through qualitative WhatsApp surveys’ (Centre for Criminological Research, University of Sheffield, 13 October 2021) available at https://www.sheffield.ac.uk/ccr/events/sights-sounds-and-art/sounds-criminal-justice accessed 7 November 2022.
+
+* Porter, A. (2019) ‘Prosecuting domestic abuse in England and Wales: Crown Prosecution Service ‘working practice’ and new public managerialism.’  Social & Legal Studies 28(4): 493-516. (example of interview-based research article)

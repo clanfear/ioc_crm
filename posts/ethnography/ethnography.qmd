@@ -1,8 +1,8 @@
 ---
-title: "Seminar 10: Ethnographic and Observational Research"
+title: "Seminar 8: Ethnographic and Observational Research"
 description: "Qualitative research using ethnographic methodology"
 author: "Arushi Garg"
-date: "2024-11-26"
+date: "2025-11-18"
 draft: false
 ---
 
@@ -14,6 +14,8 @@ Required reading:
 * Haggerty et al (2021) ‘Introduction: The promises and challenges of crime ethnographies’ in  S.M. Bucerius et al (eds), *The Oxford Handbook of Ethnographies of Crime and Criminal Justice*, Oxford: OUP, Chapter 1. pp. 1-17
 
 * Krishnan, S. (2015) ‘Dispatches from a ‘rogue’ ethnographer: Exploring homophobia and queer visibility in the field’, *Journal of the Anthropological Society of Oxford Online*, 7(1): 64–79
+
+* Based on your research interests, please read any two ‘Further reading’ items below to be able to participate in classroom discussions.
 
 
 Further reading:
@@ -31,4 +33,9 @@ Further reading:
 
 * Willis, R. (2019) ‘Observations online: Finding the ethical boundaries of Facebook research’, *Research Ethics*, 15(1): 1-17.
 
-* For a sophisticated and combative debate on ethnographic practice, see Wacquant’s (2002) ‘Scrutinizing the street: poverty, morality, and the pitfalls of urban ethnography’, and the responses by Duneier, Anderson and Newman, in the *American Journal of Sociology*, 107(6): 1468-1532, 1533- 1550, 1551–1576, and 1577–1599.[https://www.journals.uchicago.edu/toc/ajs/2002/107/6]()
+* Herrity, K, Schmidt, B.E. and Warr, J. "Sensory “Heteroglossia” and social control: Sensory methodology and method." In R. Faria and M. Dodge (eds), *Qualitative Research in Criminology: Cutting-edge Methods*. Cham: Springer International Publishing, 2022. 125-139.
+
+* Padmanabhan, K. ‘How close is too close? Ethical tensions and reflections in the Breddon Centre.’ *Embracing the Unknown*. Policy Press, 2025. 145-155.
+
+* Shah, A. (2017) ‘Ethnography? Participant observation, a potentially revolutionary praxis’, *HAU: Journal of Ethnographic Theory* 7(1): 45-59.
+

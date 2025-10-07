@@ -2,7 +2,7 @@
 title: "Seminar 4: Quantitative Data and Relationships"
 description: "An introduction to quantitative data and bivariate relationships: correlations and regression"
 author: "Charles Lanfear"
-date: "2024-10-22"
+date: "2025-10-21"
 draft: false
 ---
 

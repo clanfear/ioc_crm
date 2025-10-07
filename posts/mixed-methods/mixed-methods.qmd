@@ -1,8 +1,8 @@
 ---
-title: "Seminar 14: Mixed Methods"
+title: "Seminar 12: Mixed Methods"
 description: "Research combining quantitative and qualitative approaches"
 author: "Ben Crewe"
-date: "2024-12-03"
+date: "2025-12-02"
 draft: false
 ---
 
