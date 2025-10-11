@@ -1,8 +1,8 @@
 ---
-title: "Introduction to Research"
+title: "Research Questions and Designs"
 subtitle: "CRM Lecture 1"
 author: "Charles Lanfear"
-date: "15 Oct 2024<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%e %b %Y'))`"
+date: "14 Oct 2025<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%e %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -41,7 +41,7 @@ knitr::opts_chunk$set(eval=TRUE, echo=TRUE, message=TRUE, warning=TRUE)
 
 --
 
-* **Teach you to write an effective research proposal**
+* **Teach you to design research**
 
 ---
 
@@ -1055,9 +1055,9 @@ class: inverse
 
 Readings for next session:
 
-* Bernard, T.J. (1990) 'Twenty years of testing theories: what have we learned and why?', *Journal of Research in Crime and Delinquency*, 27(4): 325–347. http://dx.doi.org/10.1177/0022427890027004002
+* Bernard, T.J. (1990) Twenty years of testing theories: what have we learned and why? *Journal of Research in Crime and Delinquency*, 27(4): 325–347. http://dx.doi.org/10.1177/0022427890027004002
 
-* Wikstrom, P-O H. (2017) ‘Character, circumstances, and the causes of crime: Towards an analytical criminology’ In A. Liebling, S. Maruna and L. McAra (eds) *Oxford Handbook of Criminology*, 6th edition. Oxford University Press. Pg 501-521 
+* Wikström, P-O H. (2007) Doing without knowing. Common pitfalls in crime prevention. *Crime Prevention Studies*, 21, 59-80.
 
 
 
