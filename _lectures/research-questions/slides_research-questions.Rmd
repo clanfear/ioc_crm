@@ -752,7 +752,7 @@ We must know causes to make **interventions**, e.g., *controlling crime*
 ]
 
 ---
-# Causes and Mechanisms
+# Mechanistic Causality
 
 A **cause** is something that can initiate a **mechanism** to produce an effect
 
