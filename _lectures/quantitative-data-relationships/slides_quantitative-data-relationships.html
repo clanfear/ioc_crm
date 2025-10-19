@@ -4,7 +4,7 @@
     <title>Quantitative Data and Relationships</title>
     <meta charset="utf-8" />
     <meta name="author" content="Charles Lanfear" />
-    <script src="libs/header-attrs-2.29/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.30/header-attrs.js"></script>
     <link rel="stylesheet" href="../assets/cam-css.css" type="text/css" />
   </head>
   <body>
@@ -21,7 +21,7 @@ class: center, top, title-slide
 ### Charles Lanfear
 ]
 .date[
-### 22 Oct 2024<br>Updated: 23 Jun 2025
+### 21 Oct 2025<br>Updated: 19 Oct 2025
 ]
 
 ---
@@ -50,9 +50,7 @@ Sorry about today!
 ]
 
 .footnote[
-At least there's no calculus!
-
-Haha, got ya, IQA students!
+At least there's no more calculus!
 ]
 
 ---
@@ -150,6 +148,8 @@ class: inverse
 *What would these data be bad for?*
 ]
 
+
+
 ---
 # Types of Statistics
 
@@ -174,7 +174,7 @@ To make **inferences** about populations using samples, your sample needs to be 
 
 --
 
-Samples are **representative** when they have a similar composition to the population
+Samples are **representative** when they have a similar composition to the population along the characteristics you are interested in
 
 --
 
@@ -186,6 +186,10 @@ Samples are **representative** when they have a similar composition to the popul
 
 ]
 
+---
+
+![](img/phdcn-sampling.jpg)
+.footnote[Source: [Sampson et al. (2022)](https://link.springer.com/article/10.1007/s40865-022-00203-0) ]
 
 ---
 class: inverse
@@ -405,8 +409,9 @@ And was the offender...&lt;br&gt;&lt;br&gt;
 
 --
 
+.text-center[
 *These are all important but nearly never all observed, especially not for a large number of incidents*
-
+]
 
 
 ---
@@ -440,7 +445,7 @@ class: inverse
 
 &amp;zwj;**Observables**: Objective, externally measurable variables
 
-   * Individual height, occupation, stated beliefs
+   * Individual height, occupation, stated beliefs, arrest history
    * Neighborhood population, geographical area, crime rate&lt;sup&gt;1&lt;/sup&gt;
 
 .footnote[[1] Hard to measure doesn't mean unobservable!]
@@ -461,7 +466,7 @@ class: inverse
 --
 
 .text-center[
-In Criminology, we're *very often* interested in unobservables.
+*In Criminology, we're* very often *interested in unobservables.*
 ]
 
 ---
@@ -489,8 +494,47 @@ When reading articles, pay attention to how things are measured!
 .footnote[[1] Composites include things like indices, scales, factors, and principle components. Turning multiple measures into one composite is sometimes called *dimension reduction*.]
 
 ---
+# Indicators and Causes
 
-# Individual Example
+.pull-left[
+**Reflective**
+
+The measure causes the indicators
+
+
+
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-2-1.svg)&lt;!-- --&gt;
+
+*The value of the underlying unobservable variable is __reflected__ in the indicators*
+
+]
+
+--
+
+.pull-right[
+**Formative**
+
+*The indicators cause the measure*
+
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-3-1.svg)&lt;!-- --&gt;
+
+*The underyling unobservable variable is __formed__ by the combination of the indicators*
+
+]
+
+--
+
+.center[
+*These impact how we estimate measures—a topic for another time!*
+
+*Let's see some examples*
+]
+
+
+
+---
+
+# Individual Reflective
 
 ### Self-Control
 
@@ -500,18 +544,39 @@ When reading articles, pay attention to how things are measured!
 
 &amp;zwj;Indicators: *Would you agree, neither agree nor disagree, or disagree that you...*
 
-   * "Get upset when you have to wait for something?"
-   * "Act without stopping to think?"
-   * "Like to do daring things?"
-   * "Are impatient—want to have things right away?"
-   * "Are careful about what you do?"
+   * "get upset when you have to wait for something?"
+   * "act without stopping to think?"
+   * "like to do daring things?"
+   * "are impatient—want to have things right away?"
+   * "are careful about what you do?"
    
 --
 
 &amp;zwj;Assumption: *Shared variation in the indicators represents underlying self-control.*
 
 ---
-# Neighborhood Example
+
+# Individual Formative
+
+### Offending Scale
+
+&amp;zwj;Concept: A summary measure of frequency and severity of offending.
+
+--
+
+&amp;zwj;Indicators: *In the past year, how many times have you...*
+
+   * "taken something that wasn't yours?"
+   * "used force to take something from someone else?"
+   * "punched, kicked, or pushed someone else?"
+   * "attacked someone with a weapon like a knife or gun?"
+   
+--
+
+&amp;zwj;Assumption: *This combination of different types of offending counts provides a useful measure of something.*
+
+---
+# Neighborhood Reflective
 
 ### Child-Centered Informal Social Control
 
@@ -539,6 +604,29 @@ Isn't about what respondent would do--is about what people around would do
 --
 
 &amp;zwj;Assumption: *Shared variation in the measures represents underlying expectations for social control of children.*
+
+---
+
+# Neighborhood Formative
+
+### Concentrated Disadvantage
+
+&amp;zwj;Concept: The spatial clustering of socioeconomic disadvantage.
+
+--
+
+&amp;zwj;Indicators: *Census tract percentage of...*
+
+   * "families below the poverty line."
+   * "individuals on public assistance."
+   * "individuals unemployed."
+   * "female-headed households."
+   * "individuals under age 18."
+   
+--
+
+&amp;zwj;Assumption: *The combination of these measures provides a useful index of disadvantage.*
+
 
 ---
 
@@ -793,7 +881,7 @@ Because they take a limited number of values, we typically summarize categorical
 
 Bar plots are a good way to visualize categorical distributions
 
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-3-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-5-1.svg)&lt;!-- --&gt;
 
 
 ---
@@ -815,7 +903,7 @@ Ordinals can be summarized similarly to categoricals, but they have a median—w
 
 --
 
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-5-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-7-1.svg)&lt;!-- --&gt;
 
 ---
 
@@ -833,10 +921,10 @@ Continuous data can take a limitless number of values, so we summarize them with
 We visualize continuous distributions with **histograms** and **density plots**
 
 .pull-left[
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-7-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-9-1.svg)&lt;!-- --&gt;
 ]
 .pull-right[
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-8-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-10-1.svg)&lt;!-- --&gt;
 
 ]
 
@@ -853,7 +941,7 @@ These all have the same mean, median, and standard deviation!
 |Poisson      |1.0  |1.0    |1.0      |
 |Uniform      |1.0  |1.0    |1.0      |
 
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-10-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-12-1.svg)&lt;!-- --&gt;
 
 ---
 class: inverse
@@ -895,9 +983,9 @@ class: inverse
 
 Associations are really about **conditional probabilities**
 
-* The probability of `\(Y\)` taking a particular value when `\(X\)` takes a particular value
+* Probability `\(Y\)` takes a particular value when `\(X\)` takes a particular value
    * Notation: `\(P(Y|X)\)` is "Probability of Y given X"
-* e.g., if a drug possession suspect is white, their probability of arrest is 0.3.
+* e.g., if a suspect is white, their probability of arrest is 0.3.
    * `\(P(arrest|white) = 0.3\)`
 
 --
@@ -944,7 +1032,7 @@ The simplest joint distributions are those between categorical variables, usuall
 
 We can also visualise them with a bar plot
 
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-13-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-15-1.svg)&lt;!-- --&gt;
 
 ---
 
@@ -963,11 +1051,11 @@ If our association is between a categorical and a continuous variable, we can ca
 Or draw a histogram or density for each category
 
 .pull-left[
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-15-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-17-1.svg)&lt;!-- --&gt;
 ]
 
 .pull-right[
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-18-1.svg)&lt;!-- --&gt;
 ]
 
 ---
@@ -984,7 +1072,7 @@ When both variables are continuous, we usually measure association with a **corr
 
 --
 
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-18-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-20-1.svg)&lt;!-- --&gt;
 
 Here I've added a **regression line** to illustrate the correlation
 
@@ -994,7 +1082,7 @@ Here I've added a **regression line** to illustrate the correlation
 
 We can go pretty far just visualising results!
 
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-19-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-21-1.svg)&lt;!-- --&gt;
 
 --
 
@@ -1031,7 +1119,7 @@ class: inverse
 
 Visualisation is important—these all have the same correlation (0.82)!
 
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-20-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-22-1.svg)&lt;!-- --&gt;
 
 ---
 
@@ -1039,9 +1127,10 @@ Visualisation is important—these all have the same correlation (0.82)!
 
 So do these! Their `\(X\)` and `\(Y\)` values also have the same means and standard deviations!
 
-![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-21-1.svg)&lt;!-- --&gt;
+![](slides_quantitative-data-relationships_files/figure-html/unnamed-chunk-23-1.svg)&lt;!-- --&gt;
 
 ---
+class: inverse
 
 # Wrap-Up
 

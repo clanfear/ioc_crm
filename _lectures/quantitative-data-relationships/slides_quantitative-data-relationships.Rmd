@@ -2,7 +2,7 @@
 title: "Quantitative Data and Relationships"
 subtitle: "CRM Week 2"
 author: "Charles Lanfear"
-date: "22 Oct 2024<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "21 Oct 2025<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -43,9 +43,7 @@ Sorry about today!
 ]
 
 .footnote[
-At least there's no calculus!
-
-Haha, got ya, IQA students!
+At least there's no more calculus!
 ]
 
 ---
@@ -143,6 +141,8 @@ class: inverse
 *What would these data be bad for?*
 ]
 
+
+
 ---
 # Types of Statistics
 
@@ -167,7 +167,7 @@ To make **inferences** about populations using samples, your sample needs to be 
 
 --
 
-Samples are **representative** when they have a similar composition to the population
+Samples are **representative** when they have a similar composition to the population along the characteristics you are interested in
 
 --
 
@@ -179,6 +179,10 @@ Samples are **representative** when they have a similar composition to the popul
 
 ]
 
+---
+
+![](img/phdcn-sampling.jpg)
+.footnote[Source: [Sampson et al. (2022)](https://link.springer.com/article/10.1007/s40865-022-00203-0) ]
 
 ---
 class: inverse
@@ -398,8 +402,9 @@ And was the offender...<br><br>
 
 --
 
+.text-center[
 *These are all important but nearly never all observed, especially not for a large number of incidents*
-
+]
 
 
 ---
@@ -433,7 +438,7 @@ class: inverse
 
 &zwj;**Observables**: Objective, externally measurable variables
 
-   * Individual height, occupation, stated beliefs
+   * Individual height, occupation, stated beliefs, arrest history
    * Neighborhood population, geographical area, crime rate<sup>1</sup>
 
 .footnote[[1] Hard to measure doesn't mean unobservable!]
@@ -454,7 +459,7 @@ class: inverse
 --
 
 .text-center[
-In Criminology, we're *very often* interested in unobservables.
+*In Criminology, we're* very often *interested in unobservables.*
 ]
 
 ---
@@ -482,8 +487,111 @@ When reading articles, pay attention to how things are measured!
 .footnote[[1] Composites include things like indices, scales, factors, and principle components. Turning multiple measures into one composite is sometimes called *dimension reduction*.]
 
 ---
+# Indicators and Causes
 
-# Individual Example
+.pull-left[
+**Reflective**
+
+The measure causes the indicators
+
+
+
+```{tikz, fig.width = 3, cache = TRUE}
+\usetikzlibrary{positioning}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none,
+        scale = 3
+    },
+    every path/.append style = {
+        arrows = ->,
+        draw = black,
+        fill = none,
+        scale = 1,
+        line width = 1.5mm
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt
+    }
+}
+\tikz{
+    \node[hidden] (x) at (0,0) {$x$};
+    \node (y1) at (-2,-4)  {$y_1$};
+    \node (y2) at (0,-4)  {$y_2$};
+    \node (y3) at (2,-4)  {$y_3$};
+
+    \path (x) edge (y1);
+    \path (x) edge (y2);
+    \path (x) edge (y3);
+  }
+```
+
+*The value of the underlying unobservable variable is __reflected__ in the indicators*
+
+]
+
+--
+
+.pull-right[
+**Formative**
+
+*The indicators cause the measure*
+
+```{tikz, fig.width = 3, cache = TRUE}
+\usetikzlibrary{positioning}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none,
+        scale = 3
+    },
+    every path/.append style = {
+        arrows = ->,
+        draw = black,
+        fill = none,
+        scale = 1,
+        line width = 1.5mm
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt
+    }
+}
+\tikz{
+    \node[hidden] (x) at (0,0) {$y$};
+    \node (y1) at (-2,-4)  {$x_1$};
+    \node (y2) at (0,-4)  {$x_2$};
+    \node (y3) at (2,-4)  {$x_3$};
+
+    \path (y1) edge (x);
+    \path (y2) edge (x);
+    \path (y3) edge (x);
+}
+```
+
+*The underyling unobservable variable is __formed__ by the combination of the indicators*
+
+]
+
+--
+
+.center[
+*These impact how we estimate measures—a topic for another time!*
+
+*Let's see some examples*
+]
+
+
+
+---
+
+# Individual Reflective
 
 ### Self-Control
 
@@ -493,18 +601,39 @@ When reading articles, pay attention to how things are measured!
 
 &zwj;Indicators: *Would you agree, neither agree nor disagree, or disagree that you...*
 
-   * "Get upset when you have to wait for something?"
-   * "Act without stopping to think?"
-   * "Like to do daring things?"
-   * "Are impatient—want to have things right away?"
-   * "Are careful about what you do?"
+   * "get upset when you have to wait for something?"
+   * "act without stopping to think?"
+   * "like to do daring things?"
+   * "are impatient—want to have things right away?"
+   * "are careful about what you do?"
    
 --
 
 &zwj;Assumption: *Shared variation in the indicators represents underlying self-control.*
 
 ---
-# Neighborhood Example
+
+# Individual Formative
+
+### Offending Scale
+
+&zwj;Concept: A summary measure of frequency and severity of offending.
+
+--
+
+&zwj;Indicators: *In the past year, how many times have you...*
+
+   * "taken something that wasn't yours?"
+   * "used force to take something from someone else?"
+   * "punched, kicked, or pushed someone else?"
+   * "attacked someone with a weapon like a knife or gun?"
+   
+--
+
+&zwj;Assumption: *This combination of different types of offending counts provides a useful measure of something.*
+
+---
+# Neighborhood Reflective
 
 ### Child-Centered Informal Social Control
 
@@ -532,6 +661,29 @@ Isn't about what respondent would do--is about what people around would do
 --
 
 &zwj;Assumption: *Shared variation in the measures represents underlying expectations for social control of children.*
+
+---
+
+# Neighborhood Formative
+
+### Concentrated Disadvantage
+
+&zwj;Concept: The spatial clustering of socioeconomic disadvantage.
+
+--
+
+&zwj;Indicators: *Census tract percentage of...*
+
+   * "families below the poverty line."
+   * "individuals on public assistance."
+   * "individuals unemployed."
+   * "female-headed households."
+   * "individuals under age 18."
+   
+--
+
+&zwj;Assumption: *The combination of these measures provides a useful index of disadvantage.*
+
 
 ---
 
@@ -788,7 +940,15 @@ knitr::kable()
 Bar plots are a good way to visualize categorical distributions
 
 ```{r, fig.height = 2.75, fig.width = 6}
-ggplot(shoot, aes(x = `Type of Crime`)) + geom_bar(fill = "#003C71") + theme_minimal() + labs(y = "Frequency") + annotate("text", x = "Theft", y = 30, label = "Mode", color = "#64A70B", size = 8) + theme(panel.grid.major.x = element_blank())
+ggplot(shoot, aes(x = `Type of Crime`)) + 
+  geom_bar(fill = "#003C71") + 
+  theme_minimal(base_size = 14) + 
+  labs(y = "Frequency") + 
+  annotate("text", x = "Theft", y = 30, label = "Mode", color = "#64A70B", size = 8) + 
+  theme(panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb") )
 ```
 
 
@@ -819,11 +979,14 @@ knitr::kable()
 ```{r, fig.height = 2.75, fig.width = 6}
 ggplot(fear, aes(x = `Fear of Crime`)) + 
   geom_bar(fill = "#003C71") + 
-  theme_minimal() + 
+  theme_minimal(base_size = 14) + 
   labs(y = "Frequency") + 
   annotate("text", x = "Low", y = 20, label = "Mode", color = "#64A70B", size = 6) +
   annotate("text", x = "Moderate", y = 20, label = "Median", color = "#64A70B", size = 6) +
-  theme(panel.grid.major.x = element_blank())
+  theme(panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb") )
 ```
 
 ---
@@ -856,7 +1019,10 @@ robbery %>%
   geom_histogram(binwidth = 50, fill = "#003C71") +
   labs(y = "Frequency", title = "Histogram of Crime Rate") +
   theme_minimal(base_size = 18) +
-  theme(panel.grid.major.x = element_blank())
+  theme(panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb") )
 ```
 ]
 .pull-right[
@@ -866,9 +1032,9 @@ robb_density <- density(robbery$`Crime Rate`)
 robbery %>% 
   ggplot(aes(x = `Crime Rate`)) + 
   geom_density(fill = "#28282B", alpha = 0.2) + 
-  geom_vline(xintercept = robb_density$x[which.max(robb_density$y)], color = "#003C71", size = 2) +
-  geom_vline(xintercept = median(robbery$`Crime Rate`), color = "#8A1538", size = 2) +
-  geom_vline(xintercept = mean(robbery$`Crime Rate`), size = 2, color = "#64A70B") + 
+  geom_vline(xintercept = robb_density$x[which.max(robb_density$y)], color = "#003C71", size = 1) +
+  geom_vline(xintercept = median(robbery$`Crime Rate`), color = "#8A1538", size = 1) +
+  geom_vline(xintercept = mean(robbery$`Crime Rate`), size = 1, color = "#64A70B") + 
   geom_text(data = tibble(
              x = c(
                robb_density$x[which.max(robb_density$y)],
@@ -877,19 +1043,22 @@ robbery %>%
              y = c(0.001, 0.001, 0.001),
              label = c("Mode", "Median", "Mean"),
              color = c("Mode", "Median", "Mean")),
-           aes(x = x, y = y, label = label, color = color),
+           aes(x = x, y = y, label = label, color = color), size = 5,
            angle = 90) +
-  annotate("errorbarh", 
+  annotate("errorbar",
            xmin = mean(robbery$`Crime Rate`), 
            xmax = mean(robbery$`Crime Rate`) + sd(robbery$`Crime Rate`), 
-           height = 0.0005, 
+           width = 0.0005, 
            y = 0.002) +
   annotate("text", x = mean(robbery$`Crime Rate`) + 0.5*sd(robbery$`Crime Rate`),
-           label = "Std. Dev.", y = 0.00215) +
+           label = "Std. Dev.", y = 0.00215, size = 4.5) +
   scale_color_manual(values = c("Mode" = "#003C71", "Median" = "#8A1538", "Mean" = "#64A70B")) +
   labs(y = "Probability Density", title = "Density Plot of Crime Rate") +
   theme_minimal(base_size = 18) + 
-  theme(panel.grid.major.x = element_blank(),
+  theme(panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
         legend.position = "none")
   
 ```
@@ -924,7 +1093,7 @@ dists %>%
   ggplot(aes(x = value)) + 
   facet_wrap(~name) + 
   geom_density(fill = "#28282B", alpha = 0.2) + 
-  theme_minimal() + 
+  theme_minimal(base_size = 16) + 
   geom_vline(data = dists %>% 
                group_by(name) %>% 
                summarize(Mean = mean(value)), 
@@ -936,7 +1105,12 @@ dists %>%
                    summarize(Mean = mean(value), stddev = sd(value)),
                  height = 0.05, inherit.aes = FALSE) +
   xlim(-3, 5) +
-  theme(axis.text.y = element_blank()) +
+  theme(panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
+        legend.position = "none",
+        axis.text.y = element_blank()) +
   labs(x = NULL, y = NULL)
 
 ```
@@ -981,9 +1155,9 @@ class: inverse
 
 Associations are really about **conditional probabilities**
 
-* The probability of $Y$ taking a particular value when $X$ takes a particular value
+* Probability $Y$ takes a particular value when $X$ takes a particular value
    * Notation: $P(Y|X)$ is "Probability of Y given X"
-* e.g., if a drug possession suspect is white, their probability of arrest is 0.3.
+* e.g., if a suspect is white, their probability of arrest is 0.3.
    * $P(arrest|white) = 0.3$
 
 --
@@ -1034,7 +1208,13 @@ tabyl(sex_offense, Sex, Offense) %>%
 We can also visualise them with a bar plot
 
 ```{r, fig.height = 2.5}
-sex_offense %>% ggplot(aes(x=Sex, group = Offense, fill = Offense)) + geom_bar() + theme_minimal() + labs(y = "Frequency") + theme(legend.position = c(0.15, 0.8))
+sex_offense %>% ggplot(aes(x=Sex, group = Offense, fill = Offense)) + geom_bar() + theme_minimal(base_size = 14) + labs(y = "Frequency") + 
+  theme(legend.position = c(0.15, 0.8),
+        panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
+        legend.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
 ```
 
 ---
@@ -1066,7 +1246,12 @@ rural %>%
   geom_histogram(alpha = 0.3, bins = 20, position = "identity") + 
   theme_minimal(base_size = 16) + 
   labs(y = "Frequency") + 
-  theme(legend.position = c(0.8, 0.8))
+  theme(legend.position = c(0.8, 0.8),
+        panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
+        legend.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
 ```
 ]
 
@@ -1077,7 +1262,12 @@ rural %>%
   geom_density(alpha = 0.5) + 
   theme_minimal(base_size = 16) + 
   labs(y = "Density") + 
-  theme(legend.position = c(0.8, 0.8))
+  theme(legend.position = c(0.8, 0.8),
+        panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
+        legend.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
 ```
 ]
 
@@ -1101,7 +1291,11 @@ rural %>%
   geom_point(alpha = 0.5) +
   xlab("Population Density") +
   geom_smooth(method = "lm", se = FALSE) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 16) +
+  theme(panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
 ```
 
 Here I've added a **regression line** to illustrate the correlation
@@ -1118,7 +1312,12 @@ rural %>%
   geom_point(alpha = 0.5) +
   geom_smooth(method = "lm", se = FALSE) +
   theme_minimal(base_size = 16) + 
-  theme(legend.position = c(0.1, 0.8))
+  theme(legend.position = c(0.1, 0.8),
+        panel.grid.major.x = element_blank(),  
+        panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
+        legend.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
 ```
 
 --
@@ -1167,7 +1366,9 @@ anscombe %>%
   facet_wrap(~set) + 
   geom_smooth(method = "lm", se = FALSE) + 
   theme_void() + 
-  theme(strip.text = element_blank())
+  theme(strip.text = element_blank(),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
 ```
 
 ---
@@ -1184,10 +1385,13 @@ datasaurus_dozen  %>%
   facet_wrap(~dataset) + 
   geom_smooth(method = "lm", se = FALSE) + 
   theme_void() + 
-  theme(strip.text = element_blank())
+  theme(strip.text = element_blank(),
+        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
+        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
 ```
 
 ---
+class: inverse
 
 # Wrap-Up
 
