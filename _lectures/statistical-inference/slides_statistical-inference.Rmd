@@ -2,7 +2,7 @@
 title: "Statistical Inference"
 subtitle: "CRM Week 3"
 author: "Charles Lanfear"
-date: "29 Oct 2024<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "28 Oct 2025<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -104,14 +104,15 @@ r_df <- map_dfr(setNames(r_seq, r_seq), ~ make_sample(., 100), .id = "R") |>
   mutate(R = factor(R, levels = r_seq),
          R = fct_relabel(R, \(x) str_c("r=", x, "\nExplained: ", round(100*(as.numeric(x)^2)), "%"))) 
 ggplot(r_df, aes(x = x, y =y)) + 
-  geom_point() + 
+  geom_point(size = 1) + 
   facet_wrap(~R) + 
   # geom_smooth(method = "lm", se = FALSE, color = "#8A1538") +
-  theme_void(base_size = 16) +
+  theme_void(base_size = 15) +
   scale_y_continuous(expand  = c(0, 0.2)) +
   theme(
     panel.background = element_rect(fill='transparent', color=NA), 
-    plot.background = element_rect(fill='transparent', color=NA)
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.spacing = unit(10, "mm")
     )
 
 ```
@@ -130,7 +131,12 @@ communities %>%
   # geom_smooth(method = "lm", se = FALSE, color = "#8A1538") +
   xlab("Population Density") +
   stat_correlation(size = 5) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 This is a strong relationship: About 66% of the variation is explained
@@ -266,7 +272,12 @@ communities %>%
   geom_point(alpha = 0.5) +
   xlab("Population Density") +
   geom_smooth(method = "lm", se = FALSE, formula = "y ~ x") +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 &nbsp;
@@ -303,12 +314,19 @@ OLS draws a line through the data that minimizes the *sum of squared residuals*
 ```{r}
 form <- y ~ x
 communities %>%
+  mutate(pred = predict(lm(`Crime Rate`~`Pop Density`, data = .))) |>
   ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
   xlab("Population Density") +
   stat_fit_deviations(formula = form, color = "red") +
+  geom_segment(aes(x = `Pop Density`, y = `Crime Rate`, yend = pred), color = "red", size = 0.5) +
   geom_point(alpha = 0.5) +
   stat_poly_line(formula = form, se = FALSE) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 .footnote[
@@ -361,7 +379,12 @@ communities %>%
   xlab("Population Density") +
   stat_poly_line(formula = form, se = FALSE) +
   stat_poly_eq(formula = form, mapping = use_label("eq"), eq.x.rhs = "PopDensity", eq.with.lhs= "CrimeRate~`=`~", size = 5) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 ---
@@ -563,12 +586,20 @@ draws <- tibble(Heads = 0:20,
 
 ggplot(draws, aes(x = Heads, y = Probability, fill = `95%`)) + 
   geom_col() + 
+  scale_fill_manual(values = c("#003C71","#8A1538")) +
   scale_x_continuous(breaks = 0:20) +
-  theme_minimal() +
-  theme(legend.position = "none")
+  theme_minimal(base_size = 16) +
+  labs(x = "Number of heads out of 20") +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1),
+    legend.position = "none")
 ```
 
 Roughly 95% of the time, we'd expect to see between 6 and 14 heads.
+
+5% or less of the time would we see 5 or fewer or 15 or more.
 
 ---
 
@@ -632,9 +663,56 @@ Higher levels of confidence reduce false positives, but lead to more **false neg
 
 ---
 
-# Cross-Tab Chi-Square
+# Cross-Tab
 
-We can test categorical associations using a chi-square ( $\chi^2$ ) test.
+Cross-tabs are used to show associations between categorical variables
+
+.pull-left[
+
+Is there an association?
+
+```{r}
+communities |> 
+  tabyl(Disadvantage, Area) |>
+  adorn_title() |>
+  knitr::kable()
+```
+
+
+]
+
+--
+
+.pull-right[
+
+What does no association look like?
+
+```{r}
+
+tibble(
+  Sex = rep(c("Male","Female"), length.out = 120),
+  `Self-Control` = c(rep("Low", 30), rep("Medium", 50), rep("High", 40))
+)  |> 
+  tabyl(`Self-Control`, Sex) |>
+  adorn_title() |>
+  knitr::kable()
+```
+
+]
+
+*Males and females are equally probable of being in each level of self-control*
+
+
+--
+
+But we could get different probabilities just from randomness in sampling.
+
+---
+
+# Chi-Square Test
+
+The chi-square ( $\chi^2$ ) asks: How likely would we be to see a sample with this strong an association if the there were no relationship in the population?
+
 
 ```{r}
 communities |> 
@@ -647,7 +725,7 @@ Here we get a test statistic of 9.11 (df=2) corresponding to a statistically sig
 
 --
 
-This suggests Disadvantage and Area are more strongly related in this sample than is likely to occur due only to sampling noise.
+*Disadvantage and Area are more strongly related in this sample than is likely to occur due only to sampling noise.*
 
 * i.e. this is evidence for an association in the population
 
@@ -702,22 +780,30 @@ This is because means have a useful sampling property, described by the **centra
 
 # Illustration
 
-Imagine this is the distribution of a variable in the population
+Imagine this is the distribution of a variable in the population:
 
 ```{r, cache = TRUE}
 unif_draws <- runif(100000, 0, 10)
 unif_mean_draws <- map_dbl(1:100000, ~mean(sample(unif_draws, 100)))
+beta_draws <- rbeta(100000, 1.5, 1)
+beta_mean_draws <- map_dbl(1:100000, ~mean(sample(beta_draws, 100)))
 norm_draws <- c(rnorm(10000, 10, 1), rnorm(10000, 25, 4))
 norm_mean_draws <- map_dbl(1:100000, ~mean(sample(norm_draws, 100)))
 ```
 
 ```{r, fig.height = 4}
-tibble(unif_draws) |>
-  ggplot(aes(x = unif_draws)) + 
-  geom_histogram(bins = 50, fill = "black") + 
-  theme_void() +
-  geom_vline(aes(xintercept = mean(unif_draws)), color = "red") +
-  theme(axis.text.x = element_text())
+tibble(beta_draws) |>
+  ggplot(aes(x = beta_draws)) + 
+  geom_histogram(aes(y = (..count..)/sum(..count..)), bins = 50, fill = "black") + 
+  theme_minimal(base_size=16) +
+  labs(x = "X", y = "Probability") +
+  geom_vline(aes(xintercept = mean(beta_draws)), color = "red") +
+  annotate("text", x = mean(beta_draws)+0.07, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(beta_draws),2)), color = "red") +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 The mean is in red, but the shape is definitely not a bell curve
@@ -729,30 +815,45 @@ The mean is in red, but the shape is definitely not a bell curve
 Let's say we sample 100 observations from it and take the mean
 
 ```{r, fig.height = 4}
-tibble(unif_draws = sample(unif_draws, 100)) |>
-  ggplot(aes(x = unif_draws)) + 
-  geom_histogram(bins = 50, fill = "black") + 
-  theme_void() +
-  geom_vline(aes(xintercept = mean(unif_draws)), color = "red") +
-  theme(axis.text.x = element_text())
+tibble(beta_draws = sample(beta_draws, 100)) |>
+  ggplot(aes(x = beta_draws)) + 
+  geom_dotplot(binwidth = 0.02, method = "histodot", fill = "black") + 
+  theme_minimal() +
+  scale_x_continuous(limits = c(0,1)) +
+  geom_vline(aes(xintercept = mean(beta_draws)), color = "red") +
+  scale_y_continuous(breaks = seq(0, 1, 0.195), labels = 5*(seq_along(seq(0, 1, 0.195)) -1)) +
+  annotate("text", x = mean(beta_draws)+0.09, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(beta_draws),2)), color = "red") +
+  theme_minimal(base_size = 16) +
+  labs(x = "X", y = "N") +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
-Our estimate isn't bad! But if we couldn't compare to the population, how would we know that?
+Our estimate is great with only $N=100$! But if we couldn't compare to the population, how would we know that?
 
 ---
 
 # Many Samples
 
-If we take a ton of samples (n=100 each) and calculate all their means, their distribution looks like this—most are pretty accurate!
+If we take a ton of samples (n=100 each) and calculate all their means, their distribution looks like this—most are pretty accurate: 95% of them are between 0.55 and 0.65!
 
 ```{r, fig.height = 4}
 
-tibble(unif_mean_draws) |>
-  ggplot(aes(x = unif_mean_draws)) + 
-  geom_histogram(bins = 50, fill = "black") + 
-  geom_vline(aes(xintercept = mean(unif_mean_draws)), color = "red")  +
-  theme_void() +
-  theme(axis.text.x = element_text())
+tibble(beta_mean_draws) |>
+  ggplot(aes(x = beta_mean_draws)) + 
+  geom_histogram(aes(y = ..count../sum(..count..)), bins = 50, fill = "black") + 
+  geom_vline(aes(xintercept = mean(beta_mean_draws)), color = "red")  +
+  annotate("text", x = mean(beta_mean_draws)+0.015, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(beta_mean_draws),2)), color = "red") +
+  labs(y = "Probability", x = expression(bar(X))) +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 --
@@ -770,10 +871,16 @@ Okay, look at this monster:
 ```{r, fig.height = 4}
 tibble(norm_draws) |>
   ggplot(aes(x = norm_draws)) + 
-  geom_histogram(bins = 50, fill = "black") + 
-  theme_void() +
+  geom_histogram(aes(y = ..count../sum(..count..)), bins = 50, fill = "black") + 
   geom_vline(aes(xintercept = mean(norm_draws)), color = "red") +
-  theme(axis.text.x = element_text())
+  annotate("text", x = mean(norm_draws)+2.5, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(norm_draws),2)), color = "red") +
+  labs(x = "X", y = "Probability") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 There's barely any data near the mean at all!
@@ -788,10 +895,16 @@ This is the sampling distribution of the means we get from *that*
 
 tibble(norm_mean_draws) |>
   ggplot(aes(x = norm_mean_draws)) + 
-  geom_histogram(bins = 50, fill = "black") + 
+  geom_histogram(aes(y = ..count../sum(..count..)), bins = 50, fill = "black") + 
   geom_vline(aes(xintercept = mean(norm_mean_draws)), color = "red")  +
-  theme_void() +
-  theme(axis.text.x = element_text())
+  labs(y = "Probability", x = expression(bar(X))) +
+  annotate("text", x = mean(norm_mean_draws)+0.5, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(norm_mean_draws),2)), color = "red") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 .text-center[
@@ -866,6 +979,7 @@ Confidence intervals are closely related to p-values:
 * The CI will not include zero if the p-value is significant
 * The CI will include zero when your p-value is not significant
 
+[Confidence interval example](https://rpsychologist.com/d3/ci/)
 
 ---
 
@@ -900,6 +1014,28 @@ If for some reason we're only interested in the (unconditional, linear) associat
 .text-center[
 *Next week we'll get into estimates we might actually want to know*
 ]
+
+---
+
+# Confidence Interval of the Line
+
+The small standard errors translate into a narrow confidence interval around the line:
+
+```{r}
+communities %>%
+  ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
+  geom_point(alpha = 0.5) +
+  xlab("Population Density") +
+  geom_smooth(method = "lm", se = TRUE, formula = "y ~ x") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+Note it is not an interval containing 95% of the *data points*
 
 ---
 
