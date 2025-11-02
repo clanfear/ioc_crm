@@ -2,7 +2,7 @@
 title: "Causality and Theory Testing"
 subtitle: "CRM Week 4"
 author: "Charles Lanfear"
-date: "5 Nov 2024<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
+date: "4 Nov 2025<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -107,7 +107,9 @@ We call the process of estimating a causal effect **identification**
 # Theory and Causes
 
 
-All scientific theories are causal: *They explain **why** things happen*
+Scientific theories are causal<sup>1</sup>: *They explain **why** things happen*
+
+.footnote[[1] This is subject to some debate]
 
 --
 
@@ -117,7 +119,6 @@ In criminology:
 * "Increasing a person's self-control reduces their involvement in all crime"
 * "Learning violent definitions of situations increases a person's likelihood of using violence"
 * "Strong social institutions in neighbourhoods reduce crime"
-* "Reducing interactions between potential offenders and targets reduces crime in places"
 
 --
 
@@ -711,7 +712,11 @@ ex_data |>
   facet_wrap(~Who)  + 
   theme_minimal(base_size = 16) + 
   theme(legend.position = "none",
-        panel.spacing.x = unit(0.4, "in"))
+        panel.spacing.x = unit(0.4, "in"),
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 ```{tikz dag-coll, cache = TRUE}
@@ -1281,7 +1286,12 @@ ggplot(communities, aes(x = pop_density, y = crime_rate)) +
   geom_point() + 
   geom_smooth(method = "lm") +
   labs(x = "Pop Density", y = "Crime Rate") +
-  theme_minimal(base_size = 18)
+  theme_minimal(base_size = 18) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
 ```
 
 ]
@@ -1597,8 +1607,11 @@ class: inverse
 
 # Wrap-Up
 
-IMPORTANT: 11:30 Nov 12th rescheduled to Thursday 11:30 Nov 21
+&nbsp;
 
-* One last unit to knit the quant section together
+IMPORTANT: IQA next week rescheduled to Monday @ 2 PM
+
 
 * Practice drawing DAGs of theories you learn in your other courses!
+
+* Use DAGs in your dissertation if applicable
