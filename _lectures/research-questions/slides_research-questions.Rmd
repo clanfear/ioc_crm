@@ -1,8 +1,8 @@
 ---
-title: "Research Questions and Designs"
+title: "Introduction to Research"
 subtitle: "CRM Lecture 1"
 author: "Charles Lanfear"
-date: "14 Oct 2025<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%e %b %Y'))`"
+date: "`r source('../reference_date.R'); get_date(1)`<br>Updated: `r gsub(' 0', ' ', format(Sys.Date(), format='%d %b %Y'))`"
 output:
   xaringan::moon_reader:
     css: "../assets/cam-css.css"
@@ -41,7 +41,7 @@ knitr::opts_chunk$set(eval=TRUE, echo=TRUE, message=TRUE, warning=TRUE)
 
 --
 
-* **Teach you to design research**
+* **Teach you to write an effective research proposal**
 
 ---
 
@@ -752,7 +752,7 @@ We must know causes to make **interventions**, e.g., *controlling crime*
 ]
 
 ---
-# Mechanistic Causality
+# Causes and Mechanisms
 
 A **cause** is something that can initiate a **mechanism** to produce an effect
 
@@ -1055,9 +1055,9 @@ class: inverse
 
 Readings for next session:
 
-* Bernard, T.J. (1990) Twenty years of testing theories: what have we learned and why? *Journal of Research in Crime and Delinquency*, 27(4): 325–347. http://dx.doi.org/10.1177/0022427890027004002
+* Bernard, T.J. (1990) 'Twenty years of testing theories: what have we learned and why?', *Journal of Research in Crime and Delinquency*, 27(4): 325–347. http://dx.doi.org/10.1177/0022427890027004002
 
-* Wikström, P-O H. (2007) Doing without knowing. Common pitfalls in crime prevention. *Crime Prevention Studies*, 21, 59-80.
+* Wikstrom, P-O H. (2017) ‘Character, circumstances, and the causes of crime: Towards an analytical criminology’ In A. Liebling, S. Maruna and L. McAra (eds) *Oxford Handbook of Criminology*, 6th edition. Oxford University Press. Pg 501-521 
 
 
 

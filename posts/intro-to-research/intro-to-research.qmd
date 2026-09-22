@@ -1,9 +1,10 @@
 ---
-title: "Seminars 1–3: Introduction to Research"
+title: "Seminars 1–3: Introduction to Theory-Guided Research"
 subtitle: "Theory, questions, and answers"
 description: "A week-long introduction to theory-guided empirical research in criminology"
 author: "Charles Lanfear"
-date: "2025-10-14"
+date: "2026-10-13"
+week: 1
 draft: false
 ---
 

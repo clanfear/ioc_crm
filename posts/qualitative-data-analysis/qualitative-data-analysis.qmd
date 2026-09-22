@@ -2,7 +2,8 @@
 title: "Seminar 10: Qualitative Data Analysis"
 description: "Analyzing data from interviews, observation, and other qualitative collection methods"
 author: "Caroline Lanskey"
-date: "2025-11-25"
+date: "2026-11-24"
+week: 7
 draft: false
 ---
 

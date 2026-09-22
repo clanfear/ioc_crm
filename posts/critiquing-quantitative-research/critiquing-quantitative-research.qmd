@@ -1,8 +1,9 @@
 ---
-title: "Seminar 9: Critiquing Quantitative Research"
+title: "Seminar 8: Critiquing Quantitative Research"
 description: "Criteria for judging quantitative research and a dose of skepticism"
 author: "Charles Lanfear"
-date: "2025-11-18"
+date: "2026-11-10"
+week: 5
 draft: false
 ---
 

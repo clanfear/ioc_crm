@@ -41,4 +41,6 @@ _ignore/
 ignore/
 data/
 /.quarto/
+**/.quarto
 
+**/*.quarto_ipynb

@@ -1,8 +1,9 @@
 ---
-title: "Seminar 11: Document and Discourse Analysis"
+title: "Seminar 12: Document and Discourse Analysis"
 description: "Analyzing text data"
 author: "Loraine Gelsthorpe"
-date: "2025-12-02"
+date: "2026-12-01"
+week: 8
 draft: false
 ---
 
