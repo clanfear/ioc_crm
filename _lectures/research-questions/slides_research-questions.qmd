@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Research"
-subtitle: "CRM Lecture 1"
+title: "Research questions and designs"
+subtitle: "CRM lecture 1"
 author: "Charles Lanfear"
 date: "`r source('../reference_date.R'); get_date(1, raw=TRUE)`"
 format:
@@ -25,7 +25,7 @@ filters:
 knitr::opts_chunk$set(eval = TRUE, echo = TRUE, message = TRUE, warning = TRUE)
 ```
 
-## CRM Goals
+## CRM goals
 
 * Understand what research is and how it is done
 
@@ -71,7 +71,7 @@ Split design:
 &#8203;Materials: [clanfear.github.io/ioc_crm/](https://clanfear.github.io/ioc_crm/_site/index.html)
 
 
-## Criminological Research {.dark-slide}
+## Criminological research {.dark-slide}
 
 &nbsp;
 
@@ -99,7 +99,7 @@ This understanding allows us to...
 * Develop good **research designs** to answer them
 * Evaluate others' research
 
-## Good Research Questions
+## Good research questions
 
 What makes a research question *good*?
 
@@ -125,13 +125,13 @@ What makes a research question *good*?
 *These are subjective: You must make an argument!*
 :::
 
-## Sources of Questions
+## Sources of questions
 
 ::::: {.columns}
 
 :::: {.column}
 
-::: {.fragment}
+::: {.fragment fragment-index="1"}
 
 * **Theory**
 
@@ -146,12 +146,12 @@ What makes a research question *good*?
 
 :::: {.column}
 
-::: {.fragment}
+::: {.fragment fragment-index="2"}
 
 * **Ignorance**
 
    * We have no expectations!
-   * True scientific ignorance is **very rare**^[Criminology, like other social sciences, is plagued with reinvention of the wheel, due to rewarding the appearance of novelty.]
+   * True scientific ignorance is **very rare**^[[Criminology, like other social sciences, is plagued with reinvention of the wheel, due to rewarding the appearance of novelty.]{.fragment fragment-index="2"}]
       * Usually: "is $x$ like $y$?" (back to theory!)
       * Almost never: "nothing is like $x$"
    * Must make convincing argument no extant theory applies
@@ -170,7 +170,7 @@ What makes a research question *good*?
 *In either case, you're probably going to need to read a **lot**.*
 :::
 
-## Types of Questions
+## Types of questions
 
 :::::: {style="font-size: 90%;"}
 
@@ -255,30 +255,27 @@ There are many different types of empirical research design
 
 The type you choose is determined by your *question*
 
-## Descriptive Research
+## Descriptive research
 
-* Accurate and systematic description of something
+Accurate and systematic description of something
 
 . . .
 
-* Can take many forms, e.g.:
+&nbsp;
 
-   * **Incidences** and **prevalences**
+Can take many forms, e.g.:
 
-      * *How often do Americans witness gun violence?*
-. . .
+::: {.incremental}
 
-   * **Processes**
+* **Incidences** and **prevalences**: *How often do Americans witness gun violence?*
+* **Processes**: *How are police stop records generated?*
+* **Experiences**: *How do incarcerated women experience reintegration?*
 
-      * *How are police stop records generated?*
-. . .
-
-   * **Experiences**
-
-      * *How do incarcerated women experience reintegration?*
-. . .
+:::
 
 <br>
+
+. . .
 
 ::: {.center}
 *Description is the foundation of science: We must know **what** before we can explain **why***
@@ -292,7 +289,7 @@ The type you choose is determined by your *question*
 *What does exposure to gun violence look like over the life course?*
 :::
 
-## Exploratory Research
+## Exploratory research
 
 * Building insight into a phenomenon with limited data or expectations
 
@@ -321,7 +318,7 @@ The type you choose is determined by your *question*
 *How are online gang conflicts related to offline gang violence?*
 :::
 
-## Exploratory &#8800; Atheoretical
+## Exploratory &#8800; atheoretical
 
 **Reminder:** *There is no atheoretical research*
 
@@ -351,7 +348,7 @@ Research assumes:
 
 ::::
 
-## Explanatory Research
+## Explanatory research
 
 * What causes $y$? What does $x$ cause?
 
@@ -405,7 +402,7 @@ Research assumes:
 :::
 
 
-## Explanatory Process {background-color="white"}
+## Explanatory process {background-color="white"}
 
 ![](img/kyle-cycle.PNG){width=80%}
 
@@ -416,7 +413,7 @@ Research assumes:
 *Does residential change reduce recidivism?*
 :::
 
-## Evaluation Research
+## Evaluation research
 
 * Is this intervention or policy *effective*?
 
@@ -447,13 +444,13 @@ Research assumes:
 *Do body-worn cameras improve police stop outcomes?*
 :::
 
-## Linking Together
+## Linking together
 
 <br>
 
 ![](img/research-stages.svg){width=90%}
 
-## Aside: Correlation &#8800; Causation
+## Aside: Correlation &#8800; causation
 
 
 We often hear correlation doesn't imply causation, which is true...
@@ -472,7 +469,7 @@ How many people has Nicolas Cage drowned?
 
 <!-- Xaringan: count:false -->
 
-## Aside: Correlation &#8800; Causation
+## Aside: Correlation &#8800; causation
 
 We know correlation doesn't imply causation
 
@@ -495,7 +492,7 @@ More problematic: Causation can occur without correlation!
 *We'll dive into this deeply in a couple weeks*
 :::
 
-## Research Approaches {.dark-slide}
+## Research approaches {.dark-slide}
 
 ### Qualitative and quantitative
 
@@ -515,7 +512,7 @@ More problematic: Causation can occur without correlation!
 
 ::::
 
-## A Qualitative Example
+## A qualitative example
 
 :::: {.columns}
 
@@ -527,9 +524,9 @@ More problematic: Causation can occur without correlation!
 
 ::: {.column width="60%"}
 
-> In this unique and original book, Peter St. Jean examines why some blocks in urban areas experience more crime than others.  Based on a number of sources—most importantly, in-depth interviews with drug dealers and routine robbers about their strategies for selecting a location or victim...
+> In this unique and original book, Peter St. Jean examines why some blocks in urban areas experience more crime than others.  Based on a number of sources—most importantly, in-depth interviews with drug dealers and routine robbers about their strategies for selecting a location or victim... 
 
-- Mario Small
+\- Mario Small
 
 :::
 
@@ -539,7 +536,7 @@ More problematic: Causation can occur without correlation!
 *How do offenders **interpret** disorder and act based on that?*
 :::
 
-## A Quantitative Example
+## A quantitative example
 
 :::: {.columns}
 
@@ -553,7 +550,7 @@ More problematic: Causation can occur without correlation!
 
 > This important dataset on neighborhoods within each of ninety-one of the largest cities of the United States allows Peterson and Krivo to craft a structural race theory of neighborhood crime based on racial inequality, residential segregation, and spatial inequality.
 
-- Ross Matsueda
+\- Ross Matsueda
 
 :::
 
@@ -563,25 +560,38 @@ More problematic: Causation can occur without correlation!
 *How does urban racial inequality relate to crime in the United States?*
 :::
 
-## Qualitative {.smaller}
+## Qualitative
 
 *Contextual, categorical, interpretive, inductive*
 
-Data
-
-* Interviews
-* Documents
-* Observation (Overt/Covert)
-* Participation (Overt/Covert)
-* *Non-numeric*
-
-. . .
+Data are *non-numeric*:
 
 :::: {.columns}
 
 ::: {.column}
 
-Strengths
+* Interviews
+* Documents
+
+:::
+
+::: {.column}
+
+* Observation (overt or covert)
+* Participation (overt or covert)
+
+:::
+
+::::
+
+
+::::: {.columns}
+
+:::: {.column}
+
+::: {.fragment}
+
+**Strengths**
 
 * Access hidden populations
 * Capture context and meaning
@@ -590,52 +600,75 @@ Strengths
 
 :::
 
+::::
 
-::: {.column}
 
-Challenges
+:::: {.column}
+
+::: {.fragment}
+
+**Challenges**
 
 * Research time requirements
    + Scales poorly
 * Subjectivity at forefront
 * Risk and access
-* Replication / Generalizability
+* Replication / generalizability
 
 :::
 
 ::::
 
-## Quantitative {.smaller}
+:::::
+
+## Quantitative
 
 *Abstract, numeric, hypothetical, deductive*
 
-Data
-
-* Surveys
-* Secondary data
-   + Police & Government Data
-   + Commercial Data
-* Field measurements
-
-. . .
+Data are *numeric*:
 
 :::: {.columns}
 
 ::: {.column}
 
-Strengths
+* Surveys
+* Field measurements
 
-* Replication / Generalizability
+:::
+
+::: {.column}
+
+* Secondary, e.g., police, government
+* Encoded qualitative data
+
+:::
+
+::::
+
+
+::::: {.columns}
+
+:::: {.column}
+
+::: {.fragment}
+
+**Strengths**
+
+* Replication / generalizability
 * Testing and validating
 * Measuring effects
 * Scales well
 
 :::
 
+::::
 
-::: {.column}
+:::: {.column}
 
-Challenges
+
+::: {.fragment}
+
+**Challenges**
 
 * Up-front time requirements
 * Homogenization
@@ -647,13 +680,15 @@ Challenges
 
 ::::
 
-## Feedback Loop
+:::::
+
+## Feedback loop
 
 <br>
 
 ![](img/quant_qual_loop.svg){width=50%}
 
-## Mixed Methods Research
+## Mixed methods research
 
 > Research in which the investigator collects and analyses
 data, integrates the findings, and draws inferences using
@@ -686,7 +721,7 @@ Creswell 2007:4)
 
 ::::
 
-## A Methodological Toolbox
+## A methodological toolbox
 
 Some *specialization* is necessary but overspecialization is limiting, both *intellectually* and *professionally*. It is important to be able to:
 
@@ -797,7 +832,7 @@ We must know causes to make **interventions**, e.g., *controlling crime*
 *But what is a cause anyway?*
 :::
 
-## Causes and Mechanisms
+## Causes and mechanisms
 
 A **cause** is something that can initiate a **mechanism** to produce an effect
 
@@ -811,14 +846,14 @@ A **mechanism** is a *process* linking input to output under specific conditions
 * Mechanisms specified by theory but often not observable
 
 
-## Causes and Mechanisms
+## Causes and mechanisms
 
 &nbsp;
 
 >  the hallmark of modern science is the search for lawful mechanisms behind the observed facts, rather than the mindless accumulation of data and the mindless search for statistical correlations among them. (Bunge 2004)^[See [Wikström & Kroneberg (2022)](https://www.annualreviews.org/doi/full/10.1146/annurev-criminol-030920-091320) and [Bunge (2004)](https://doi.org/10.1177/00483931032625)]
 
 
-## Causes and Mechanisms
+## Causes and mechanisms
 
 A **cause** is something that can initiate a **mechanism** to produce an effect
 
@@ -832,7 +867,7 @@ A **mechanism** is a *process* linking input to output under specific conditions
 Example&#58; "..collective efficacy may also reduce crime by empowering residents to remove or prevent the development of sources of criminal opportunities..." (Lanfear 2022)
 
 
-## Boxes and Arrows
+## Boxes and arrows
 
 Graphs ("boxes and arrows") are commonly used to illustrate theories:
 
@@ -854,7 +889,7 @@ Graphs ("boxes and arrows") are commonly used to illustrate theories:
 *Graphs are powerful tools for explanatory research—we'll see this soon!*
 :::
 
-## An Example
+## An example
 
 <br>
 
@@ -880,7 +915,7 @@ Source: [Lanfear, Matsueda, & Beach (2020)](https://doi.org/10.1146/annurev-crim
 Source: Bursik & Grasmick's (1993) systemic model of social disorganization
 :::
 
-## Testing Theories Deductively
+## Testing theories deductively
 
 1. Start with research question
 2. Generate **hypothesis**
@@ -893,12 +928,12 @@ Source: Bursik & Grasmick's (1993) systemic model of social disorganization
    * Repeated falsification of hypotheses *should* falsify theories^[Though rarely in criminology! More common is (sometimes tortured) alteration]
 
 
-## Testing Theories Deductively {background-color="white"}
+## Testing theories deductively {background-color="white"}
 
 ![](img/kyle-cycle.PNG){width=80%}
 
 
-## Testing Theories Deductively
+## Testing theories deductively
 
 1. Start with research question
 2. Generate **hypothesis**
@@ -948,7 +983,7 @@ The Broken Windows Thesis:
 . . .
 
 ::: {.center}
-A Proposition: At the neighbourhood level, disorder *causes* crime
+A proposition: At the neighbourhood level, disorder *causes* crime
 :::
 
 . . .
@@ -957,15 +992,17 @@ A Proposition: At the neighbourhood level, disorder *causes* crime
 *What questions might we ask and how might we test them?*
 :::
 
-## An Experiment
+## An experiment
 
 Keizer et al. (2008): *Does seeing disorder make individuals more likely to commit a crime?*
 
-. . .
 
-:::: {.columns}
 
-::: {.column width="70%"}
+::::: {.columns}
+
+:::: {.column width="70%"}
+
+::: {.fragment fragment-index="1"}
 
 * Leave money-filled envelope dangling from postbox
 
@@ -977,23 +1014,28 @@ Keizer et al. (2008): *Does seeing disorder make individuals more likely to comm
 
 :::
 
-::: {.column width="30%"}
+::::
+
+:::: {.column width="30%"}
+
+::: {.fragment fragment-index="1"}
 
 ![](img/keizer.png)
-
 :::
 
 ::::
 
-. . .
+:::::
 
-::: {.center}
-Theft was twice as common with either litter or graffiti.^[See [Lanfear (2018)](https://digital.lib.washington.edu/researchworks/handle/1773/40974) and [Wicherts & Bakker (2013)](https://doi.org/10.1177/1368430213502) for counterpoints]
+
+::: {.center .fragment fragment-index="2"}
+
+Theft was twice as common with either litter or graffiti.^[[See [Lanfear (2018)](https://digital.lib.washington.edu/researchworks/handle/1773/40974) and [Wicherts & Bakker (2013)](https://doi.org/10.1177/1368430213502) for counterpoints]{.fragment fragment-index="2"}]
+
 :::
 
-. . .
 
-::: {.center}
+::: {.center .fragment fragment-index="3"}
 *Interpreted as evidence for the broken windows thesis*
 :::
 
@@ -1009,7 +1051,7 @@ Sampson & Raudenbush (1999): *What if low social control causes both disorder an
 
 * Measure disorder and social control in 80 Chicago neighborhoods
 
-* Test if disorder predicts crime when social control is *held constant*^[We'll learn about holding things constant soon!]
+* Test if disorder predicts crime when social control is *held constant*
 
 :::
 
@@ -1071,7 +1113,7 @@ Offenders don't care about disorder, they care about **opportunity**, of which s
 *Interpreted as evidence against the broken windows thesis—and for a more complicated social control theory*
 :::
 
-## Comparing Designs
+## Comparing designs
 
 
 ::::: {.columns}
@@ -1115,7 +1157,7 @@ How do they differ?
 *All three provide useful answers!*
 :::
 
-## Wrap-Up {.dark-slide}
+## Wrap-up {.dark-slide}
 
 * Theory is inseparable from methodology
 * Choice of methods should be driven by the question
