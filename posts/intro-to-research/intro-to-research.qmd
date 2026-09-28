@@ -18,7 +18,7 @@ draft: false
 
 ### [Seminar 2 (Tue, Oct-14): Developing and applying research questions and studying the causes of crime](https://clanfear.github.io/ioc_crm/_lectures/research-questions/slides_research-questions.html)
 
-* [Huntington-Klein, N. (2022) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press.](https://theeffectbook.net/index.html)
+* [Huntington-Klein, N. (2025) *The Effect: An Introduction to Research Design and Causality*, New York, NY: Chapman and Hall/CRC Press.](https://theeffectbook.net/index.html)
    * Read pp. xix–18: (1) Introduction, (2) Chapter 1: Designing Research, and (3) Chapter 2: Research Questions
 
 * Bueno de Mesquita, E. and Fowler, A. (2021) *Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis*, Princeton, NJ: Princeton University Press. 
