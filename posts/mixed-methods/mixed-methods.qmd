@@ -1,7 +1,7 @@
 ---
-title: "Seminar 11: Mixed Methods"
+title: "Seminar 12: Mixed Methods"
 description: "Research combining quantitative and qualitative approaches"
-author: "Ben Crewe"
+author: "Alison Liebling"
 date: "2026-12-01"
 week: 8
 draft: false
