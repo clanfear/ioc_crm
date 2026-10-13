@@ -935,6 +935,8 @@ Source: Bursik & Grasmick's (1993) systemic model of social disorganization
 
 ## Testing theories deductively
 
+
+
 1. Start with research question
 2. Generate **hypothesis**
    * A theory-based **falsifiable** prediction
@@ -944,6 +946,8 @@ Source: Bursik & Grasmick's (1993) systemic model of social disorganization
 4. Re-evaluate theory
    * Falsified hypotheses are evidence against theory^[As operationalized in the study]
    * Repeated falsification of hypotheses *should* falsify theories^[Though rarely in criminology! More common is (sometimes tortured) alteration]
+
+
 
 . . .
 
