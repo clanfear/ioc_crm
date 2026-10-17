@@ -1,8 +1,8 @@
 ---
-title: "Quantitative Data and Relationships"
+title: "Quantitative data and relationships"
 subtitle: "CRM Week 2"
 author: "Charles Lanfear"
-date: "`r source('../reference_date.R'); get_date(1, raw=TRUE)`"
+date: "`r source('../reference_date.R'); get_date(2, raw=TRUE)`"
 format:
   revealjs:
     theme: ../assets/ioc.scss
@@ -45,7 +45,7 @@ set.seed(7)
 
 
 
-# Populations and Samples
+# Populations and samples
 
 &nbsp;
 
@@ -68,10 +68,7 @@ set.seed(7)
 
 . . .
 
-**Sampling Frame**: Members of population eligible to be in your sample
-
-* The *actual* members we're drawing the sample from
-* Ideally as similar as possible to the population
+**Sampling frame**: Members of population eligible to be in your sample
 
 . . .
 
@@ -83,6 +80,8 @@ set.seed(7)
 
 . . .
 
+&nbsp;
+
 ::: {.center}
 
 *Your data will contain only observations and variables, but their value is determined by everything else*
@@ -90,7 +89,7 @@ set.seed(7)
 :::
 
 
-## Example
+## Example: BCS
 
 > To estimate the level of crime victimisation in the United Kingdom, the British Crime Survey surveys a random sample of 3,000 UK household residents per month and asks them about incidents of victimisation (e.g., burglary) in the past year.
 
@@ -108,7 +107,7 @@ set.seed(7)
 
 . . .
 
-**Sampling Frame**: People living in a known household
+**Sampling frame**: People living in a known household
 
 . . .
 
@@ -129,22 +128,30 @@ set.seed(7)
 
 
 
-## Types of Statistics
+## Types of statistics
 
-.pull-left[
+::::: {.columns}
+
+:::: {.column}
 
 ### Descriptive
 
 * Describing a sample
 * Summarizing variables
-]
-.pull-right[
+
+::::
+
+:::: {.column}
+
 
 ### Inferential
 
 * Learning about the population
 * Testing hypotheses
-]
+
+::::
+
+:::::
 
 . . .
 
@@ -164,9 +171,9 @@ Samples are **representative** when they have a similar composition to the popul
 
 :::
 
-# {}
+## {.dark-slide}
 
-![](img/phdcn-sampling.jpg)
+![](img/phdcn-sampling.jpg){.nostretch style="width: 75%;"}
 
 ::: {.aside}
 
@@ -175,7 +182,7 @@ Source: [Sampson et al. (2022)](https://link.springer.com/article/10.1007/s40865
 :::
 
 
-## Crime Data {.dark-slide style="background-color: #111111;"}
+## Crime data {.black-slide}
 
 &nbsp;
 
@@ -196,7 +203,7 @@ Source: [Sampson et al. (2022)](https://link.springer.com/article/10.1007/s40865
 ::::
 
 
-## Police Data
+## Police data
 
 An example: `data.police.uk`
 
@@ -208,23 +215,25 @@ An example: `data.police.uk`
 
 . . .
 
-:::: {.columns}
+::::: {.columns}
 
-::: {.column}
+:::: {.column}
 
-### Advantages:
+**Advantages:**
 
 * Captures wide array of offenses
 * Often easily available
 * Often *all* that is available
 
-:::
+::::
 
-::: {.column}
+:::: {.column}
 
-### Challenges:
+::: {.fragment}
 
-* Misses *unreported crime*
+**Challenges:**
+
+* Misses **unreported crime**
 * *Reporting* varies widely
 * Quality varies widely
 
@@ -232,6 +241,7 @@ An example: `data.police.uk`
 
 ::::
 
+:::::
 
 ## The Dark Figure of Crime
 
@@ -248,9 +258,7 @@ Not all crimes are *discovered*
 
 Not all crimes are *reported*
 
-* Varies by place
-* Varies by individuals
-* Varies by crime
+* Varies by place, individuals, crime type
 
 :::
 
@@ -258,9 +266,8 @@ Not all crimes are *reported*
 
 Not all reported are *recorded* by police
 
-* Varies by agency and crime
+* Different rules (e.g., hierarchy)
 * Differential treatment
-* Hierarchy rules
 * Political incentives
 
 :::
@@ -269,14 +276,14 @@ Not all reported are *recorded* by police
 
 :::: {.column width="40%"}
 
-![](img/dark_figure.jpg)
+![](img/dark_figure.jpg){.nostretch width="100%"}
 
 ::::
 
 :::::
 
 
-## An Example
+## An example
 
 Observed Crime Rate = Actual Rate ∗ Probability of Reporting
 
@@ -287,8 +294,6 @@ Observed Crime Rate = Actual Rate ∗ Probability of Reporting
 
 . . .
 
-&nbsp;
-
 ::: {.center}
 
 *Note the complex process generating the data!*
@@ -296,36 +301,7 @@ Observed Crime Rate = Actual Rate ∗ Probability of Reporting
 :::
 
 
-## Victimization Data
-
-:::: {.columns}
-
-::: {.column}
-
-### Advantages:
-
-* Captures unreported crime
-* Can get at exposure and effects
-   * *How many times*
-   * *How badly injured*
-
-
-:::
-
-::: {.column}
-
-### Challenges:
-
-* Reluctance to answer
-* Hidden populations
-* Expense
-* Doesn't capture crime without victim
-
-:::
-
-::::
-
-. . .
+## Victimization data
 
 An Example: **British Crime Survey**
 
@@ -334,37 +310,45 @@ An Example: **British Crime Survey**
    * Great for nationwide estimates
    * Bad for small area estimates
 
+. . .
 
-## Self-Reported Offense Data
+::::: {.columns}
 
+:::: {.column}
 
-:::: {.columns}
-
-::: {.column}
-
-
-### Advantages:
+**Advantages:**
 
 * Captures unreported crime
-* Captures crime without victim
-* Can get at motivation
+* Can get at exposure and effects
+   * *How many times*
+   * *How badly injured*
 
-:::
 
-::: {.column}
+::::
 
-### Challenges:
+:::: {.column}
+
+::: {.fragment}
+
+**Challenges:**
 
 * Reluctance to answer
-* Hidden, even dangerous, populations
-* Many crimes very rare
+* Hidden populations
 * Expense
+* Doesn't capture victimless crime
 
 :::
 
 ::::
 
-. . .
+:::::
+
+
+
+
+
+## Self-reported offense data
+
 
 An Example: **PADS+**
 
@@ -373,10 +357,45 @@ An Example: **PADS+**
 * Repeated follow-up—with incredible *retention*
 * Detailed information on life and context
 
+. . .
 
-## Ideal Data
+::::: {.columns}
 
-*Ideal criminological data would cover every potential crime and what occurred as a result*
+:::: {.column}
+
+**Advantages:**
+
+* Captures unreported crime
+* Captures crime without victim
+* Can get at motivation
+
+
+::::
+
+:::: {.column}
+
+::: {.fragment}
+
+**Challenges:**
+
+* Reluctance to answer
+* Hidden populations
+* Many crimes very rare
+* Expense
+
+:::
+
+::::
+
+:::::
+
+
+
+
+
+## Ideal criminological data
+
+*Ideal data would cover every potential crime and what occurred as a result*
 
 . . .
 
@@ -386,17 +405,21 @@ An Example: **PADS+**
 
 That is, for a given opportunity, was the crime...
 
+::: {.incremental}
+
 * Attempted?
 * Successful?
 * Discovered?
 * Reported to police?
+
+:::
 
 ::::
 
 :::: {.column}
 
 
-::: {.fragment}
+::: {.fragment .incremental}
 
 And was the offender...<br><br>
 
@@ -420,7 +443,7 @@ And was the offender...<br><br>
 :::
 
 
-## Types of Studies
+## Types of studies
 
 ::: {.incremental}
 
@@ -430,7 +453,7 @@ And was the offender...<br><br>
 * **Time-series cross-section**: 
    * Many units observed at different times
    * Not the same units at each time
-* **Panel study**
+* **Panel study**:
 
    * Many units observed at different times
    * Same units observed at each time
@@ -455,39 +478,46 @@ And was the offender...<br><br>
 ![](img/craniograph.jpg)
 
 
-## What is Measurement?
+## What is measurement?
+
+&nbsp;
 
 
-* Measurement is the process of connecting an abstract concept to empirical data
+The *process* of connecting an abstract concept to empirical data
 
-. . .
-
-* Research questions must be testable with empirical data
-
-. . .
-
-* Testing thus relies heavily on measurement
+&nbsp;
 
 . . .
 
-* No research design can overcome bad measures
+Research questions must be testable with empirical data
+
+&nbsp;
 
 
-## Types of Measures
+. . .
+
+Testing thus relies heavily on measurement
+
+&nbsp;
+
+. . .
+
+No research design can overcome bad measures
+
+
+## Types of measures
 
 &zwj;**Observables**: Objective, externally measurable variables
 
    * Individual height, occupation, stated beliefs, arrest history
-   * Neighborhood population, geographical area, crime rate^[Hard to measure doesn't mean unobservable!]
+   * Neighborhood population, geographical area, crime rate
 
 
 *Observables can be directly seen and/or experienced*
 
 . . .
 
-&nbsp;
-
-**Unobservables** (or **Constructs**): Subjective, internal, or only indirectly measurable
+**Unobservables**: Subjective, internal, or only indirectly measurable
 
    * Individual self-control, wellness, social class, actual beliefs
    * Neighborhood social capital, disadvantage, collective efficacy
@@ -507,8 +537,7 @@ And was the offender...<br><br>
 
 &zwj;**Conceptualization**: *What is X?*
 
-* Define what a measure constitutes
-* Define relations to other concepts
+* Define what it constitutes and how it relates to other concepts
 * Goal: Minimize ambiguity
 
 . . .
@@ -518,28 +547,24 @@ And was the offender...<br><br>
 * Define observable(s)—**indicators**—that are related to the concept
 * If single indicator, it is a **proxy** for the concept
    + e.g. *Years of School* is a proxy for *Education*
-* If multiple indicators, they can be combined into *composite* measure[^1]
-
-[^1]: Composites include things like indices, scales, factors, and principle components. Turning multiple measures into one composite is sometimes called *dimension reduction*.
+* If multiple indicators, they can be combined into *composite* measure
 
 . . .
 
-When reading articles, pay attention to how things are measured!
+::: {.center}
+
+*When reading articles, pay attention to how things are measured!*
+
+:::
 
 
-
-
-## Indicators and Causes
+## Indicators and causes
 
 ::::: {.columns}
 
 :::: {.column}
 
-**Reflective**
-
-The measure causes the indicators
-
-
+**Reflective**: *The value of the underlying unobservable variable is __reflected__ in the indicators*
 
 ```{tikz, fig.width = 3, cache = TRUE}
 \usetikzlibrary{positioning}
@@ -575,20 +600,17 @@ The measure causes the indicators
   }
 ```
 
-*The value of the underlying unobservable variable is __reflected__ in the indicators*
+
 
 
 ::::
 
-:::: {.column}
 
 :::: {.column}
 
 ::: {.fragment}
 
-**Formative**
-
-The indicators cause the measure
+**Formative**: *The underlying unobservable variable is __formed__ by the combination of the indicators*
 
 ```{tikz, fig.width = 3, cache = TRUE}
 \usetikzlibrary{positioning}
@@ -624,13 +646,16 @@ The indicators cause the measure
 }
 ```
 
-*The underyling unobservable variable is __formed__ by the combination of the indicators*
 
 :::
 
 ::::
 
+:::::
+
 . . .
+
+&nbsp;
 
 ::: {.center}
 
@@ -643,16 +668,15 @@ The indicators cause the measure
 
 
 
+## Individual reflective: 
 
-## Individual Reflective
+**Self-control**
 
-### Self-Control
-
-&zwj;Concept: The ability to delay gratification, tolerate frustration, and carefully consider before acting.
+Concept: The ability to delay gratification, tolerate frustration, and carefully consider before acting.
 
 . . .
 
-&zwj;Indicators: *Would you agree, neither agree nor disagree, or disagree that you...*
+Indicators: *Would you agree, neither agree nor disagree, or disagree that you...*
 
    * "get upset when you have to wait for something?"
    * "act without stopping to think?"
@@ -662,18 +686,18 @@ The indicators cause the measure
    
 . . .
 
-&zwj;Assumption: *Shared variation in the indicators represents underlying self-control.*
+Assumption: *Shared variation in the indicators represents self-control.*
 
 
-## Individual Formative
+## Individual formative
 
-### Offending Scale
+**Offending frequency scale**
 
-&zwj;Concept: A summary measure of frequency and severity of offending.
+Concept: A summary measure of frequency and severity of offending.
 
 . . .
 
-&zwj;Indicators: *In the past year, how many times have you...*
+Indicators: *In the past year, how many times have you...*
 
    * "taken something that wasn't yours?"
    * "used force to take something from someone else?"
@@ -682,45 +706,36 @@ The indicators cause the measure
    
 . . .
 
-&zwj;Assumption: *This combination of different types of offending counts provides a useful measure of something.*
+Assumption: *This combination of different types of offending counts provides a useful measure of something.*
 
 
-## Neighborhood Reflective
+## Neighborhood reflective
 
-### Child-Centered Informal Social Control
+### Child-centered informal social control
 
-&zwj;Concept: The shared neighborhood norms and expectations for intervening against child misbehavior.
-
-???
-
-This is a complex one that we'll see a bunch in social disorg--mainly collective efficacy
-
-Idea is capturing neighborhood capacity to control child behavior in public spaces
-
-Isn't about what respondent would do--is about what people around would do
+Concept: The shared neighborhood norms and expectations for intervening against child misbehavior.
 
 . . .
 
-&zwj;Indicators: *How likely[^1] is it that people in your neighborhood would stop it if...*
+Indicators: *How likely is it that people in your neighborhood would stop it if...*
 
    * "a group of neighborhood children were skipping school and hanging out on a street corner."
    * "some children were spray-painting graffiti on a local building."
    * "children were fighting out in the street."
    * "a child was showing disrespect to an adult."
 
-[^1]: (1) Very Likely, (2) Likely, (3) Unlikely, (4) Very Unlikely
 
 . . .
 
-&zwj;Assumption: *Shared variation in the measures represents underlying expectations for social control of children.*
+Assumption: *Shared variation in the measures represents underlying expectations for social control of children.*
 
 
 
-## Neighborhood Formative
+## Neighborhood formative
 
-### Concentrated Disadvantage
+### Concentrated disadvantage
 
-&zwj;Concept: The spatial clustering of socioeconomic disadvantage.
+Concept: The spatial clustering of socioeconomic disadvantage.
 
 . . .
 
@@ -734,16 +749,16 @@ Isn't about what respondent would do--is about what people around would do
    
 . . .
 
-&zwj;Assumption: *The combination of these measures provides a useful index of disadvantage.*
+Assumption: *The combination of these measures provides a useful index of disadvantage.*
 
 
 
 
-## Estimation is hard! {.darj-slide}
+## Estimation is hard! {.dark-slide}
 
 <br>
 
-![](img/measurement_representation.gif)
+![](img/measurement_representation.gif){.nostretch width="70%"}
 
 
 ::: {.aside}
@@ -754,7 +769,7 @@ Source: [Groves & Lyburg (2010) "Total Survey Error: Past, Present, and Future"]
 
 
 
-# Types of Quantitative Data
+# Types of quantitative data
 
 &nbsp;
 
@@ -762,7 +777,7 @@ Source: [Groves & Lyburg (2010) "Total Survey Error: Past, Present, and Future"]
 
 
 
-## Continuous Data
+## Continuous data
 
 **Continuous** data take ordered, evenly-spaced, numeric values:
 
@@ -773,26 +788,19 @@ Source: [Groves & Lyburg (2010) "Total Survey Error: Past, Present, and Future"]
 
 If they have a *true non-arbitrary zero*, they are **ratio** data
 
-* If something is 0cm long, it has *no length* (ratio!)
+::: {.incremental}
 
+* If something is 0cm long, it has *no length* (ratio!)
 * If the temperature is 0C, there isn't *no temperature* (not ratio!)
    * The 0 is arbitrary: In Fahrenheit it is 32 degrees!
-
-. . .
-
-* Multiplication only works with ratio data
-
+* Multiplication and division only work with ratio data
    * 15cm is half as long as 30cm
    * 15C is not half as hot as 30C
-      * 15C is 59F is 288K[^1]
-      * 30C is 86F is 303K
+      * 15C = 59F = 288K; 30C = 86F = 303K
 
+:::
 
-[^1]: Kelvin *is* ratio though!
-
-
-
-## Discrete or Count Data
+## Discrete or count data
 
 **Counts** are a special type of numeric data:
 
@@ -808,21 +816,23 @@ Events or incidents are counts
 
 . . .
 
-We create **rates** by dividing counts by an **exposure** variable like population, time, or area[^1]
+We get **rates** by dividing counts by **exposures** like population, time, or area
 
 * **Exposures** measure what is "at risk" for an event
 * e.g., Homicides per 100,000 people
 
 
-[^1]: Rates have to be used carefully—we'll talk about this in IQA later in the term
 
 
+## Ordinal data
 
-## Ordinal Data
-
-**Ordinal** data have values that can be ranked or ordered, but have no units or meaningful intervals
+**Ordinal** data can be ranked (ordered), but have no units or even intervals
 
 . . .
+
+::::: {.columns}
+
+:::: {.column}
 
 A common **Likert scale** item:
 
@@ -832,10 +842,21 @@ A common **Likert scale** item:
 * Disagree
 * Strongly Disagree
 
-. . .
+::::
+
+:::: {.column}
+
+::: {.fragment}
+
+No clear intervals:
 
 The difference between "strongly agree" and "disagree" and between "disagree" and "neither agree nor disagree" may not be the same
 
+:::
+
+::::
+
+:::::
 . . .
 
 This means you cannot add/subtract or multiply/divide ordinal data
@@ -848,13 +869,11 @@ You also can't easily compare one person's ordinal value to another's
 
 
 
-## Nominal (Categorical) Data
+## Nominal (categorical) data
 
-**Nominal** or **categorical** data can't even be ranked. Every value is *qualitatively*, rather than quantitatively, different
+**Nominal** or **categorical** data can't even be ranked. Every value is *qualitatively*, rather than quantitatively, different:
 
-* Gender
-* Nationality
-* Occupation
+* Gender, nationality, occupation
 
 . . .
 
@@ -872,47 +891,65 @@ Sometimes we use nominal data to create other types:
 
 
 
-# Describing Data
+# Describing data
 
 &nbsp;
 
 ![](img/distributions.png)
 
 
-## Central Tendency
+## Central tendency
 
 Measures of **central tendency** are ways to summarize a variable mathematically using a (usually) single number
 
-. . .
+
+::::: {.columns}
+
+:::: {.column}
+
+::: {.fragment fragment-index=1}
 
 **Mean**
 
 * The "average" or "expected value"
 * Defined only for continuous data
 
-. . .
+:::
+
+::: {.fragment fragment-index=3}
+
+&nbsp;
+
+**Mode**
+
+* The most common single value
+* Defined for all data (even continuous!)
+
+:::
+
+::::
+
+:::: {.column}
+
+::: {.fragment fragment-index=2}
 
 **Median**
 
 * The "middle" value or 50th **percentile**
 * Defined for continuous or ordinal data
 
-. . .
+:::
 
-**Mode**
+::::
 
-* The most common single value[^1]
-* Defined for all data
+:::::
 
-
-
-[^1]: For continuous data, the mode is the highest peak of probability density function
 
 
 
 ## Dispersion
 
-Measures of **dispersion** are ways to summarize how spread out data are in a variable
+Measures of **dispersion** summarize how spread out values are in a variable
 
 . . .
 
@@ -923,23 +960,21 @@ We typically only define these for continuous data
 **Standard Deviation**
 
 * Roughly the average difference between data values and the mean
-* Low values indicate data are clustered around the mean
-* High values indicate data are spread away from the mean
+   * Low values indicate data are clustered around the mean
+   * High values indicate data are spread away from the mean
 
 . . .
 
-**Variance**[^1]
+**Variance**
 
 * The square of the standard deviation
 * Not typically interpretable
 * Mainly useful in calculations
 
-[^1] Note there are different variance formulae for the population (divide by N) and sample (divide by N-1). We nearly always use the second one.
 
+## Probability distributions
 
-## Probability Distributions
-
-**Probability distributions** are mathematical functions that give the **probability** of observing each value
+Mathematical functions that give the **probability** of observing each value
 
 * This is just how likely it is for a variable to take any given value
 * Common notation: $P(X)$ (probability of $X$)
@@ -955,14 +990,13 @@ We typically only define these for continuous data
 **Theoretical distributions**
 
 * Imagined or expected frequencies based on mathematical parameters
-* Not based on empirical data
 * We often compare empirical distributions to theoretical ones
 
 . . .
 
 ::: {.center}
 
-*We'll talk about theoretical distributions next week—we'll focus on empirical ones today*
+*We'll focus on empirical ones today and talk about theoretical ones next week*
 
 :::
 
@@ -975,6 +1009,8 @@ Because they take a limited number of values, we typically summarize categorical
 . . .
 
 
+::: {style="font-size: 0.7em;"}
+
 ```{r}
 shoot <- tibble(`Type of Crime` = sample(c("Robbery", "Assault", "Theft"), 250, replace=TRUE, prob = c(0.1, 0.3, 0.6)))
 shoot %>% 
@@ -983,6 +1019,7 @@ shoot %>%
 knitr::kable()
 ```
 
+:::
 
 . . .
 
@@ -996,8 +1033,8 @@ ggplot(shoot, aes(x = `Type of Crime`)) +
   annotate("text", x = "Theft", y = 30, label = "Mode", color = "#64A70B", size = 8) + 
   theme(panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb") )
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1") )
 ```
 
 
@@ -1007,6 +1044,7 @@ ggplot(shoot, aes(x = `Type of Crime`)) +
 
 Ordinals can be summarized similarly to categoricals, but they have a median—where the cumulative proportion (percentile) passes 0.50.
 
+::: {style="font-size: 0.7em;"}
 
 ```{r}
 fear <- tibble(`Fear of Crime` = 
@@ -1022,6 +1060,7 @@ fear %>%
 knitr::kable()
 ```
 
+:::
 
 . . .
 
@@ -1034,14 +1073,16 @@ ggplot(fear, aes(x = `Fear of Crime`)) +
   annotate("text", x = "Moderate", y = 20, label = "Median", color = "#64A70B", size = 6) +
   theme(panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb") )
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1") )
 ```
 
 
 ## Continuous
 
 Continuous data can take a limitless number of values, so we summarize them with measures of central tendency and dispersion.
+
+::: {style="font-size: 0.7em;"}
 
 ```{r}
 robbery <- tibble(`Crime Rate` = 100000*(rnbinom(400, 1,  0.15) / rnbinom(400, 100, mu = 4000)))
@@ -1056,7 +1097,11 @@ robbery %>%
   knitr::kable()
 ```
 
+:::
+
 . . .
+
+&nbsp;
 
 We visualize continuous distributions with **histograms** and **density plots**
 
@@ -1072,8 +1117,8 @@ robbery %>%
   theme_minimal(base_size = 18) +
   theme(panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb") )
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1") )
 ```
 
 :::
@@ -1111,8 +1156,8 @@ robbery %>%
   theme_minimal(base_size = 18) + 
   theme(panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"),
         legend.position = "none")
   
 ```
@@ -1121,9 +1166,11 @@ robbery %>%
 
 ::::
 
-## Visualise Your Data
+## Visualise your data
 
 These all have the same mean, median, and standard deviation!
+
+::: {style="font-size: 0.7em;"}
 
 ```{r}
 
@@ -1141,6 +1188,8 @@ dists %>%
   knitr::kable(col.names = c("Distribution", "Mean", "Median", "Std. Dev"))
 
 ```
+
+:::
 
 ```{r, fig.height = 3}
 dists %>%
@@ -1161,8 +1210,8 @@ dists %>%
   xlim(-3, 5) +
   theme(panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"),
         legend.position = "none",
         axis.text.y = element_blank()) +
   labs(x = NULL, y = NULL)
@@ -1171,31 +1220,39 @@ dists %>%
 
 
 
-# Quantitative Relationships
+# Quantitative relationships
 
 &nbsp;
 
 ![](img/age-crime-curve.png)
 
 
-## Types of Relationships
+## Types of relationships
 
-&zwj;**Association**: *X and Y tend to "go together"*
+::: {style="font-size: 0.8em;"}
+
+**Association**: *X and Y tend to "go together"*
 
 * e.g., ice cream sales and violent crime rise at same time
 * *May* imply common causes, e.g. temperature
 * *Does not* imply banning ice cream will reduce crime or vice versa
 * Purely observational—makes no assumptions
 
+:::
+
 . . .
 
-&zwj;**Effect**: *X causes Y*
+::: {style="font-size: 0.8em;"}
+
+**Effect**: *X causes Y*
 
 * e.g., clearing a vacant lot reduces nearby violence 
 * Implies *direction* and *cause*:
    * Clearing more lots will reduce violence there
    * Reducing violence will not clear lots
 * Requires strong assumptions to **identify**
+
+:::
 
 . . .
 
@@ -1222,9 +1279,7 @@ A **conditional distribution** is the distribution a variable takes when a diffe
 
 . . .
 
-A **joint distribution** is the full distribution of *both* variables
-
-* i.e., the **conditional distributions** of each variable at every value of the other variable
+A **joint distribution** is the conditional distribution of each variable at every value of the other variable
 
 . . .
 
@@ -1235,13 +1290,15 @@ A **joint distribution** is the full distribution of *both* variables
 :::
 
 
-## Cross-Tabs
+## Cross-tabs
 
 The simplest joint distributions are those between categorical variables, usually displayed as **cross-tabulations**
 
-:::: {.columns}
+::::: {.columns}
 
-::: {.column}
+:::: {.column}
+
+::: {style="font-size: 0.8em;"}
 
 ```{r}
 sex_offense <- 
@@ -1254,7 +1311,11 @@ tabyl(sex_offense, Sex, Offense) %>%
 
 :::
 
-::: {.column}
+::::
+
+:::: {.column}
+
+::: {style="font-size: 0.8em;"}
 
 ```{r}
 tabyl(sex_offense, Sex, Offense) %>% 
@@ -1266,6 +1327,8 @@ tabyl(sex_offense, Sex, Offense) %>%
 
 ::::
 
+:::::
+
 . . .
 
 We can also visualise them with a bar plot
@@ -1275,16 +1338,18 @@ sex_offense %>% ggplot(aes(x=Sex, group = Offense, fill = Offense)) + geom_bar()
   theme(legend.position = c(0.15, 0.8),
         panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
-        legend.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"),
+        legend.background = element_rect(fill="#ECEEF1", color="#ECEEF1"))
 ```
 
 
 
-## Categorical x Continuous
+## Categorical x continuous
 
 If our association is between a categorical and a continuous variable, we can calculate statistics within each category
+
+::: {style="font-size: 0.8em;"}
 
 ```{r}
 rural <- tibble(Area = rep(c("Rural", "Urban"), each = 5000),
@@ -1297,6 +1362,8 @@ rural %>% group_by(Area) %>% summarize(`Mean Crime Rate` = round(mean(`Crime Rat
                                        N = n()) %>%
   knitr::kable()
 ```
+
+:::
 
 . . .
 
@@ -1315,9 +1382,9 @@ rural %>%
   theme(legend.position = c(0.8, 0.8),
         panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
-        legend.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"),
+        legend.background = element_rect(fill="#ECEEF1", color="#ECEEF1"))
 ```
 
 :::
@@ -1333,9 +1400,9 @@ rural %>%
   theme(legend.position = c(0.8, 0.8),
         panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
-        legend.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"),
+        legend.background = element_rect(fill="#ECEEF1", color="#ECEEF1"))
 ```
 
 :::
@@ -1344,7 +1411,7 @@ rural %>%
 
 
 
-## Continuous x Continuous
+## Continuous x continuous
 
 When both variables are continuous, we usually measure association with a **correlation** and visualise with a **scatterplot**
 
@@ -1365,8 +1432,8 @@ rural %>%
   theme_minimal(base_size = 16) +
   theme(panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"))
 ```
 
 Here I've added a **regression line** to illustrate the correlation
@@ -1385,9 +1452,9 @@ rural %>%
   theme(legend.position = c(0.1, 0.8),
         panel.grid.major.x = element_blank(),  
         panel.grid.major.y = element_line(color = "#28282B", linewidth = 0.25),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"),
-        legend.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"),
+        legend.background = element_rect(fill="#ECEEF1", color="#ECEEF1"))
 ```
 
 . . .
@@ -1399,14 +1466,14 @@ Soon we'll get into statistical models to measure and test relationships
 But they're pretty much all just based on cross-tabs, group means, or correlations
 
 
-## What does this show?
+## What does this show? {.dark-slide}
 
 &nbsp;
 
 ![](img/age-crime-curve.png)
 
 
-## Correlation Cautions
+## Correlation cautions {background-color="white"}
 
 &nbsp;
 
@@ -1436,13 +1503,13 @@ anscombe %>%
   geom_smooth(method = "lm", se = FALSE) + 
   theme_void() + 
   theme(strip.text = element_blank(),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"))
 ```
 
 
 
-## Dinosaur Deceit
+## Dinosaur deceit
 
 So do these! Their $X$ and $Y$ values also have the same *means* and *standard deviations*!
 
@@ -1455,13 +1522,13 @@ datasaurus_dozen  %>%
   geom_smooth(method = "lm", se = FALSE) + 
   theme_void() + 
   theme(strip.text = element_blank(),
-        panel.background = element_rect(fill="#f0f1eb", color="#f0f1eb"), 
-        plot.background = element_rect(fill="#f0f1eb", color="#f0f1eb"))
+        panel.background = element_rect(fill="#ECEEF1", color="#ECEEF1"), 
+        plot.background = element_rect(fill="#ECEEF1", color="#ECEEF1"))
 ```
 
 
 
-## Wrap-Up {.dark-slide}
+## Wrap-up {.dark-slide}
 
 * Takeaways
 

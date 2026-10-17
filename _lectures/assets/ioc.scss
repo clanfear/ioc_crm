@@ -133,10 +133,6 @@ body strong {
 }
 
 .dark-slide {
- background-image: "img/logo-light.svg" !important;
-}
-
-.dark-slide {
   background-color: $color-bg-code !important;
 }
 .dark-slide body {
@@ -152,6 +148,28 @@ body strong {
 .dark-slide p {
   color: $color-text-code !important;
   background-color: $color-bg-code !important;
+}
+
+
+.black-slide strong {
+ color: $color-accent-code;
+}
+.black-slide {
+  background-color: #111111 !important;
+}
+.black-slide body {
+  color: $color-text-code !important;
+  background-color: #111111 !important;
+}
+.black-slide h1,
+.black-slide h2,
+.black-slide h3 {
+  color: $color-highlight-code !important;
+  background-color: #111111 !important;
+}
+.black-slide p {
+  color: $color-text-code !important;
+  background-color: #111111 !important;
 }
 
 //
