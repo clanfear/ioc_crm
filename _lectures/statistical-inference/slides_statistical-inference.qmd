@@ -1,0 +1,1185 @@
+---
+title: "Statistical inference"
+subtitle: "CRM Week 3"
+author: "Charles Lanfear"
+date: "`r source('../reference_date.R'); get_date(3, raw=TRUE)`"
+format:
+  revealjs:
+    theme: ../assets/ioc.scss
+    incremental: false
+    self-contained: true
+    width: 1200
+    height: 800
+    auto-stretch: true
+    title-slide-attributes:
+      data-background-image: ../assets/ioc_entrance_narrow.jpg
+      data-background-position: bottom
+      data-background-size: contain
+filters: 
+  - ../assets/invert-h1.lua
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning = FALSE, message = FALSE, dev = "svg", fig.height = 5, dev.args=list(bg="transparent"))
+standardize <- function(x){
+  return((x-mean(x))/sd(x))
+}
+library(tidyverse)
+library(ggpmisc)
+library(janitor)
+set.seed(7)
+communities_orig <- read_csv("https://clanfear.github.io/ioc_iqa/_data/communities.csv") |>
+  mutate(control = 0.5*standardize(crime_rate) - 0.1*standardize(pop_density) + rnorm(n()))
+communities <- communities_orig |>
+  janitor::clean_names(case = "title") |>
+  mutate(across(c(Disadvantage, Incarceration), ~factor(., levels = c("Low", "Medium", "High"))))
+```
+
+
+## Today {.dark-slide}
+
+
+
+* Regression and Models
+
+* Inferential Statistics
+
+   * Hypothesis Testing
+   * Theoretical Distributions
+   * Properties of Means
+   * Problems with Hypothesis Testing
+
+* Many wordy slides
+
+
+# Regression
+
+![](img/kids-regress.png)
+
+## Correlations
+
+Correlations ( $R$ ) summarize associations between continuous variables:
+
+::: {.incremental}
+
+* Range from -1 to 1
+   * 0: No *linear association*
+   * -1 and 1: Perfect linear associations
+
+:::
+
+. . .
+
+$R^2$, the **coefficient of determination**, indicates the *proportion* of variation in one variable **linearly** predicted by another
+
+::: {.incremental}
+
+* Range from 0 to 1
+   * 0: Neither explains each other (linearly)
+   * 1: They perfectly explain (or determine) each other
+
+:::
+
+. . .
+
+::: {.center}
+*A correlation of 0.5 between $x$ and $y$ indicates 25% of the variation in $y$ is "explained" by $x$ (and vice versa)*
+:::
+
+
+## Visualizing correlations
+
+&nbsp;
+
+```{r}
+make_sample <- function(r, n){
+  sig <- matrix(c(1,r,r,1),2,2)
+  dat <- setNames(data.frame(MASS::mvrnorm(n=n, c(0,0), sig, empirical=TRUE)), c("x", "y"))
+  return(dat)
+  }
+r_seq <- round(c(seq(0, 0.9, by = .15), 0.95, 1),2)
+
+r_df <- map_dfr(setNames(r_seq, r_seq), ~ make_sample(., 100), .id = "R") |>
+  mutate(R = factor(R, levels = r_seq),
+         R = fct_relabel(R, \(x) str_c("Correlation: ", x, "\nExplained: ", round(100*(as.numeric(x)^2)), "%"))) 
+ggplot(r_df, aes(x = x, y =y)) + 
+  geom_point(size = 1) + 
+  facet_wrap(~R, axes = "all") + 
+  # geom_smooth(method = "lm", se = FALSE, color = "#8A1538") +
+  theme_void(base_size = 15) +
+  scale_y_continuous(expand  = c(0, 0.2)) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.spacing = unit(10, "mm"),
+    axis.line.x = element_line(linewidth = 0.25, color = "black"),
+    axis.line.y = element_line(linewidth = 0.25, color = "black")
+    )
+
+```
+
+
+
+## Last week's correlation
+
+&nbsp;
+
+```{r, fig.height = 3}
+communities %>%
+  ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
+  geom_point(alpha = 0.5) +
+  # geom_smooth(method = "lm", se = FALSE, color = "#8A1538") +
+  xlab("Population Density") +
+  stat_correlation(size = 5) +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+This is a strong relationship: About 66% of the variation is explained
+
+
+::::: {.columns}
+
+:::: {.column}
+
+::: {.fragment}
+
+But what is the *substantive* interpretation?
+
+:::
+
+::::
+
+:::: {.column}
+
+::: {.fragment}
+
+If pop density is 20, what do we expect crime to be?
+
+:::
+
+::::
+
+:::::
+
+. . .
+
+::: {.center}
+*What we want is a **model** to estimate how pop density predicts crime*
+:::
+
+
+# Modeling {.black-slide}
+
+![](img/modeling.png)
+
+
+## The DGP
+
+When doing research, we're usually interested in saying something about how some part of the real world works
+
+. . .
+
+The distributions of data we observe are the result of a real-world process we cannot directly observe
+
+. . .
+
+We call this the **data generating process** (DGP)
+
+. . .
+
+**Models** aim to approximate this data generating process mathematically to allow us to make quantitative statements about how the world works
+
+. . .
+
+Most of the time, in any given project, we're really interested in an **estimate** of just one part of the DGP or one characteristic of the population:
+
+* A distribution or measure of central tendency
+* A correlation or other association
+* A *causal effect* (next week!)
+
+
+## Estimation
+
+Going from data to an estimate is a process involving three components:
+
+::: {.incremental}
+
+* **Estimand**: the real-world quantity we want to measure
+* **Estimator**: the procedure we use to calculate the estimate using data
+* **Estimate**: the measured quantity approximating our estimand
+
+
+:::
+
+. . .
+
+Any given estimate consists also of three components:
+
+$$Estimate = Estimand + Bias + Noise$$
+
+. . .
+
+**Noise** comes from *randomness* in the real world or sampling (today)
+
+. . .
+
+**Bias** comes from *using the wrong estimator* (next week)
+
+## {.dark-slide}
+
+![](img/estimation.png)
+
+::: {.aside}
+Credit: [Richard McElreath](https://twitter.com/rlmcelreath/status/1582368904529137672)
+:::
+
+
+## Regression
+
+Regression is an estimation method for *fitting lines* to data
+
+. . .
+
+Regression just summarizes a relationship between variables using a line
+
+* e.g., predicting $Y$ using $X$
+
+. . .
+
+* The variable being predicted is the **dependent** or **outcome** variable
+
+* The variables used for prediction are **independent** or **explanatory** variables, sometimes called **covariates** or **regressors**
+
+. . .
+
+The regression line is the **conditional expectation** of the dependent variable
+
+* e.g., the expected value (mean) of $Y$ for each value of $X$
+
+
+## A regression line
+
+&nbsp;
+
+```{r}
+communities %>%
+  ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
+  geom_point(alpha = 0.5) +
+  xlab("Population Density") +
+  geom_smooth(method = "lm", se = FALSE, formula = "y ~ x") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+&nbsp;
+
+"If population density is 20, we expect the crime rate to be about 41"
+
+
+
+## Model fitting
+
+The regression line represents an **estimate** of the association between population density and the crime rate (the estimand we want)
+
+. . .
+
+The estimator used for **fitting** this line has two parts:
+
+1. The model—the shape of the line (e.g., straight) and our choice of covariates
+
+2. The estimation method—the maths to fit that shape to the data, e.g., **ordinary least squares** (OLS)
+
+. . .
+
+OLS draws a line through the data that minimizes the *sum of squared residuals*
+
+* Residuals are the $Y$ distances between the line and each point
+* OLS draws the line where the sum of squared residuals is *smallest*
+
+## Residuals
+
+&nbsp;
+
+```{r}
+form <- y ~ x
+communities %>%
+  mutate(pred = predict(lm(`Crime Rate`~`Pop Density`, data = .))) |>
+  ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
+  xlab("Population Density") +
+  stat_fit_deviations(formula = form, color = "red") +
+  geom_segment(aes(x = `Pop Density`, y = `Crime Rate`, yend = pred), color = "red", size = 0.5) +
+  geom_point(alpha = 0.5) +
+  stat_poly_line(formula = form, se = FALSE) +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+::: {.aside}
+
+[See here for an interactive explanation](https://setosa.io/ev/ordinary-least-squares-regression/)
+
+:::
+
+
+## Regression equation
+
+Regression lines are defined by **parameters**: the **intercept** and **slope(s)** .
+
+. . .
+
+Regression line equations look like this:
+
+
+$$y_i = a + bx_i + e_i$$
+
+. . .
+
+$a$ is the **intercept**
+
+* The expected value of $y$ when $x = 0$
+
+. . .
+
+$b$ is a **slope**
+
+* The amount the expected value of $y$ rises for every 1 unit increase in $x$
+
+. . .
+
+$e_i$ is the **residual**
+
+* The difference between prediction ( $a + bx$ ) and *each value* of $y$
+* The square of this is what OLS is trying to minimize
+
+
+## Regression equation 
+
+&nbsp;
+
+```{r}
+form <- y ~ x
+communities %>%
+  ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
+  geom_point(alpha = 0.5) +
+  xlab("Population Density") +
+  stat_poly_line(formula = form, se = FALSE) +
+  stat_poly_eq(formula = form, mapping = use_label("eq"), eq.x.rhs = "PopDensity", eq.with.lhs= "CrimeRate~`=`~", size = 7) +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+
+
+## Predictions
+
+The regression line is a set of predictions of $Y$ for every value of $X$
+
+. . .
+
+The regression formula tells us those predictions:
+
+. . .
+
+$$CrimeRate = -20.8 + 3.09 PopDensity$$
+
+We expect $CrimeRate$ to be 3.09 higher for every additional unit of $PopDensity$
+
+When $PopDensity$ is zero, the expected $CrimeRate$ is $-20.8$
+
+. . .
+
+If $PopDensity$ is $20$, then we expect $CrimeRate$ to be:
+
+$$41 = -20.8 + 3.09*20$$
+
+. . .
+
+::: {.center}
+*The next question is whether this strong association likely holds in the population*
+:::
+
+
+# Inferential statistics
+
+<br>
+<br>
+
+![](img/sampling.png)
+
+
+
+## Null hypothesis testing
+
+Recall that we want to learn about the true data generating process (DGP)
+
+. . .
+
+We cannot observe it directly, but we can use data to infer things about it
+
+. . .
+
+**Hypothesis testing** is one approach to learning about DGPs
+
+. . .
+
+The basic idea:
+
+* Make an informed guess—a **hypothesis**—about what the DGP looks like
+   * **Theory** is about DGPs!
+* Test if it is likely observed data were created by the hypothetical DGP
+* If it seems unlikely, we **reject** our hypothesis
+
+. . .
+
+In short, we get closer to the truth by rejecting false explanations
+
+* *via negativa*: Knowledge by subtracting what is wrong
+
+
+
+## Significance testing
+
+The simplest hypothesis testing is **null hypothesis significance testing**:
+
+. . .
+
+1. State hypotheses about estimand:
+
+   * **Null Hypothesis**: There is no relationship
+   * **Alternative Hypothesis**: There is a relationship (at all or directional)
+
+. . .
+
+2. Make an estimate
+
+. . .
+
+3. Test how likely this estimate would be *if our null hypothesis is true*
+
+   * We choose a threshold for what we consider "unlikely", e.g., less than 5% chance
+
+. . .
+
+4. Either reject or fail to reject the null; we do not *accept* the null
+
+. . .
+
+::: {.center}
+*When we reject the null, we're confident our result is not just due to **noise***
+:::
+
+
+## Frequentism
+
+Hypothesis testing is rooted in the **frequentist** paradigm of statistics
+
+. . .
+
+Frequentism is based on the logic of *infinite* random sampling
+
+. . .
+
+* For a given DGP, imagine randomly sampling from the population *forever*
+
+. . .
+
+* The distribution of values in the samples (e.g., the means) would follow a known **theoretical distribution**
+
+   * i.e., we know how likely it is to obtain any particular estimate *if the theoretical DGP is true*
+
+. . .
+
+* Based on these theoretical distributions, we assess how (un)likely observed results are under a given hypothesis
+
+. . .
+
+* Importantly, *all of these rely on properties of random sampling*
+
+   * Non-random samples lead to **bias**
+
+
+
+# Theoretical distributions
+
+<br>
+
+![](img/distributions.png)
+
+
+
+## Coin flipping
+
+In theory, a normal coin is equally likely to land on heads or tails
+
+If we flipped it 20 times and got 13 heads, would we think it is a fair coin?
+
+. . .
+
+What about 15 heads?
+
+. . .
+
+If the coin is truly fair, it should have a 0.5 probability of coming up heads
+
+* Our null hypothesis is the coin is fair and has a heads probability of 0.5
+* Our alternative is it is *unfair*—likely to give more or fewer heads than 0.5
+
+. . .
+
+We can calculate how likely it is to observe any particular number of heads flips if our null hypothesis is true
+
+* e.g., how likely is it to get 15 heads on 20 flips with a fair coin
+* We can do this just by tabulating every possible outcome of 20 coin flips
+
+
+
+## Ways to get...
+
+::: {.incremental}
+
+* There is only 1 way to get 0 heads: They're all tails!
+* There are 20 ways to get 1 head: Any 1 coin is heads!
+* There are 190 ways to get 2 heads
+* There are 4845 ways to 5 heads
+* There are *184,756* ways to get 10 heads!
+
+:::
+
+. . .
+
+We're *1,000 times* more likely to get 10 heads than 2 heads!
+
+&nbsp;
+
+. . .
+
+The probability we get any particular number of heads is can be described by a theoretical distribution: the **binomial distribution**
+
+
+## Binomial distribution
+
+If we flip a fair coin 20 times, the binomial distribution says we're this likely to see each count of heads:
+
+```{r, fig.height = 4}
+draws <- tibble(Heads = 0:20,
+                Probability = map_dbl(Heads, ~dbinom(., 20, 0.5)),
+                `95%` = map_dbl(Heads, ~binom.test(., 20, 0.5, alternative = "two.sided")$p.value) < 0.05)
+
+ggplot(draws, aes(x = Heads, y = Probability, fill = `95%`)) + 
+  geom_col() + 
+  scale_fill_manual(values = c("#003C71","#8A1538")) +
+  scale_x_continuous(breaks = 0:20) +
+  theme_minimal(base_size = 16) +
+  labs(x = "Number of heads out of 20") +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1),
+    legend.position = "none")
+```
+
+Roughly 95% of the time, we'd expect to see between 6 and 14 heads.
+
+5% or less of the time would we see 5 or fewer or 15 or more.
+
+
+
+## p-values
+
+The **p-value** is the probability of observing a result at least as extreme as our estimate if the null hypothesis (a fair coin) were true.
+
+. . .
+
+* The p-value for 15 out of 20 (75%) flips being heads is `r round(binom.test(15, 20, 0.5, alternative = "two.sided")$p.value,3)`
+* A fair coin would give us a result as far from 50% as this 1 in 25 times
+* p-values are typically calculated using a **test statistic** derived from a theoretical distribution (e.g., $t$ or $\chi^2$ tests)
+
+. . .
+
+The *p-value* is *not* the probability our null hypothesis is true
+
+. . .
+
+All a p-value tells us is how *frequently* the theoretical distribution we chose would generate the data we observe
+
+* p-values are only valid if we've chosen the right theoretical distribution
+
+. . .
+
+## Confidence levels ($\alpha$)
+
+
+&nbsp;
+
+
+
+$\alpha$ is the rejection threshold, corresponding to a **confidence level** of $1-\alpha$
+
+* The threshold for rejecting the null distribution as a source of our data
+* e.g., 95% confidence corresponds to $\alpha=.05$
+
+. . .
+
+$\alpha$ indicates our "comfort" in rejecting the null when it is *true*
+
+* e.g., $\alpha=.05$ means we reject a true null 5% of the time
+
+## Errors
+
+&nbsp;
+
+Lower confidence levels lead to more **false positive** or **Type I error**
+
+* Rejecting the null when it is true
+
+. . .
+
+Higher levels of confidence reduce false positives, but lead to more **false negatives** or **Type II errors**
+
+* Failing to reject the null when it is false
+
+. . .
+
+&nbsp;
+
+::: {.center}
+*Choice of confidence levels is context-specific*
+:::
+
+
+## Cross-tabs
+
+Cross-tabs are used to show associations between categorical variables
+
+::::: {.columns}
+
+:::: {.column}
+
+Is there an association?
+
+```{r}
+communities |> 
+  tabyl(Disadvantage, Area) |>
+  adorn_title() |>
+  knitr::kable()
+```
+
+::::
+
+:::: {.column}
+
+::: {.fragment fragment-index=1}
+
+What does no association look like?
+
+```{r}
+
+tibble(
+  Sex = rep(c("Male","Female"), length.out = 120),
+  `Self-Control` = c(rep("Low", 30), rep("Medium", 50), rep("High", 40))
+)  |> 
+  tabyl(`Self-Control`, Sex) |>
+  adorn_title() |>
+  knitr::kable()
+```
+
+
+:::
+
+::::
+
+:::::
+
+
+::: {.fragment fragment-index=1}
+
+&nbsp;
+
+*Males and females are equally probable of being in each level of self-control*
+
+:::
+
+. . .
+
+But we could get different probabilities just from randomness in sampling.
+
+
+## Chi-square test
+
+The chi-square ( $\chi^2$ ) asks: How likely would we be to see a sample with this strong an association if the there were no relationship in the population?
+
+::: {style="font-size: 80%;"}
+
+```{r}
+communities |> 
+  tabyl(Disadvantage, Area) |>
+  adorn_title() |>
+  knitr::kable()
+```
+
+:::
+
+Here we get a test statistic of 9.11 (df=2) corresponding to a statistically significant (at 95% confidence) p-value of 0.010.
+
+. . .
+
+*Disadvantage and Area are more strongly related in this sample than is likely to occur due only to sampling noise.*
+
+* i.e. this is evidence for an association in the population
+
+```{r, eval = FALSE}
+communities |> 
+  tabyl(Disadvantage, Area) |>
+  chisq.test()
+```
+
+
+
+# Focusing on means
+
+<br>
+
+![](img/means.jpg)
+
+
+## Means
+
+When we want to infer something about the population from a sample, we often focus on some kind of mean
+
+. . .
+
+This is because means have a useful sampling property, described by the **central limit theorem**:
+
+
+*No matter what the distribution\* of the variable in the population you sample from, the distribution of the **means** of all samples will be normally distributed around the population's mean*
+
+
+. . .
+
+&nbsp;
+
+::: {.center}
+*This sounds weird because it is weird*
+:::
+
+. . .
+
+::: {.center}
+*It makes slightly more sense visually*
+:::
+
+
+## Illustration
+
+Imagine this is the distribution of a variable in the population:
+
+```{r, cache = TRUE}
+unif_draws <- runif(100000, 0, 10)
+unif_mean_draws <- map_dbl(1:100000, ~mean(sample(unif_draws, 100)))
+beta_draws <- rbeta(100000, 1.5, 1)
+beta_mean_draws <- map_dbl(1:100000, ~mean(sample(beta_draws, 100)))
+norm_draws <- c(rnorm(10000, 10, 1), rnorm(10000, 25, 4))
+norm_mean_draws <- map_dbl(1:100000, ~mean(sample(norm_draws, 100)))
+```
+
+```{r, fig.height = 4}
+tibble(beta_draws) |>
+  ggplot(aes(x = beta_draws)) + 
+  geom_histogram(aes(y = (..count..)/sum(..count..)), bins = 50, fill = "black") + 
+  theme_minimal(base_size=16) +
+  labs(x = "X", y = "Probability") +
+  geom_vline(aes(xintercept = mean(beta_draws)), color = "red") +
+  annotate("text", x = mean(beta_draws)+0.07, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(beta_draws),2)), color = "red") +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+The mean is in red, but the shape is definitely not a bell curve
+
+
+## One sample
+
+Let's say we sample 100 observations from it and take the mean
+
+```{r, fig.height = 4}
+tibble(beta_draws = sample(beta_draws, 100)) |>
+  ggplot(aes(x = beta_draws)) + 
+  geom_dotplot(binwidth = 0.02, method = "histodot", fill = "black") + 
+  theme_minimal() +
+  scale_x_continuous(limits = c(0,1)) +
+  geom_vline(aes(xintercept = mean(beta_draws)), color = "red") +
+  scale_y_continuous(breaks = seq(0, 1, 0.195), labels = 5*(seq_along(seq(0, 1, 0.195)) -1)) +
+  annotate("text", x = mean(beta_draws)+0.09, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(beta_draws),2)), color = "red") +
+  theme_minimal(base_size = 16) +
+  labs(x = "X", y = "N") +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+Our estimate is great with only $N=100$! But if we couldn't compare to the population, how would we know that?
+
+
+
+## Many samples
+
+If we take a ton of samples (n=100 each) and calculate all their means, their distribution looks like this—most are pretty accurate: 95% of them are between 0.55 and 0.65!
+
+```{r, fig.height = 4}
+
+tibble(beta_mean_draws) |>
+  ggplot(aes(x = beta_mean_draws)) + 
+  geom_histogram(aes(y = ..count../sum(..count..)), bins = 50, fill = "black") + 
+  geom_vline(aes(xintercept = mean(beta_mean_draws)), color = "red")  +
+  annotate("text", x = mean(beta_mean_draws)+0.015, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(beta_mean_draws),2)), color = "red") +
+  labs(y = "Probability", x = expression(bar(X))) +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+. . .
+
+::: {.center}
+*Okay, sure, but what about **weird** distributions?*
+:::
+
+
+## wat
+
+Okay, look at this bimodal monster:
+
+```{r, fig.height = 4}
+tibble(norm_draws) |>
+  ggplot(aes(x = norm_draws)) + 
+  geom_histogram(aes(y = ..count../sum(..count..)), bins = 50, fill = "black") + 
+  geom_vline(aes(xintercept = mean(norm_draws)), color = "red") +
+  annotate("text", x = mean(norm_draws)+2.5, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(norm_draws),2)), color = "red") +
+  labs(x = "X", y = "Probability") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+There's barely any data near the mean at all!
+
+
+## Huh, okay
+
+This is the sampling distribution of the means we get from *that*
+
+```{r, fig.height = 4}
+
+tibble(norm_mean_draws) |>
+  ggplot(aes(x = norm_mean_draws)) + 
+  geom_histogram(aes(y = ..count../sum(..count..)), bins = 50, fill = "black") + 
+  geom_vline(aes(xintercept = mean(norm_mean_draws)), color = "red")  +
+  labs(y = "Probability", x = expression(bar(X))) +
+  annotate("text", x = mean(norm_mean_draws)+0.5, y= Inf, vjust = 2, label = sprintf("%.2f", round(mean(norm_mean_draws),2)), color = "red") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+::: {.center}
+*Yep, still works—just noisier!*
+:::
+
+
+
+## This is nice
+
+Sample means being normally distributed around the population mean is *extremely useful*
+
+. . .
+
+This means we can use the normal distribution (or something related to it) as a theoretical distribution in many different situations
+
+* Population means
+* Differences in means
+* Correlations
+* Regression parameters
+* Categorical associations ($\chi^2$!)
+
+. . .
+
+In particular, we can assess the precision and statistical significance of estimates
+
+
+
+## Standard errors
+
+**Standard errors** measure the precision of our sample estimates
+
+. . .
+
+Smaller standard errors indicate more precise estimates
+
+. . .
+
+![](img/sampling-schematic-1.png){.nostretch width="50%"}
+
+::: {.aside}
+
+Image credit: [Claus Wilke](https://clauswilke.com/dataviz/visualizing-uncertainty.html)
+
+:::
+
+. . .
+
+Larger sample sizes mean smaller standard errors
+
+
+## Confidence intervals
+
+We can calculate confidence intervals from the standard error
+
+. . .
+
+Intuitively, **confidence intervals** (CI) are a range of reasonably likely values for the estimand, given our observed sample values
+
+* Based on a **confidence level**, e.g. 95%
+* 95% CI of (5.2, 7.5) is compatible with estimands between 5.2 and 7.5
+
+. . .
+
+Less intuitively, if you re-estimated the quantity with new data infinitely, 95% of the 95% CIs would overlap the true estimand
+
+. . .
+
+Confidence intervals are closely related to p-values:
+
+* The CI will not include zero if the p-value is significant
+* The CI will include zero when your p-value is not significant
+
+[Confidence interval example](https://rpsychologist.com/d3/ci/)
+
+
+## Our regression
+
+Here is a table of results from our regression earlier
+
+::: {style="font-size: 80%;"}
+
+```{r}
+lm(`Crime Rate` ~ `Pop Density`, data = communities) |> 
+  broom::tidy(conf.int=TRUE) |>
+  mutate(term = str_remove_all(term, "`"),
+         across(where(is.numeric), ~sprintf(., fmt = '%#.2f'))) |>
+  arrange(desc(term)) |>
+  janitor::clean_names(case = "title") |> 
+  knitr::kable()
+```
+
+:::
+
+This suggests a strong, statistically significant relationship between density and the crime rate
+
+. . .
+
+Do we believe this is a good model, however?
+
+. . .
+
+If for some reason we're only interested in the (unconditional, linear) association between density and the crime rate, this might be just fine!
+
+. . .
+
+::: {.center}
+*Next week we'll get into estimates we might actually want to know*
+:::
+
+
+
+## Confidence Interval of the Line
+
+Small standard errors translate into narrow confidence intervals around the line:
+
+```{r}
+communities %>%
+  ggplot(aes(x = `Pop Density`, y = `Crime Rate`)) + 
+  geom_point(alpha = 0.5) +
+  xlab("Population Density") +
+  geom_smooth(method = "lm", se = TRUE, formula = "y ~ x") +
+  theme_minimal(base_size = 16) +
+  theme(
+    panel.background = element_rect(fill='transparent', color=NA), 
+    plot.background = element_rect(fill='transparent', color=NA),
+    panel.grid.major = element_line(color = "black", size = 0.1)
+    )
+```
+
+Note it is not an interval containing 95% of the *data points*
+
+
+
+
+## Hypothesis testing issues {.dark-slide}
+
+&nbsp;
+
+![](img/replication.jpeg){.nostretch width="50%"}
+
+&nbsp;
+
+::: {.aside}
+
+Source: Open Science Collaboration (2015) "Estimating the reproducibility of psychological science"
+
+:::
+
+
+
+
+## Unethical practices
+
+There are intense pressures on researchers to produce both high volume and high impact research
+
+. . .
+
+It is trivial to perform many analyses, cherry-pick significant ones, then submit only those for review
+
+* The scientific community observes only what is submitted
+
+. . .
+
+Similarly, one can invest enormous time and money into a project and receive null results
+
+* Inability to publish these is frustrating and damaging to careers
+
+
+
+## Screening effects
+
+Due simply to random noise, even perfectly designed ethical research will routinely produce false positives at conventional confidence levels
+
+. . .
+
+Journal peer reviewers and editors have historically declined submissions with null findings
+
+* Articles are rejected for being "not novel"
+* Articles are never submitted because authors know they will be rejected
+   
+. . .
+
+Conversely, these parties (and the media) often reward unexpected or "novel" significant results
+
+. . .
+
+This leads to a number of problems:
+
+* Literatures filled with false positives
+* Literatures missing true negatives
+* Absence of replication studies (likely null findings)
+* Average estimates greater in magnitude than the real estimands
+
+
+
+
+## Responding
+
+The social sciences are begrudgingly moving to address these problems:
+
+* Estimating publication bias
+* Pre-registration of analyses
+* Registered reports
+* Requirements for computational reproducibility
+* Replication studies
+* Publishing null findings
+
+. . .
+
+These all work best to address researchers behaving *ethically*
+
+. . .
+
+It can be *very hard* to detect unethical researchers
+
+* As is the case for many types of white-collar crime, it is mainly the incompetent who get caught
+
+
+## Incompetent... but rich
+
+<br>
+
+::::: {.columns}
+
+:::: {.column}
+
+![](img/ariely_gino.jpg)
+
+::::
+
+:::: {.column}
+
+![](img/lies.PNG)
+
+
+::::
+
+:::::
+
+## Wrap-up {.dark-slide}
+
+Regression is just fancy line drawing
+
+* The line represents the conditional mean
+* We can use the line to make predictions
+
+. . .
+
+Hypothesis tests compare observed data and to theoretical distributions
+
+* Statistical significance means the observed data are unlikely to have come from the chosen theoretical distribution
+
+. . .
+
+Be wary of the scientific literature
+
+* Constraints and incentives result in many false positives
+* Enforcement of research ethics is difficult
+
+
+
+## Next time {.dark-slide}
+
+&nbsp;
+
+Causality and theory testing!
+
+&nbsp;
+
+You're almost dome with me!^[In CRM, sorry about IQA, haha]
+
+
