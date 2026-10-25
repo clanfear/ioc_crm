@@ -343,19 +343,15 @@ Regression lines are defined by **parameters**: the **intercept** and **slope(s)
 Regression line equations look like this:
 
 
-$$y_i = a + bx_i + e_i$$
+$$y_i = a + b x_i + e_i$$
 
 . . .
 
-$a$ is the **intercept**
-
-* The expected value of $y$ when $x = 0$
+$a$ is the **intercept**, the expected value of $y$ when $x = 0$
 
 . . .
 
-$b$ is a **slope**
-
-* The amount the expected value of $y$ rises for every 1 unit increase in $x$
+$b$ is a **slope**, how the mean of $y$ rises for each increase in $x$
 
 . . .
 
@@ -365,7 +361,10 @@ $e_i$ is the **residual**
 * The square of this is what OLS is trying to minimize
 
 
+
+
 ## Regression equation 
+
 
 &nbsp;
 
@@ -414,6 +413,24 @@ $$41 = -20.8 + 3.09*20$$
 ::: {.center}
 *The next question is whether this strong association likely holds in the population*
 :::
+
+## A note on notation
+
+For theoretical models, i.e., what occurs in the *population*, we usually use Greek for the **parameters** (estimands!) but Latin for the observed data:
+
+$$y_i = \alpha + \beta x_i + \epsilon_i$$
+
+. . .
+
+But once we estimate those parameters from data, i.e., show what occurs in the *sample*, we typically use Latin for those **estimates** (they're *observed*!):
+
+$$y_i = a + b x_i + e_i$$
+
+. . .
+
+Sometimes, though, you'll see Greek wearing hats for estimates:
+
+$$y_i = \hat{\alpha} + \hat{\beta} x_i + \hat{\epsilon}_i$$
 
 
 # Inferential statistics
@@ -641,6 +658,12 @@ $\alpha$ indicates our "comfort" in rejecting the null when it is *true*
 
 * e.g., $\alpha=.05$ means we reject a true null 5% of the time
 
+. . .
+
+::: {.center}
+*Choice of confidence levels is context-specific*
+:::
+
 ## Errors
 
 &nbsp;
@@ -655,14 +678,14 @@ Higher levels of confidence reduce false positives, but lead to more **false neg
 
 * Failing to reject the null when it is false
 
-. . .
 
-&nbsp;
+## {background-color="#E2FFE3"}
 
-::: {.center}
-*Choice of confidence levels is context-specific*
+![](img/type-i-and-type-ii-errors.jpg)
+
+::: {.aside}
+Credit: [Paul Ellis](https://effectsizefaq.com/2010/05/31/i-always-get-confused-about-type-i-and-ii-errors-can-you-show-me-something-to-help-me-remember-the-difference/)
 :::
-
 
 ## Cross-tabs
 
@@ -967,7 +990,7 @@ We can calculate confidence intervals from the standard error
 
 . . .
 
-Intuitively, **confidence intervals** (CI) are a range of reasonably likely values for the estimand, given our observed sample values
+Intuitively, **confidence intervals** (CI) are a range of *reasonably likely* values for the estimand, given our observed sample values
 
 * Based on a **confidence level**, e.g. 95%
 * 95% CI of (5.2, 7.5) is compatible with estimands between 5.2 and 7.5
@@ -981,9 +1004,8 @@ Less intuitively, if you re-estimated the quantity with new data infinitely, 95%
 Confidence intervals are closely related to p-values:
 
 * The CI will not include zero if the p-value is significant
-* The CI will include zero when your p-value is not significant
 
-[Confidence interval example](https://rpsychologist.com/d3/ci/)
+[Confidence interval example](https://rpsychologist.com/d3/CI/)
 
 
 ## Our regression
@@ -1024,7 +1046,7 @@ If for some reason we're only interested in the (unconditional, linear) associat
 
 ## Confidence Interval of the Line
 
-Small standard errors translate into narrow confidence intervals around the line:
+Small standard errors give a narrow confidence interval around the line:
 
 ```{r}
 communities %>%
@@ -1064,7 +1086,9 @@ Source: Open Science Collaboration (2015) "Estimating the reproducibility of psy
 
 ## Unethical practices
 
-There are intense pressures on researchers to produce both high volume and high impact research
+&nbsp;
+
+There are intense pressures on researchers to produce both *high volume* and *high impact* research
 
 . . .
 
@@ -1076,7 +1100,7 @@ It is trivial to perform many analyses, cherry-pick significant ones, then submi
 
 Similarly, one can invest enormous time and money into a project and receive null results
 
-* Inability to publish these is frustrating and damaging to careers
+* Inability to publish these is frustrating and damaging to careers; *publish or perish*
 
 
 
@@ -1086,21 +1110,20 @@ Due simply to random noise, even perfectly designed ethical research will routin
 
 . . .
 
-Journal peer reviewers and editors have historically declined submissions with null findings
+Journal have historically declined ~~my~~ submissions with null findings
 
 * Articles are rejected for being "not novel"
 * Articles are never submitted because authors know they will be rejected
    
 . . .
 
-Conversely, these parties (and the media) often reward unexpected or "novel" significant results
+Conversely, journals (and the media) reward "novel" significant results
 
 . . .
 
 This leads to a number of problems:
 
-* Literatures filled with false positives
-* Literatures missing true negatives
+* Literatures filled with false positives and missing true negatives
 * Absence of replication studies (likely null findings)
 * Average estimates greater in magnitude than the real estimands
 
@@ -1112,8 +1135,7 @@ This leads to a number of problems:
 The social sciences are begrudgingly moving to address these problems:
 
 * Estimating publication bias
-* Pre-registration of analyses
-* Registered reports
+* Pre-registration of analyses and registered reports
 * Requirements for computational reproducibility
 * Replication studies
 * Publishing null findings
@@ -1145,6 +1167,11 @@ It can be *very hard* to detect unethical researchers
 
 ![](img/lies.PNG)
 
+::: {.center}
+
+Answer: *Yes*
+
+::: 
 
 ::::
 
