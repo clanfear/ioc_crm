@@ -1,6 +1,6 @@
 ---
 title: "Statistical inference"
-subtitle: "CRM Week 3"
+subtitle: "CRM week 3"
 author: "Charles Lanfear"
 date: "`r source('../reference_date.R'); get_date(3, raw=TRUE)`"
 format:
@@ -210,7 +210,7 @@ Going from data to an estimate is a process involving three components:
 ::: {.incremental}
 
 * **Estimand**: the real-world quantity we want to measure
-* **Estimator**: the procedure we use to calculate the estimate using data
+* **Estimator**: the procedure we use to calculate an estimate using data
 * **Estimate**: the measured quantity approximating our estimand
 
 
@@ -640,11 +640,12 @@ All a p-value tells us is how *frequently* the theoretical distribution we chose
 
 . . .
 
-## Confidence levels ($\alpha$)
+## Confidence levels
 
 
-&nbsp;
+We say something is **statistically significant** when the p-value is below a chosen value ($p < \alpha$), e.g.,  $p<.05$
 
+. . .
 
 
 $\alpha$ is the rejection threshold, corresponding to a **confidence level** of $1-\alpha$
@@ -715,10 +716,10 @@ What does no association look like?
 ```{r}
 
 tibble(
-  Sex = rep(c("Male","Female"), length.out = 120),
-  `Self-Control` = c(rep("Low", 30), rep("Medium", 50), rep("High", 40))
+  Area = rep(c("Rural","Urban"), length.out = 300),
+  `Disadvantage` = factor(c(rep("Low", 132), rep("Medium", 90), rep("High", 78)), levels = c("Low", "Medium", "High"))
 )  |> 
-  tabyl(`Self-Control`, Sex) |>
+  tabyl(`Disadvantage`, Area) |>
   adorn_title() |>
   knitr::kable()
 ```
@@ -735,7 +736,7 @@ tibble(
 
 &nbsp;
 
-*Males and females are equally probable of being in each level of self-control*
+*Rural and urban areas equally probable to be in each level of disadvantage*
 
 :::
 
@@ -746,7 +747,7 @@ But we could get different probabilities just from randomness in sampling.
 
 ## Chi-square test
 
-The chi-square ( $\chi^2$ ) asks: How likely would we be to see a sample with this strong an association if the there were no relationship in the population?
+The chi-square ( $\chi^2$ ) asks: How likely would we be to draw a sample with this strong an association if there were no relationship in the population?
 
 ::: {style="font-size: 80%;"}
 
@@ -811,7 +812,7 @@ This is because means have a useful sampling property, described by the **centra
 
 ## Illustration
 
-Imagine this is the distribution of a variable in the population:
+Imagine this is the distribution of a variable $X$ ranging $(0,1)$ in the population:
 
 ```{r, cache = TRUE}
 unif_draws <- runif(100000, 0, 10)
@@ -868,7 +869,7 @@ Our estimate is great with only $N=100$! But if we couldn't compare to the popul
 
 ## Many samples
 
-If we take a ton of samples (n=100 each) and calculate all their means, their distribution looks like this—most are pretty accurate: 95% of them are between 0.55 and 0.65!
+If we take a ton^[100,000 in this case!] of samples (n=100 each) and calculate all their means, their distribution looks like this—most are pretty accurate: 95% of them are between 0.55 and 0.65!
 
 ```{r, fig.height = 4}
 
@@ -1044,7 +1045,7 @@ If for some reason we're only interested in the (unconditional, linear) associat
 
 
 
-## Confidence Interval of the Line
+## Confidence interval of the line
 
 Small standard errors give a narrow confidence interval around the line:
 
@@ -1100,7 +1101,8 @@ It is trivial to perform many analyses, cherry-pick significant ones, then submi
 
 Similarly, one can invest enormous time and money into a project and receive null results
 
-* Inability to publish these is frustrating and damaging to careers; *publish or perish*
+* Inability to publish these is frustrating and damaging to careers
+   * *publish or perish*
 
 
 
@@ -1110,7 +1112,7 @@ Due simply to random noise, even perfectly designed ethical research will routin
 
 . . .
 
-Journal have historically declined ~~my~~ submissions with null findings
+Journals have historically declined ~~my~~ submissions with null findings
 
 * Articles are rejected for being "not novel"
 * Articles are never submitted because authors know they will be rejected
